@@ -154,6 +154,28 @@
   to   { transform: scale(1.04); }
 }
 
+/* ---------- Páginas internas: un video en lugar de la composición ---------- */
+.hero__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 848 / 478;
+  border-radius: 14px;
+  background-color: var(--verde-pastel);
+  animation: hero-foto .8s var(--ease) .15s both;
+}
+
+.hero__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__media .boton-video {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+
 /* ---------- Entrada ---------- */
 .hero__texto > * {
   animation: hero-entrada .7s var(--ease) both;
@@ -204,8 +226,9 @@
     max-width: 10.5em;
   }
 
-  /* Escritorio: el H1 es una sola frase en tres líneas */
-  .hero__antetitulo {
+  /* Escritorio (Inicio): el H1 es una sola frase en tres líneas.
+     En las páginas internas (.hero--pagina) el antetítulo se mantiene. */
+  .hero:not(.hero--pagina) .hero__antetitulo {
     margin-bottom: 0;
     font: inherit;
     letter-spacing: inherit;
@@ -241,5 +264,14 @@
 
   .hero__foto {
     border-radius: var(--radio);
+  }
+
+  .hero__media {
+    border-radius: var(--radio);
+  }
+
+  .hero__media .boton-video {
+    right: 20px;
+    bottom: 20px;
   }
 }
