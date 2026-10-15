@@ -38,6 +38,10 @@
   <link rel="stylesheet" href="assets/css/beneficios.css">
   <link rel="stylesheet" href="assets/css/opiniones.css">
   <link rel="stylesheet" href="assets/css/guia.css">
+  <link rel="stylesheet" href="assets/css/horarios.css">
+  <link rel="stylesheet" href="assets/css/formulario.css">
+  <link rel="stylesheet" href="assets/css/contacto.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 <body>
 
@@ -366,15 +370,6 @@
               </blockquote>
             </li>
 
-            <li class="card-resena">
-              <div class="card-resena__estrellas" role="img" aria-label="5 de 5 estrellas">
-                <svg aria-hidden="true"><use href="#icono-estrella"/></svg><svg aria-hidden="true"><use href="#icono-estrella"/></svg><svg aria-hidden="true"><use href="#icono-estrella"/></svg><svg aria-hidden="true"><use href="#icono-estrella"/></svg><svg aria-hidden="true"><use href="#icono-estrella"/></svg>
-              </div>
-              <blockquote class="card-resena__texto">
-                <p>¡Excelente todo!</p>
-              </blockquote>
-            </li>
-
           </ul>
         </div>
 
@@ -450,7 +445,477 @@
     </section>
     <!-- /LO QUE NOS GUIA -->
 
+    <!-- HORARIOS -->
+    <section class="horarios" id="horarios" data-fondo="claro" aria-labelledby="horarios-titulo">
+      <div class="contenedor horarios__contenedor" data-acordeon-alto>
+
+        <h2 class="horarios__titulo" id="horarios-titulo">Días, horarios y dudas frecuentes</h2>
+
+        <!-- AGENDA
+             Para actualizar un horario, cambiá el texto de las horas (ej. 9:00 – 11:00).
+             Cada turno va dentro del día que corresponde (data-dia) y ordenado por hora.
+             agenda__turno--1 / agenda__profesional--1: primera profesional (tono pastel).
+             agenda__turno--2 / agenda__profesional--2: segunda profesional (tono medio). -->
+        <div class="horarios__bloque horarios__bloque--agenda">
+          <h3 class="horarios__antetitulo" id="agenda-titulo">Agenda</h3>
+
+          <div class="agenda" data-agenda>
+            <div class="agenda__calendario">
+
+              <!-- Desplegable de especialidad: cada opción apunta al id de su panel -->
+              <div class="agenda__control agenda__control--amarillo">
+                <label class="visualmente-oculto" for="agenda-especialidad">Especialidad</label>
+                <select class="agenda__desplegable" id="agenda-especialidad" data-agenda-desplegable>
+                  <option value="agenda-apoyo-escolar" data-familia="amarillo" selected>Apoyo escolar</option>
+                  <option value="agenda-psicologia" data-familia="rosa">Psicología</option>
+                  <option value="agenda-pediatria" data-familia="naranja">Pediatría</option>
+                  <option value="agenda-fonoaudiologia" data-familia="amarillo">Fonoaudiología</option>
+                  <option value="agenda-psicopedagogia" data-familia="verde">Psicopedagogía</option>
+                  <option value="agenda-ingles" data-familia="rosa">Inglés</option>
+                  <option value="agenda-nutricion" data-familia="naranja">Nutrición</option>
+                </select>
+                <svg class="icono agenda__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              </div>
+
+              <!-- Grilla de fondo (solo escritorio y tablet) -->
+              <div class="agenda__encabezado" aria-hidden="true">
+                <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span>
+              </div>
+              <div class="agenda__horas" aria-hidden="true">
+                <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+              </div>
+              <div class="agenda__fondo" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+
+              <!-- Apoyo escolar -->
+              <div class="agenda__panel agenda__panel--amarillo" id="agenda-apoyo-escolar" role="group" aria-label="Horarios de Apoyo escolar">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Andrea Novero y Ana Rinaldi</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">17:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="martes">
+                    <h4 class="agenda__dia-nombre">Martes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="miercoles">
+                    <h4 class="agenda__dia-nombre">Miércoles</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="jueves">
+                    <h4 class="agenda__dia-nombre">Jueves</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="viernes">
+                    <h4 class="agenda__dia-nombre">Viernes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Psicología -->
+              <div class="agenda__panel agenda__panel--rosa" id="agenda-psicologia" role="group" aria-label="Horarios de Psicología">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Edith Pintos</li>
+                  <li class="agenda__profesional agenda__profesional--2">Rocío Godoy</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Edith Pintos</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="martes">
+                    <h4 class="agenda__dia-nombre">Martes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Rocío Godoy</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="miercoles">
+                    <h4 class="agenda__dia-nombre">Miércoles</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Edith Pintos</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="jueves">
+                    <h4 class="agenda__dia-nombre">Jueves</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Rocío Godoy</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Pediatría -->
+              <div class="agenda__panel agenda__panel--naranja" id="agenda-pediatria" role="group" aria-label="Horarios de Pediatría">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Gabriela Cumpian</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Gabriela Cumpian</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="jueves">
+                    <h4 class="agenda__dia-nombre">Jueves</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Gabriela Cumpian</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Fonoaudiología -->
+              <div class="agenda__panel agenda__panel--amarillo" id="agenda-fonoaudiologia" role="group" aria-label="Horarios de Fonoaudiología">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Julieta Zeballos</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Julieta Zeballos</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="miercoles">
+                    <h4 class="agenda__dia-nombre">Miércoles</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Julieta Zeballos</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="viernes">
+                    <h4 class="agenda__dia-nombre">Viernes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Julieta Zeballos</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Psicopedagogía -->
+              <div class="agenda__panel agenda__panel--verde" id="agenda-psicopedagogia" role="group" aria-label="Horarios de Psicopedagogía">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Candelaria Gaitán</li>
+                  <li class="agenda__profesional agenda__profesional--2">Melisa Sol Riera</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">11:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="martes">
+                    <h4 class="agenda__dia-nombre">Martes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">11:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                      <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">17:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">20:00</span></span> <span class="agenda__turno-nombre">Candelaria Gaitán</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="miercoles">
+                    <h4 class="agenda__dia-nombre">Miércoles</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">20:00</span></span> <span class="agenda__turno-nombre">Candelaria Gaitán</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="jueves">
+                    <h4 class="agenda__dia-nombre">Jueves</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">14:00</span> – <span class="agenda__hora">15:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">20:00</span></span> <span class="agenda__turno-nombre">Candelaria Gaitán</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Inglés -->
+              <div class="agenda__panel agenda__panel--rosa" id="agenda-ingles" role="group" aria-label="Horarios de Inglés">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Jaquelina del Valle Gutiérrez</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="martes">
+                    <h4 class="agenda__dia-nombre">Martes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Jaquelina del Valle Gutiérrez</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="viernes">
+                    <h4 class="agenda__dia-nombre">Viernes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Jaquelina del Valle Gutiérrez</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Nutrición -->
+              <div class="agenda__panel agenda__panel--naranja" id="agenda-nutricion" role="group" aria-label="Horarios de Nutrición">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Evelin Márquez</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">19:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Evelin Márquez</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="miercoles">
+                    <h4 class="agenda__dia-nombre">Miércoles</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">19:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Evelin Márquez</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- /AGENDA -->
+
+        <div class="horarios__lateral">
+
+          <!-- PREGUNTAS FRECUENTES -->
+          <div class="horarios__bloque" id="preguntas-frecuentes">
+            <h3 class="horarios__antetitulo">Preguntas frecuentes</h3>
+
+            <div class="acordeon" data-acordeon>
+
+              <div class="acordeon__item acordeon__item--naranja">
+                <h4 class="acordeon__encabezado">
+                  <button class="acordeon__pregunta" type="button" id="faq-pago-boton" aria-expanded="false" aria-controls="faq-pago">
+                    <span>¿Cómo se paga?</span>
+                    <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                  </button>
+                </h4>
+                <div class="acordeon__respuesta" id="faq-pago" role="region" aria-labelledby="faq-pago-boton">
+                  <div class="acordeon__interior">
+                    <div class="acordeon__texto">
+                      <p>Apoyo escolar: por hora, por semana o con plan mensual, que tiene un 10% de descuento si abonás del 1 al 10 de cada mes. Especialidades: valor fijo por turno según la especialidad, que se abona el día del turno.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acordeon__item acordeon__item--rosa">
+                <h4 class="acordeon__encabezado">
+                  <button class="acordeon__pregunta" type="button" id="faq-obra-social-boton" aria-expanded="false" aria-controls="faq-obra-social">
+                    <span>¿Trabajan con obra social?</span>
+                    <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                  </button>
+                </h4>
+                <div class="acordeon__respuesta" id="faq-obra-social" role="region" aria-labelledby="faq-obra-social-boton">
+                  <div class="acordeon__interior">
+                    <div class="acordeon__texto">
+                      <p>Sí. Las especialidades se atienden de forma particular y por obra social. Consultanos por la tuya.</p>
+                      <a class="acordeon__link" href="https://wa.me/5493516095374" target="_blank" rel="noopener" aria-label="Consultar por WhatsApp (se abre en una pestaña nueva)">Consultar por WhatsApp <svg class="icono acordeon__flecha" viewBox="0 0 256 256" aria-hidden="true"><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acordeon__item acordeon__item--amarillo">
+                <h4 class="acordeon__encabezado">
+                  <button class="acordeon__pregunta" type="button" id="faq-combinar-boton" aria-expanded="false" aria-controls="faq-combinar">
+                    <span>¿Se pueden combinar servicios?</span>
+                    <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                  </button>
+                </h4>
+                <div class="acordeon__respuesta" id="faq-combinar" role="region" aria-labelledby="faq-combinar-boton">
+                  <div class="acordeon__interior">
+                    <div class="acordeon__texto">
+                      <p>Sí. Si tu hijo o hija necesita apoyo escolar y alguna especialidad, ofrecemos descuentos especiales por acompañamiento integral. Consultanos por WhatsApp.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="acordeon__item acordeon__item--verde">
+                <h4 class="acordeon__encabezado">
+                  <button class="acordeon__pregunta" type="button" id="faq-adultos-boton" aria-expanded="false" aria-controls="faq-adultos">
+                    <span>¿También atienden a adultos?</span>
+                    <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                  </button>
+                </h4>
+                <div class="acordeon__respuesta" id="faq-adultos" role="region" aria-labelledby="faq-adultos-boton">
+                  <div class="acordeon__interior">
+                    <div class="acordeon__texto">
+                      <p>Sí. Además de niños y estudiantes, recibimos adultos en las consultas médicas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- /PREGUNTAS FRECUENTES -->
+
+          <!-- UBICACION -->
+          <div class="ubicacion">
+            <h3 class="horarios__antetitulo">Ubicación</h3>
+            <div class="ubicacion__mapa">
+              <iframe src="https://www.google.com/maps?q=Fundaci%C3%B3n%20Siete%20Sentidos%2C%20Julio%20de%20Vedia%202554%2C%20C%C3%B3rdoba&amp;z=16&amp;output=embed" title="Mapa: Fundación Siete Sentidos, Julio de Vedia 2554, Barrio Yofre Norte, Córdoba" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <a class="btn btn--secundario ubicacion__boton" href="https://maps.app.goo.gl/Jo8CkrszWnZgzn7D9" target="_blank" rel="noopener">Ver ubicación en el mapa</a>
+          </div>
+          <!-- /UBICACION -->
+
+        </div>
+
+      </div>
+    </section>
+    <!-- /HORARIOS -->
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto" data-fondo="claro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__contenedor">
+        <div class="contacto__tarjeta">
+          <h2 class="contacto__titulo" id="contacto-titulo">Contacto</h2>
+
+          <!-- Al enviar abre WhatsApp con un mensaje armado con los datos (formulario-whatsapp.js) -->
+          <form class="formulario" action="https://wa.me/5493516095374" method="get" target="_blank" novalidate data-formulario-whatsapp="5493516095374">
+
+            <div class="formulario__fila">
+
+              <div class="campo">
+                <div class="campo__caja">
+                  <input class="campo__control" type="text" id="contacto-nombre" name="nombre" placeholder=" " autocomplete="name" required aria-describedby="contacto-nombre-error" data-error-vacio="Falta tu nombre y apellido para saber con quién hablamos.">
+                  <label class="campo__label" for="contacto-nombre">Nombre y apellido</label>
+                </div>
+                <p class="campo__error" id="contacto-nombre-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+              </div>
+
+              <div class="campo campo--telefono">
+                <div class="campo__caja">
+                  <div class="campo__prefijo">
+                    <img class="campo__bandera" src="assets/imagenes/banderas/ar.svg" alt="" width="30" height="20">
+                    <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    <select class="campo__prefijo-select" id="contacto-prefijo" name="prefijo" aria-label="Prefijo de país" data-campo-prefijo>
+                      <option value="+54" data-bandera="ar" selected>Argentina (+54)</option>
+                      <option value="+591" data-bandera="bo">Bolivia (+591)</option>
+                      <option value="+55" data-bandera="br">Brasil (+55)</option>
+                      <option value="+56" data-bandera="cl">Chile (+56)</option>
+                      <option value="+595" data-bandera="py">Paraguay (+595)</option>
+                      <option value="+51" data-bandera="pe">Perú (+51)</option>
+                      <option value="+598" data-bandera="uy">Uruguay (+598)</option>
+                    </select>
+                  </div>
+                  <input class="campo__control" type="tel" id="contacto-telefono" name="telefono" placeholder=" " inputmode="tel" autocomplete="tel-national" required aria-describedby="contacto-telefono-error" data-error-vacio="Falta el teléfono para poder contactarte." data-error-formato="Revisá el teléfono: tiene que tener al menos 8 números, con la característica.">
+                  <label class="campo__label" for="contacto-telefono">Teléfono</label>
+                </div>
+                <p class="campo__error" id="contacto-telefono-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+              </div>
+
+            </div>
+
+            <div class="campo campo--desplegable">
+              <div class="campo__caja">
+                <select class="campo__control" id="contacto-servicio" name="servicio" required aria-describedby="contacto-servicio-error" data-error-vacio="Elegí un servicio para que podamos orientarte.">
+                  <option value="" selected disabled hidden></option>
+                  <option>Apoyo escolar</option>
+                  <option>Psicopedagogía</option>
+                  <option>Fonoaudiología</option>
+                  <option>Psicología</option>
+                  <option>Pediatría</option>
+                  <option>Acompañamiento integral</option>
+                </select>
+                <label class="campo__label" for="contacto-servicio">Servicio de interés</label>
+                <svg class="icono campo__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              </div>
+              <p class="campo__error" id="contacto-servicio-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+            </div>
+
+            <div class="campo campo--mensaje">
+              <div class="campo__caja">
+                <textarea class="campo__control" id="contacto-mensaje" name="mensaje" placeholder=" " rows="4"></textarea>
+                <label class="campo__label" for="contacto-mensaje">Mensaje</label>
+              </div>
+            </div>
+
+            <button class="btn formulario__enviar" type="submit">Enviar</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /CONTACTO -->
+
   </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" data-fondo="claro">
+    <div class="contenedor footer__contenedor">
+
+      <a class="footer__logo" href="./">
+        <img src="assets/logos/Logo.svg" alt="Fundación Siete Sentidos, ir al inicio" width="399" height="206" loading="lazy">
+      </a>
+
+      <div class="footer__columnas">
+
+        <ul class="footer__columna">
+          <li class="footer__dato footer__dato--direccion">
+            <a class="footer__enlace" href="https://maps.app.goo.gl/Jo8CkrszWnZgzn7D9" target="_blank" rel="noopener" aria-label="Julio de Vedia 2554, ver en Google Maps (se abre en una pestaña nueva)">
+              <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="104" r="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M208,104c0,72-80,128-80,128S48,176,48,104a80,80,0,0,1,160,0Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              <span>Julio de Vedia 2554</span>
+            </a>
+          </li>
+          <li class="footer__dato footer__dato--horario">
+            <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="128 72 128 128 184 128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+            <span>Lunes a Viernes<br>09:00 a 21:00</span>
+          </li>
+        </ul>
+
+        <ul class="footer__columna">
+          <li class="footer__dato footer__dato--instagram">
+            <a class="footer__enlace" href="https://www.instagram.com/sietesentidos2023/" target="_blank" rel="noopener" aria-label="Instagram: sietesentidos2023 (se abre en una pestaña nueva)">
+              <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="40" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><rect x="32" y="32" width="192" height="192" rx="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="180" cy="76" r="12" fill="currentColor"/></svg>
+              <span>sietesentidos2023</span>
+            </a>
+          </li>
+          <li class="footer__dato footer__dato--whatsapp">
+            <a class="footer__enlace" href="https://wa.me/5493516095374" target="_blank" rel="noopener" aria-label="WhatsApp: 3516095374 (se abre en una pestaña nueva)">
+              <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><path d="M72,104a32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16a32,32,0,0,1-32,32A80,80,0,0,1,72,104Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M79.93,211.11a96,96,0,1,0-35-35h0L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              <span>3516095374</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="footer__columna footer__columna--botones grupo-botones">
+          <!-- PENDIENTE: destino de "Quiero donar" (todavía no hay página ni datos para donar) -->
+          <a class="btn" href="#">Quiero donar</a>
+          <a class="btn btn--secundario" href="sumate/">Trabajá con nosotros</a>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="footer__legal"><span>Todos los derechos reservados</span> <span>© 2026 Fundación Siete Sentidos</span></p>
+  </footer>
+  <!-- /FOOTER -->
 
   <script src="assets/js/menu.js" defer></script>
   <script src="assets/js/boton-blob.js" defer></script>
@@ -458,5 +923,9 @@
   <script src="assets/js/card-giro.js" defer></script>
   <script src="assets/js/carrusel.js" defer></script>
   <script src="assets/js/acordeon-paneles.js" defer></script>
+  <script src="assets/js/agenda.js" defer></script>
+  <script src="assets/js/acordeon.js" defer></script>
+  <script src="assets/js/campo-telefono.js" defer></script>
+  <script src="assets/js/formulario-whatsapp.js" defer></script>
 </body>
 </html>

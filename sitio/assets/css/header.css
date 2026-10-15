@@ -9,7 +9,7 @@
   --menu-hover: var(--blanco);
 
   position: sticky;
-  top: max(var(--header-top), env(safe-area-inset-top));
+  top: max(var(--header-top-fijo), env(safe-area-inset-top));   /* al hacer scroll sube a 20px */
   z-index: 50;
   margin-top: var(--header-top);
 }

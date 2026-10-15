@@ -70,7 +70,7 @@
    - **Escritorio:** dos columnas. Izquierda: agenda por especialidad. Derecha: acordeón de preguntas frecuentes y, debajo, el mapa de ubicación.
    - **Móvil:** se apilan el bloque "Agenda" (con antetítulo en mayúsculas), el bloque "Preguntas frecuentes" (con antetítulo en mayúsculas) y el botón "Ver ubicación en el mapa", que abre Google Maps. En móvil no se muestra el mapa incrustado.
    - **Agenda:** días y horarios de Apoyo escolar, Fonoaudiología, Psicopedagogía, Psicología, Pediatría e Inglés.
-   - **Preguntas frecuentes (acordeón con la primera pregunta abierta):**
+   - **Preguntas frecuentes (acordeón con todas las preguntas cerradas; se abren al tocarlas y de a una por vez):**
      - ¿La revisión con la pediatra tiene costo? → No. Cuando el equipo detecta alguna dificultad durante la atención, la pediatra realiza una revisión preventiva sin costo. No reemplaza una consulta pediátrica a pedido.
      - ¿La atención es gratuita? → No. Siete Sentidos es una fundación, pero sus servicios son arancelados. Incluyen sin costo adicional los servicios detallados arriba.
      - ¿Trabajan con obra social? → Sí. Las especialidades se atienden de forma particular y por obra social. Consultanos por la tuya.
@@ -89,7 +89,7 @@
    - **Escritorio:** Nombre y Teléfono en una misma fila; Servicio de interés y Mensaje a ancho completo.
    - **Móvil:** todos los campos a ancho completo.
    - Botón "Enviar" (principal).
-   - **REQUERIMIENTO OBLIGATORIO:** formulario 100% en código, sin herramientas externas (sin WPForms ni Google Forms), y las respuestas llegan por mail a la fundación.
+   - **REQUERIMIENTO OBLIGATORIO:** formulario 100% en código, sin herramientas externas (sin WPForms ni Google Forms). Al enviarlo, abre WhatsApp (3516095374) con un mensaje prearmado a partir de lo que se completó (nombre, servicio, mensaje y teléfono). Nombre, teléfono y servicio son obligatorios.
    - **REQUERIMIENTO OBLIGATORIO:** los CTA "Contactate" y "Hacé tu consulta" del Inicio llevan a este formulario.
 
 9. **Pie de Página (Footer)**

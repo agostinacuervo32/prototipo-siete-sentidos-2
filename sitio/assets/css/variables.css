@@ -19,6 +19,7 @@
   --amarillo-pastel: #FFF0B8;
   --negro: #2B2522;            /* nunca #000000 */
   --blanco: #FFFFFF;
+  --linea-suave: color-mix(in srgb, var(--negro) 12%, transparent);   /* líneas de la grilla de la agenda */
 
   /* ---------- Roles ---------- */
   --color-principal: var(--verde);
@@ -42,13 +43,18 @@
   --fs-h2: clamp(30px, 26.1px + 0.98vw, 45px);
   --fs-h2-lateral: clamp(30px, 22.3px + 1.96vw, 60px);
   --fs-subtitulo: clamp(24px, 21.9px + 0.52vw, 32px);
-  --fs-card-titulo: clamp(20px, 16.9px + 0.79vw, 32px);   /* subtítulo en cards: 20 móvil / 32 escritorio */
-  --fs-bajada: clamp(16px, 15px + 0.26vw, 20px);
-  --fs-texto: clamp(16px, 15px + 0.26vw, 20px);
+  --fs-card-titulo: 20px;   /* títulos de las cards de "Por qué elegir Siete Sentidos" */
+  --fs-bajada: clamp(16px, 15.2px + 0.2vw, 19px);
+  --fs-texto-grande: clamp(16px, 15px + 0.26vw, 20px);   /* hero y cards de Apoyo escolar / Especialidades */
+  --fs-texto: clamp(16px, 15.2px + 0.2vw, 19px);
+  --fs-card-texto: var(--fs-texto);   /* texto de cards y acordeones (15px en escritorio) */
+  --fs-resena: var(--fs-texto);   /* texto de las reseñas (19px en escritorio) */
   --fs-aclaracion: clamp(14px, 13.5px + 0.13vw, 16px);
   --fs-boton: clamp(16px, 15.5px + 0.13vw, 18px);
   --fs-menu: 18px;
   --fs-antetitulo: 14px;
+  --fs-agenda: clamp(13px, 10.5px + 0.2vw, 14px);   /* textos dentro de la grilla de la agenda */
+  --fs-ajuste-horarios: 0px;   /* en escritorio, agenda y FAQ van 2px más chicas */
 
   /* ---------- Radios ---------- */
   --radio-sm: 12px;
@@ -63,6 +69,12 @@
   /* ---------- Botones ---------- */
   --boton-alto: 39px;
   --boton-padding: 9px 21px 9px 22px;
+  --ancho-desplegable: 230px;   /* desplegable de especialidad de la agenda */
+
+  /* ---------- Horarios ---------- */
+  --antetitulo-interlineado: 1.2;
+  --antetitulo-separacion: 12px;   /* entre el antetítulo y su bloque */
+  --mapa-alto: 250px;   /* alto fijo del mapa (escritorio) */
 
   /* ---------- Retícula ---------- */
   --contenido: 1600px;
@@ -74,8 +86,19 @@
   --stack-sm: 16px;
   --stack-md: 32px;
   --stack-lg: 60px;
-  --header-top: 23px;
+  --header-top: 23px;          /* separación del menú arriba de todo (hero) */
+  --header-top-fijo: 20px;     /* separación al hacer scroll */
   --header-alto: 55px;
+
+  /* ---------- Formularios ---------- */
+  --campo-alto: 48px;          /* área táctil de 44px como mínimo */
+  --campo-padding: 20px;       /* separación del texto con el borde izquierdo */
+  --mensaje-alto: 136px;       /* alto del campo Mensaje */
+
+  /* ---------- Formas ---------- */
+  /* "Apretada" arriba y abajo: los bordes se curvan hacia adentro
+     (foto del equipo y franja de fondo del contacto) */
+  --mascara-apretada: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0Q50 12 100 0V100Q50 88 0 100Z'/%3E%3C/svg%3E");
 
   /* ---------- Movimiento ---------- */
   --ease: cubic-bezier(.2, .8, .2, 1);
@@ -107,5 +130,10 @@
   :root {
     --header-top: 51px;
     --header-alto: 93px;
+    --fs-ajuste-horarios: 2px;
+    --fs-card-texto: 15px;
+    --fs-resena: 19px;   /* texto de las reseñas */
+    --campo-alto: 54px;
+    --mensaje-alto: 168px;
   }
 }

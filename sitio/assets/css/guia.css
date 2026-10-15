@@ -7,8 +7,6 @@
    ========================================================================== */
 
 .guia {
-  /* Foto "apretada" arriba y abajo: los bordes se curvan hacia adentro */
-  --mascara-apretada: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0Q50 12 100 0V100Q50 88 0 100Z'/%3E%3C/svg%3E");
   padding-bottom: var(--seccion-padding);
 }
 
@@ -99,7 +97,7 @@
 .acordeon-paneles__texto {
   padding: 0 20px 22px;
   font-family: var(--fuente-texto);
-  font-size: var(--fs-texto);
+  font-size: var(--fs-card-texto);
   line-height: 1.5;
 }
 
@@ -153,11 +151,10 @@
   }
 
   /* --- Acordeón horizontal --- */
-  /* 500px de alto en 1600px de contenido (wireframe); más alto en pantallas
-     angostas para que el texto de la Misión siga entrando */
+  /* Se estira hasta el alto de la columna del equipo (foto + título + botones) */
   .acordeon-paneles {
     flex-direction: row;
-    height: max(500px, calc(950px - 28vw));
+    min-height: 420px;   /* el alto lo da la columna del equipo; 420px como mínimo para la Misión */
     container-type: inline-size;
   }
 

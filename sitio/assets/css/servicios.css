@@ -64,7 +64,7 @@
   gap: 1em;
   max-width: 65ch;
   font-family: var(--fuente-texto);
-  font-size: var(--fs-texto);
+  font-size: var(--fs-texto-grande);
   line-height: 1.5;
   color: var(--negro);
 }
@@ -191,7 +191,7 @@
   }
 
   .card-servicio__texto {
-    font-size: var(--fs-texto);
+    font-size: var(--fs-texto-grande);
   }
 
   .card-servicio__botones {

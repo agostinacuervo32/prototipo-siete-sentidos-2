@@ -155,7 +155,7 @@
 
 .card-beneficio__texto {
   font-family: var(--fuente-texto);
-  font-size: var(--fs-texto);
+  font-size: var(--fs-card-texto);
   line-height: 1.45;
 }
 
