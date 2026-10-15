@@ -1,0 +1,251 @@
+/* ==========================================================================
+   LO QUE NOS GUÍA — acordeón de Valores, Visión y Misión + bloque del equipo
+   Siempre hay un panel abierto (Misión por defecto); al tocar otro, se
+   contrae el abierto y se despliega el elegido (ver acordeon-paneles.js).
+   Móvil: acordeón vertical. Escritorio: acordeón horizontal; los títulos
+   de los paneles cerrados van en vertical y giran al abrirse.
+   ========================================================================== */
+
+.guia {
+  /* Foto "apretada" arriba y abajo: los bordes se curvan hacia adentro */
+  --mascara-apretada: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M0 0Q50 12 100 0V100Q50 88 0 100Z'/%3E%3C/svg%3E");
+  padding-bottom: var(--seccion-padding);
+}
+
+.guia__contenedor {
+  display: grid;
+  gap: var(--stack-md);
+}
+
+.guia__titulo,
+.equipo__titulo {
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--verde);
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* ==========================================================================
+   Acordeón de paneles
+   ========================================================================== */
+.acordeon-paneles {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radio);
+  overflow: hidden;
+}
+
+.acordeon-paneles__panel--amarillo { --panel-fondo: var(--amarillo-pastel); --panel-texto: var(--amarillo-oscuro); }
+.acordeon-paneles__panel--naranja  { --panel-fondo: var(--naranja-pastel);  --panel-texto: var(--naranja-oscuro); }
+.acordeon-paneles__panel--rosa     { --panel-fondo: var(--rosa-pastel);     --panel-texto: var(--rosa-oscuro); }
+
+.acordeon-paneles__panel {
+  position: relative;
+  background: var(--panel-fondo);
+  color: var(--panel-texto);
+}
+
+.acordeon-paneles__encabezado {
+  font: inherit;
+}
+
+.acordeon-paneles__boton {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.acordeon-paneles__panel.is-abierto .acordeon-paneles__boton {
+  cursor: default;
+}
+
+.acordeon-paneles__titulo {
+  display: inline-block;
+  font-family: var(--fuente-subtitulo);
+  font-weight: 500;
+  font-size: var(--fs-subtitulo);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* El contenido se abre con grid-template-rows 0fr → 1fr */
+.acordeon-paneles__contenido {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition:
+    grid-template-rows var(--duracion-larga) var(--ease),
+    visibility 0s linear var(--duracion-larga);
+}
+
+.acordeon-paneles__panel.is-abierto .acordeon-paneles__contenido {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition:
+    grid-template-rows var(--duracion-larga) var(--ease),
+    visibility 0s;
+}
+
+.acordeon-paneles__interior {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.acordeon-paneles__texto {
+  padding: 0 20px 22px;
+  font-family: var(--fuente-texto);
+  font-size: var(--fs-texto);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Equipo
+   ========================================================================== */
+.equipo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--stack-sm);
+}
+
+.equipo__botones {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.equipo__imagen {
+  width: 100%;
+  margin-top: var(--stack-md);
+  aspect-ratio: 357 / 253;
+  border-radius: var(--radio);
+  overflow: hidden;
+  -webkit-mask: var(--mascara-apretada) center / 100% 100% no-repeat;
+  mask: var(--mascara-apretada) center / 100% 100% no-repeat;
+}
+
+/* Fotos del equipo en blanco y negro */
+.equipo__imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: grayscale(1);
+}
+
+/* ==========================================================================
+   Escritorio (desde 1200px)
+   ========================================================================== */
+@media (min-width: 1200px) {
+
+  .guia__contenedor {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+
+  .guia__titulo {
+    grid-column: 1 / -1;
+    text-align: left;
+  }
+
+  /* --- Acordeón horizontal --- */
+  /* 500px de alto en 1600px de contenido (wireframe); más alto en pantallas
+     angostas para que el texto de la Misión siga entrando */
+  .acordeon-paneles {
+    flex-direction: row;
+    height: max(500px, calc(950px - 28vw));
+    container-type: inline-size;
+  }
+
+  .acordeon-paneles__panel {
+    flex: 0 0 22%;
+    min-width: 0;
+    overflow: hidden;
+    transition: flex var(--duracion-larga) var(--ease);
+  }
+
+  .acordeon-paneles__panel.is-abierto {
+    flex: 1 1 0;
+  }
+
+  /* En los cerrados, todo el panel es el botón */
+  .acordeon-paneles__boton {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    padding: 0;
+  }
+
+  .acordeon-paneles__panel.is-abierto .acordeon-paneles__boton {
+    z-index: 0;
+  }
+
+  /* El título va en vertical y, al abrirse, gira y sube */
+  .acordeon-paneles__titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transition:
+      top var(--duracion-larga) var(--ease),
+      transform var(--duracion-larga) var(--ease);
+  }
+
+  .acordeon-paneles__panel.is-abierto .acordeon-paneles__titulo {
+    top: 48px;
+    transform: translate(-50%, 0) rotate(0deg);
+  }
+
+  /* El texto no ocupa lugar en el panel y siempre tiene el ancho del panel
+     abierto (100% − 2 × 22%), así no se reacomoda mientras el panel crece */
+  .acordeon-paneles__contenido,
+  .acordeon-paneles__panel.is-abierto .acordeon-paneles__contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    grid-template-rows: 1fr;
+    width: 56cqw;
+    height: 100%;
+    padding: 124px clamp(32px, 2.5vw, 48px) 48px;
+    opacity: 0;
+    transition:
+      opacity var(--duracion-corta) var(--ease),
+      visibility 0s linear var(--duracion-corta);
+  }
+
+  .acordeon-paneles__panel.is-abierto .acordeon-paneles__contenido {
+    opacity: 1;
+    transition:
+      opacity var(--duracion-larga) var(--ease) 200ms,
+      visibility 0s;
+  }
+
+  .acordeon-paneles__interior {
+    overflow: visible;
+  }
+
+  .acordeon-paneles__texto {
+    padding: 0;
+  }
+
+  /* --- Equipo: imagen arriba, título y botones debajo --- */
+  .equipo {
+    margin-top: 0;
+  }
+
+  .equipo__imagen {
+    order: -1;
+    margin-top: 0;
+    margin-bottom: 32px;
+    aspect-ratio: 792 / 297;   /* medida del wireframe */
+  }
+
+  .equipo__botones {
+    margin-top: 28px;
+  }
+}

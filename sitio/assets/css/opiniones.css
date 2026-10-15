@@ -1,0 +1,181 @@
+/* ==========================================================================
+   OPINIONES — reseñas reales de Google Maps en un carrusel en loop
+   En reposo pasan solas y se pueden arrastrar; al tocar una flecha el
+   carrusel se frena y avanza card por card (ver carrusel.js).
+   Móvil: título con las flechas a la derecha y el carrusel debajo, recortado
+   en los bordes de la pantalla. Escritorio: título a la izquierda y
+   carrusel a la derecha entre flechas.
+   ========================================================================== */
+
+.opiniones {
+  padding-bottom: var(--seccion-padding);
+  overflow-x: clip;
+}
+
+.opiniones__contenedor {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 24px 10px;
+}
+
+.opiniones__titulo {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  font-size: var(--fs-h2-lateral);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--verde);
+}
+
+/* ---------- Flechas (íconos lineales dentro de un círculo) ---------- */
+.carrusel__flecha {
+  grid-row: 1;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: var(--borde-boton) solid var(--verde);
+  border-radius: var(--radio-full);
+  color: var(--verde);
+  transition:
+    background-color var(--duracion-corta) var(--ease),
+    transform var(--duracion-corta) var(--ease-rebote);
+}
+
+.carrusel__flecha--anterior { grid-column: 2; }
+.carrusel__flecha--siguiente { grid-column: 3; }
+
+.carrusel__flecha .icono {
+  width: 22px;
+  height: 22px;
+}
+
+@media (hover: hover) {
+  .carrusel__flecha:hover {
+    background-color: var(--verde-pastel);
+  }
+}
+
+.carrusel__flecha:active {
+  transform: scale(.9);
+}
+
+/* ---------- Carrusel (a todo el ancho de la pantalla en móvil) ---------- */
+.carrusel {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-inline: calc(-1 * var(--margen));
+  padding-inline: var(--margen);
+  overflow: hidden;
+  touch-action: pan-y;   /* el arrastre horizontal lo maneja carrusel.js */
+}
+
+.carrusel__pista {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  width: max-content;
+  will-change: transform;
+}
+
+/* ---------- Card de reseña: franja con estrellas + cuerpo, separados 3px ---------- */
+.card-resena {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: min(320px, 80vw);
+  flex: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.card-resena__estrellas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  border-radius: var(--radio) var(--radio) 0 0;
+  background: var(--verde-pastel);
+  color: var(--verde);   /* verde sobre menta: 6,0:1 */
+}
+
+.card-resena__estrellas svg {
+  width: 24px;
+  height: 24px;
+}
+
+.card-resena__texto {
+  flex: 1;
+  margin: 0;
+  padding: 20px 22px;
+  border-radius: 0 0 var(--radio) var(--radio);
+  background: var(--verde-pastel);
+  color: var(--negro);
+  font-family: var(--fuente-texto);
+  font-size: var(--fs-texto);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   Escritorio
+   ========================================================================== */
+@media (min-width: 1200px) {
+
+  /* Título con las flechas debajo, una al lado de la otra;
+     el carrusel ocupa todo el resto del ancho */
+  .opiniones__contenedor {
+    grid-template-columns: 44px minmax(0, 244px) minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-content: center;
+    gap: 28px 12px;
+  }
+
+  .opiniones__titulo {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .carrusel__flecha {
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .carrusel__flecha--anterior { grid-column: 1; }
+  .carrusel__flecha--siguiente { grid-column: 2; justify-self: start; }
+
+  .carrusel {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    margin-left: clamp(16px, 2.08vw, 40px);
+    margin-right: 0;
+    padding-inline: 0;
+  }
+
+  .carrusel__pista {
+    gap: 20px;
+  }
+
+  .card-resena {
+    width: 411px;   /* medida del wireframe */
+  }
+
+  .card-resena__estrellas {
+    gap: 10px;
+    height: 65px;
+  }
+
+  .card-resena__estrellas svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .card-resena__texto {
+    padding: 24px 28px;
+  }
+}
