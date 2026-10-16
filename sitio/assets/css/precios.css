@@ -1,0 +1,188 @@
+/* ==========================================================================
+   PRECIOS Y FORMAS DE PAGO (Apoyo escolar)
+   Tres cards con la misma estructura (card-plan): una por nivel con su
+   precio por hora y el plan mensual destacado (otro relleno + etiqueta).
+   Debajo, las notas (qué incluye y que los servicios son arancelados) y el
+   link al acompañamiento integral.
+   Móvil: cards apiladas. Desde 768px: tres en fila.
+   ========================================================================== */
+
+.precios {
+  padding-bottom: var(--seccion-padding);
+}
+
+/* ---------- Encabezado ---------- */
+.precios__encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.precios__titulo {
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: var(--verde);
+  text-wrap: balance;
+}
+
+.precios__bajada {
+  max-width: 30em;
+  font-family: var(--fuente-subtitulo);
+  font-weight: 300;
+  font-size: var(--fs-bajada);
+  line-height: 1.35;
+  color: var(--negro);
+}
+
+/* ---------- Grilla ---------- */
+.precios__grilla {
+  display: grid;
+  gap: 24px;   /* deja lugar a la etiqueta del plan destacado */
+  margin-top: var(--stack-md);
+}
+
+/* ---------- Card de plan ---------- */
+.card-plan--verde    { --card-fondo: var(--verde-pastel);    --card-medio: var(--verde);    --card-texto: var(--verde-oscuro); }
+.card-plan--rosa     { --card-fondo: var(--rosa-pastel);     --card-medio: var(--rosa);     --card-texto: var(--rosa-oscuro); }
+.card-plan--amarillo { --card-fondo: var(--amarillo-pastel); --card-medio: var(--amarillo); --card-texto: var(--amarillo-oscuro); }
+
+.card-plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 24px 28px;
+  border-radius: var(--radio);
+  background: var(--card-fondo);
+  color: var(--card-texto);
+  text-align: center;
+  transition: background-color var(--duracion-corta) var(--ease);
+}
+
+/* Hover: el relleno sube un tono dentro de su familia */
+@media (hover: hover) {
+  .card-plan:hover {
+    background: color-mix(in srgb, var(--card-fondo) 82%, var(--card-medio));
+  }
+}
+
+.card-plan__titulo {
+  font-family: var(--fuente-subtitulo);
+  font-weight: 500;
+  font-size: var(--fs-subtitulo);
+  line-height: 1.2;
+}
+
+.card-plan__precio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px 8px;
+}
+
+.card-plan__monto {
+  font-family: var(--fuente-titulo);
+  font-weight: 800;
+  font-size: var(--fs-h2);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.card-plan__unidad,
+.card-plan__detalle {
+  font-family: var(--fuente-subtitulo);
+  font-weight: 300;
+  font-size: var(--fs-bajada);
+  line-height: 1.35;
+}
+
+/* El botón queda siempre abajo, alineado entre las cards */
+.card-plan__boton {
+  margin-top: auto;
+}
+
+.card-plan__precio,
+.card-plan__detalle {
+  margin-bottom: 16px;
+}
+
+/* Plan destacado: etiqueta en verde sobre el borde superior */
+.card-plan__etiqueta {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 4px 14px;
+  border-radius: var(--radio-full);
+  background: var(--verde);
+  color: var(--blanco);
+  font-family: var(--fuente-subtitulo);
+  font-weight: 400;
+  font-size: var(--fs-antetitulo);
+  line-height: 1.3;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------- Notas y link ---------- */
+.precios__notas {
+  display: grid;
+  gap: 4px;
+  margin-top: var(--stack-md);
+  font-size: var(--fs-aclaracion);
+  line-height: 1.4;
+  text-align: center;
+  color: var(--negro);
+}
+
+/* Forma abierta: subrayado lineal y flecha (como los links de las preguntas frecuentes) */
+.precios__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: fit-content;
+  margin: 20px auto 0;
+  color: var(--verde);
+  font-family: var(--fuente-subtitulo);
+  font-weight: 400;
+  font-size: var(--fs-boton);
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.precios__flecha {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  transition: transform var(--duracion-corta) var(--ease);
+}
+
+.precios__link:hover .precios__flecha {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Tablet y escritorio (desde 768px): tres cards en fila
+   ========================================================================== */
+@media (min-width: 768px) {
+
+  .precios__grilla {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, 2.29vw, 44px);
+    margin-top: 48px;
+  }
+
+  .card-plan {
+    padding: 44px 28px 32px;
+  }
+}
