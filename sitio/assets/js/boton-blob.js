@@ -41,8 +41,19 @@
   let activo = null;       // botón con el cursor encima
   let fantasma = null;     // su copia en color inverso
   let visible = false, presionado = false;
+  let corriendo = false;   // el loop solo corre con un botón activo o mientras el blob se va
+  let ultimoD = null;      // último trazado escrito, para no tocar el DOM si no cambió
 
   const N = 24;
+
+  // Al arrancar desde reposo, el blob aparece justo debajo del cursor
+  function arrancar() {
+    if (corriendo) return;
+    corriendo = true;
+    x = mx; y = my; vx = vy = 0;
+    dx = dy = dvx = dvy = 0;
+    requestAnimationFrame(tick);
+  }
 
   addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; visible = true; });
   document.documentElement.addEventListener('mouseleave', () => { visible = false; });
@@ -73,8 +84,10 @@
   document.addEventListener('pointerover', e => {
     const btn = botonDe(e.target);
     if (!btn || btn === activo) return;
+    mx = e.clientX; my = e.clientY; visible = true;
     if (activo) salir(activo);
     entrar(btn);
+    arrancar();
   });
 
   document.addEventListener('pointerout', e => {
@@ -155,7 +168,11 @@
     }
 
     const d = R < 0.3 ? '' : smoothClosed(pts);
-    path.setAttribute('d', d);
+    if (d !== ultimoD) {
+      path.setAttribute('d', d);
+      capa.style.clipPath = d ? `path('${d}')` : 'inset(100%)';
+      ultimoD = d;
+    }
 
     // La copia en color inverso sigue exactamente al botón real
     if (activo && fantasma) {
@@ -166,8 +183,12 @@
       fantasma.style.height = rect.height + 'px';
       fantasma.style.fontSize = getComputedStyle(activo).fontSize;
     }
-    capa.style.clipPath = d ? `path('${d}')` : 'inset(100%)';
 
+    // Sin botón activo y con el blob ya ido, el loop se frena hasta el próximo botón
+    if (!activo && !d) {
+      corriendo = false;
+      return;
+    }
     requestAnimationFrame(tick);
   }
 
@@ -183,6 +204,4 @@
     }
     return d + 'Z';
   }
-
-  requestAnimationFrame(tick);
 })();
