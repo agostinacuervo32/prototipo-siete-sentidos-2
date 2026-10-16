@@ -17,9 +17,9 @@
    - **REQUERIMIENTO OBLIGATORIO:** el header y el footer son exactamente iguales en todas las páginas, sin modificaciones. Se copian del Inicio (`<!-- HEADER -->` … `<!-- /HEADER -->` y `<!-- FOOTER -->` … `<!-- /FOOTER -->`).
 
 1. **Hero**
-   - **Distribución (captura `imagenes de referencia/Captura de pantalla 2026-10-16 134614.png`):** texto a la izquierda y composición a la derecha, con el video grande, tres fotos y el globo con la cola hacia la derecha. **REUTILIZA** `hero hero--pagina` y `hero__composicion--pagina` de Apoyo escolar, y `video-fondo.js`. Sin botones, como en el wireframe.
+   - **Distribución:** el wireframe (captura `imagenes de referencia/Captura de pantalla 2026-10-16 134614.png`) tenía la composición de Apoyo escolar, pero el video es vertical y quedaba cortado. Se cambió por la de Especialidades: video vertical a la derecha y, a la izquierda, una foto chica arriba, una más grande abajo y el globo con la cola hacia el video. **REUTILIZA** `hero hero--pagina`, `hero__composicion--especialidades` y `video-fondo.js`. Sin botones, como en el wireframe.
    - **Video:** `equipo/WhatsApp Video 2026-10-16 at 13.59.50.mp4`.
-   - **Fotos (PROVISORIO):** `novedades/galeria-cocina-docentes.jpg` arriba a la izquierda; el abrazo de Ana y Edith (`equipo/… 13.58.12 (4).jpeg`) en el medio; `apoyo-escolar/hero-mesa-juegos.jpg` abajo a la derecha (ya se usa en el hero de Apoyo escolar). Van en color, como en el resto de los heros.
+   - **Fotos (PROVISORIO):** `novedades/galeria-cocina-docentes.jpg` arriba y el abrazo de Ana y Edith (`equipo/… 13.58.12 (4).jpeg`) abajo. Van en color, como en el resto de los heros.
    - **Contenido (PROVISORIO):** el wireframe tiene los textos del Inicio como relleno. Textos armados con `brief.md`:
      - Antetítulo en mayúsculas: "NOSOTROS".
      - H1: "Educación y salud de la mano".
@@ -66,5 +66,5 @@
 ## Pendientes
 - Foto de Gabriela Cumpian (pediatra).
 - Textos definitivos del hero.
-- Fotos del hero: confirmar la selección (la de la mesa de juegos se repite con Apoyo escolar).
+- Fotos del hero: confirmar la selección.
 - Agradecimiento: confirmar si se corrige "se irradia hacia alrededor".
