@@ -420,6 +420,8 @@
     <!-- /SERVICIOS INCLUIDOS -->
 
     <!-- PRECIOS
+         PRUEBA — FORMA 1: cuatro cards de apoyo escolar (Inglés va en su
+         propia sección, debajo). Se compara con la FORMA 2 (#precios-2).
          Precios de informacion/precios-por-area.md (octubre 2026). Para
          actualizarlos, cambiá el monto de cada card (card-plan__monto). -->
     <section class="precios" id="precios" data-fondo="claro" aria-labelledby="precios-titulo">
@@ -453,11 +455,11 @@
 
           <!-- PROPUESTA — a validar: textos de la card de combinación.
                No lleva porcentaje: el descuento depende de la combinación. -->
-          <li class="card-plan card-plan--naranja card-plan--destacada card-plan--ancha">
+          <li class="card-plan card-plan--naranja card-plan--destacada">
             <span class="card-plan__etiqueta">Descuento especial</span>
             <h3 class="card-plan__titulo">Apoyo escolar + especialidad</h3>
             <p class="card-plan__detalle">Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología o pediatría y accedé a un descuento especial.</p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultá por tu combinación por WhatsApp (se abre en una pestaña nueva)">Consultá por tu combinación</a>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultá por tu combinación por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
           </li>
 
         </ul>
@@ -466,9 +468,6 @@
           <p>La merienda y el área protegida están incluidas en todas las formas de pago.</p>
           <p>Siete Sentidos es una fundación, pero sus servicios son arancelados.</p>
         </div>
-
-        <!-- #acompanamiento-integral: sección 5, todavía no está armada -->
-        <a class="precios__link" href="#acompanamiento-integral">¿Necesitás combinar apoyo escolar con una especialidad? <svg class="icono precios__flecha" viewBox="0 0 256 256" aria-hidden="true"><line x1="40" y1="128" x2="216" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="144 56 216 128 144 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg></a>
 
       </div>
     </section>
@@ -500,6 +499,126 @@
       </div>
     </section>
     <!-- /INGLES -->
+
+    <!-- PRECIOS (FORMA 2)
+         PRUEBA — FORMA 2: Inglés, Apoyo escolar (precio por nivel), Plan
+         mensual y Apoyo escolar + especialidad en una sola fila. Se compara
+         con la FORMA 1 (#precios). Al elegir una, se borra la otra.
+         Precios de informacion/precios-por-area.md (octubre 2026). -->
+    <section class="precios" id="precios-2" data-fondo="claro" aria-labelledby="precios-2-titulo">
+      <div class="contenedor">
+
+        <header class="precios__encabezado">
+          <h2 class="precios__titulo" id="precios-2-titulo">Precios y formas de pago</h2>
+          <p class="precios__bajada">Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual.</p>
+        </header>
+
+        <ul class="precios__grilla">
+
+          <li class="card-plan card-plan--rosa">
+            <h3 class="card-plan__titulo">Inglés</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$20.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20las%20clases%20de%20ingl%C3%A9s." target="_blank" rel="noopener" aria-label="Consultá por inglés por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
+          </li>
+
+          <li class="card-plan card-plan--verde">
+            <h3 class="card-plan__titulo">Apoyo escolar</h3>
+            <ul class="card-plan__niveles">
+              <li class="card-plan__nivel">
+                <span class="card-plan__nivel-nombre">Inicial y Primaria</span>
+                <span class="card-plan__precio"><span class="card-plan__monto">$12.000</span> <span class="card-plan__unidad">por hora</span></span>
+              </li>
+              <li class="card-plan__nivel">
+                <span class="card-plan__nivel-nombre">Secundaria</span>
+                <span class="card-plan__precio"><span class="card-plan__monto">$14.000</span> <span class="card-plan__unidad">por hora</span></span>
+              </li>
+            </ul>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultá por el apoyo escolar por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
+          </li>
+
+          <li class="card-plan card-plan--amarillo card-plan--destacada">
+            <span class="card-plan__etiqueta">10% de descuento</span>
+            <h3 class="card-plan__titulo">Plan mensual</h3>
+            <p class="card-plan__detalle">Abonando del 1 al 10 de cada mes.</p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20plan%20mensual%20de%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultá por el plan mensual por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
+          </li>
+
+          <li class="card-plan card-plan--naranja card-plan--destacada">
+            <span class="card-plan__etiqueta">Descuento especial</span>
+            <h3 class="card-plan__titulo">Apoyo escolar + especialidad</h3>
+            <p class="card-plan__detalle">Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología o pediatría y accedé a un descuento especial.</p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultá por tu combinación por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
+          </li>
+
+        </ul>
+
+        <div class="precios__notas">
+          <p>La merienda y el área protegida están incluidas en todas las formas de pago.</p>
+          <p>Siete Sentidos es una fundación, pero sus servicios son arancelados.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- /PRECIOS (FORMA 2) -->
+
+    <!-- PRECIOS (FORMA 3)
+         PRUEBA — FORMA 3 (referencia "Captura de pantalla 2026-10-15 222832"):
+         cinco cards en una fila, con el precio arriba de "por hora", botón
+         "Consultar" y la etiqueta girada en la esquina superior derecha.
+         Se compara con las FORMAS 1 y 2. Al elegir una, se borran las otras.
+         Precios de informacion/precios-por-area.md (octubre 2026). -->
+    <section class="precios precios--cinco" id="precios-3" data-fondo="claro" aria-labelledby="precios-3-titulo">
+      <div class="contenedor">
+
+        <header class="precios__encabezado">
+          <h2 class="precios__titulo" id="precios-3-titulo">Precios y formas de pago</h2>
+          <p class="precios__bajada">Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual.</p>
+        </header>
+
+        <ul class="precios__grilla">
+
+          <li class="card-plan card-plan--verde">
+            <h3 class="card-plan__titulo">Inicial y primaria</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$12.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20apoyo%20escolar%20de%20Inicial%20y%20Primaria." target="_blank" rel="noopener" aria-label="Consultar por el apoyo escolar de Inicial y primaria por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--rosa">
+            <h3 class="card-plan__titulo">Secundario</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$14.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20apoyo%20escolar%20de%20Secundaria." target="_blank" rel="noopener" aria-label="Consultar por el apoyo escolar de Secundario por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--naranja">
+            <h3 class="card-plan__titulo">Inglés</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$20.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20las%20clases%20de%20ingl%C3%A9s." target="_blank" rel="noopener" aria-label="Consultar por inglés por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--amarillo card-plan--destacada">
+            <span class="card-plan__etiqueta card-plan__etiqueta--esquina">10% OFF</span>
+            <h3 class="card-plan__titulo">Plan mensual</h3>
+            <p class="card-plan__detalle">Abonando del 1 al 10 de cada mes.</p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20plan%20mensual%20de%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultar por el plan mensual por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--verde card-plan--destacada">
+            <span class="card-plan__etiqueta card-plan__etiqueta--esquina">Descuento exclusivo</span>
+            <h3 class="card-plan__titulo">Apoyo escolar y especialidad</h3>
+            <p class="card-plan__detalle">Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología o pediatría.</p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultar por combinar apoyo escolar y una especialidad por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+        </ul>
+
+        <div class="precios__notas">
+          <p>La merienda y el área protegida están incluidas en todas las formas de pago.</p>
+          <p>Siete Sentidos es una fundación, pero sus servicios son arancelados.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- /PRECIOS (FORMA 3) -->
 
   </main>
 
