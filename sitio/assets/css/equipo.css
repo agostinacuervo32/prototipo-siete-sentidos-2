@@ -75,7 +75,6 @@
   left: 8px;
   right: 8px;
   bottom: 8px;
-  width: fit-content;
   padding: 8px 10px;
   border-radius: var(--radio-sm);
   background-color: var(--etiqueta-color);
@@ -189,7 +188,7 @@
   }
 
   .agradecimiento__imagen {
-    aspect-ratio: 775 / 300;   /* medida del wireframe */
+    aspect-ratio: 775 / 333;   /* 333px de alto para que se vea el grupo completo */
   }
 }
 
