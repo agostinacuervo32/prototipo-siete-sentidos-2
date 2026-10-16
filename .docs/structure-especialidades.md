@@ -63,21 +63,21 @@
    - CTA de cierre: "Hacé tu consulta" (**APROBADO**, al formulario).
 
 3. **Precios**
+   - **REUTILIZA** la sección de precios de Apoyo Escolar (`precios`, `card-plan`, `precios.css`): misma estructura, mismas clases y misma distribución (escritorio desde 1440px: las 5 cards en fila; tablet: de a dos; móvil: apiladas).
    - Título (PROVISORIO): "Precios de las especialidades".
-   - Bajada (PROVISORIO, con datos de `contexto.md`): "Cada especialidad tiene un precio fijo por hora y se abona el día del turno. Si la combinás con apoyo escolar, tenés un descuento especial."
-   - **REUTILIZA** las cards de plan de Apoyo Escolar (`card-plan`, `precios.css`), una por servicio, con los valores de `informacion/precios-por-area.md` (octubre 2026):
+   - Bajada (PROVISORIO, con datos de `contexto.md`): "Cada especialidad tiene un precio fijo por hora y se abona el día del turno."
+   - **Cinco cards**, con los valores de `informacion/precios-por-area.md` (octubre 2026). Solo llevan precio, salvo Servicios adicionales, que suma una descripción (`card-plan__detalle`):
      1. **Psicopedagogía:** $36.000 por hora.
      2. **Fonoaudiología:** $35.000 por hora.
      3. **Psicología:** $35.000 por hora.
-     4. **Pediatría y trámites:** $25.000. Incluye pediatría, fichas médicas, planillas ANSES y fichas para viajes de estudio (en el archivo figura como "Servicios adicionales").
-     5. **Acompañamiento integral** (destacada, etiqueta "Descuento exclusivo"): apoyo escolar + una o más especialidades. Sin monto: CTA a WhatsApp.
+     4. **Nutrición:** $40.000 por hora.
+     5. **Servicios adicionales:** $25.000. Descripción: "Pediatría, fichas médicas, planillas ANSES y fichas para viajes de estudio."
    - Cada card lleva el CTA "Consultar" a WhatsApp con el servicio en el mensaje (mismo criterio que Apoyo Escolar).
-   - Notas debajo de las cards: "Las especialidades se abonan el día del turno." · "Siete Sentidos es una fundación, pero sus servicios son arancelados." (**APROBADO**, FAQ del Inicio).
+   - Notas debajo de las cards: "Si combinás una especialidad con apoyo escolar, tenés un descuento especial." (PROVISORIO) · "Siete Sentidos es una fundación, pero sus servicios son arancelados." (**APROBADO**, FAQ del Inicio).
    - **ID de ancla:** `#precios`.
    - **REQUERIMIENTO OBLIGATORIO:** los precios se escriben en el HTML, en un único lugar por card, para poder actualizarlos.
    - **REQUERIMIENTO OBLIGATORIO:** no usar "accesible" para hablar de precios.
-   - **PENDIENTE:** si "por hora" es la unidad correcta en cada especialidad (o si es por sesión) y si pediatría y trámites se cobran por consulta.
-   - **A DEFINIR:** si se suma **Nutrición** ($40.000, figura en `precios-por-area.md` y en `horarios.md`, pero no en la lista de especialidades de `contexto.md`).
+   - **PENDIENTE:** si "por hora" es la unidad correcta en cada especialidad (o si es por sesión) y cuál es la unidad de Servicios adicionales (por consulta o por trámite).
    - **PENDIENTE:** qué obras sociales se aceptan y si los precios cambian con obra social.
 
 4. **Contacto (Formulario)**
@@ -131,7 +131,7 @@
 - Todos los textos marcados como PROVISORIO.
 - Botón de pausa del video del hero (en esta página y en Apoyo Escolar).
 - Unidad de cobro de cada especialidad (por hora o por sesión).
-- Si se incluye Nutrición.
+- Si Nutrición se suma también como especialidad en el hero y en la sección 2 (por ahora solo figura en Precios).
 - Obras sociales aceptadas.
 - Imagen definitiva de la sección 2a.
 - Si se hace un wireframe en Figma de esta página antes de pasarla a código.

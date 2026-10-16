@@ -38,6 +38,7 @@
   <link rel="stylesheet" href="/assets/css/acordeon-paneles.css">
   <link rel="stylesheet" href="/assets/css/integral.css">
   <link rel="stylesheet" href="/assets/css/beneficios.css">
+  <link rel="stylesheet" href="/assets/css/precios.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
@@ -92,7 +93,6 @@
 
           <div class="grupo-botones hero__botones">
             <a class="btn" href="#contacto">Pedí un turno</a>
-            <!-- #precios: sección 3 (Precios), todavía no está armada -->
             <a class="btn btn--secundario" href="#precios">Ver precios</a>
           </div>
         </div>
@@ -309,6 +309,63 @@
       </div>
     </section>
     <!-- /SERVICIOS INCLUIDOS -->
+
+    <!-- PRECIOS
+         Precios de informacion/precios-por-area.md (octubre 2026). Para
+         actualizarlos, cambiá el monto de cada card (card-plan__monto).
+         Bajada y notas PROVISORIAS (structure-especialidades.md, sección 3). -->
+    <section class="precios" id="precios" data-fondo="claro" aria-labelledby="precios-titulo">
+      <div class="contenedor">
+
+        <header class="precios__encabezado">
+          <h2 class="precios__titulo" id="precios-titulo">Precios de las especialidades</h2>
+          <p class="precios__bajada">Cada especialidad tiene un precio fijo por hora y se abona el día del turno.</p>
+        </header>
+
+        <ul class="precios__grilla">
+
+          <li class="card-plan card-plan--amarillo">
+            <h3 class="card-plan__titulo">Psicopedagogía</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$36.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20psicopedagog%C3%ADa." target="_blank" rel="noopener" aria-label="Consultar por psicopedagogía por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--naranja">
+            <h3 class="card-plan__titulo">Fonoaudiología</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$35.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20fonoaudiolog%C3%ADa." target="_blank" rel="noopener" aria-label="Consultar por fonoaudiología por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--rosa">
+            <h3 class="card-plan__titulo">Psicología</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$35.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20psicolog%C3%ADa." target="_blank" rel="noopener" aria-label="Consultar por psicología por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--verde">
+            <h3 class="card-plan__titulo">Nutrición</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$40.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20nutrici%C3%B3n." target="_blank" rel="noopener" aria-label="Consultar por nutrición por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+          <li class="card-plan card-plan--amarillo">
+            <h3 class="card-plan__titulo">Servicios adicionales</h3>
+            <!-- PENDIENTE: unidad de cobro (por hora, por consulta o por trámite) -->
+            <p class="card-plan__precio"><span class="card-plan__monto">$25.000</span></p>
+            <p class="card-plan__detalle">Pediatría, fichas médicas, planillas ANSES y fichas para viajes de estudio.</p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20los%20servicios%20adicionales." target="_blank" rel="noopener" aria-label="Consultar por los servicios adicionales por WhatsApp (se abre en una pestaña nueva)">Consultar</a>
+          </li>
+
+        </ul>
+
+        <div class="precios__notas">
+          <p>Si combinás una especialidad con apoyo escolar, tenés un descuento especial.</p>
+          <p>Siete Sentidos es una fundación, pero sus servicios son arancelados.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- /PRECIOS -->
 
   </main>
 
