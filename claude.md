@@ -44,7 +44,7 @@ sitio/                    ← raíz del sitio
 ```
 
 - Los links entre páginas apuntan a la carpeta: `<a href="/nosotros/">Nosotros</a>`. El Inicio es `/`.
-- **Rutas relativas (temporal):** por ahora las rutas a recursos y entre páginas son relativas (`assets/css/estilos.css` en el Inicio, `../assets/css/estilos.css` en las subpáginas), para poder ver el sitio con Live Server o con doble clic. Más adelante se vuelven a pasar a rutas que empiezan con `/`.
+- **Rutas desde la raíz:** las rutas a recursos y entre páginas empiezan con `/` (`/assets/css/variables.css`, `/nosotros/`), en todas las páginas por igual. Funcionan porque el deploy sirve `sitio/` como raíz del dominio. No volver a rutas relativas.
 - El header y el footer se repiten en cada página (copiados en cada `index.html`, no cargados por JS). Si cambia algo en uno, se actualiza en todas las páginas.
 - Los nombres de carpeta van en minúscula, sin tildes ni espacios, con guiones.
 
@@ -63,8 +63,9 @@ Una vez terminado el sitio se está evaluando **pasarlo a WordPress**. Todavía 
 
 ## Repositorio y deploy
 - **Repositorio de GitHub:** https://github.com/agostinacuervo32/sietesentidos
-- **Dominio:** `fundacionsietesentidos.com.ar`, todavía **no está activo**. Está en trámite el pago y la vinculación con **Hostinger**.
-- El código se sube al repositorio y desde ahí se hace el deploy al dominio.
+- **Vista previa actual (Vercel):** https://sietesentidos.vercel.app/. Vercel toma el repositorio de GitHub y despliega solo cada push a `main`, sirviendo `sitio/` como raíz.
+- **Dominio:** `fundacionsietesentidos.com.ar`, todavía **no está activo**. Está en trámite el pago y la vinculación con **Hostinger**. Cuando el dominio esté habilitado, probablemente el sitio pase de Vercel a Hostinger; todavía no está decidido cómo. Al hacer ese cambio, el contenido de `sitio/` tiene que quedar en la raíz del dominio para que las rutas con `/` sigan funcionando.
+- El código se sube al repositorio y desde ahí se hace el deploy (por ahora, a Vercel).
 - No hagas commits, push ni configures el deploy sin que yo lo pida. Si algo del deploy no está definido en los `.md` (por ejemplo, cómo se conecta GitHub con Hostinger), preguntame antes de asumirlo.
 
 ## Fuente de verdad
@@ -137,4 +138,4 @@ Antes que nada, hace preguntas hasta estar 99% seguro de lo que tenés que hacer
 - **Menú móvil desplegado:** muestra los 5 links y el botón "Contactate".
 - **Carrusel de reseñas:** en reposo gira en loop infinito y se puede arrastrar; al tocar las flechas se detiene y avanza card por card, mostrando cada card completa.
 - **Tipografías:** se cargan desde Google Fonts con `<link>` (no hace falta instalarlas).
-- **Vista local:** con las rutas relativas, el sitio se abre con Live Server (`/sitio/index.html`) o con doble clic en el HTML.
+- **Vista del sitio:** se revisa en la vista previa de Vercel (https://sietesentidos.vercel.app/). Con las rutas desde la raíz, el sitio ya no se ve bien con doble clic ni abriendo `/sitio/index.html` en Live Server (no cargan estilos ni recursos).
