@@ -188,7 +188,7 @@
   }
 
   .agradecimiento__imagen {
-    aspect-ratio: 775 / 333;   /* 333px de alto para que se vea el grupo completo */
+    aspect-ratio: 531 / 333;   /* más alta para que se vea el grupo completo */
   }
 }
 
