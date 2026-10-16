@@ -60,7 +60,7 @@
 
 3. **Noticias**
    - **Distribución (captura `imagenes de referencia/Captura de pantalla 2026-10-16 110541.png`):** título "Noticias" a la izquierda y "Ordenar por" (Más recientes / Más antiguas) a la derecha; grilla de cards cuadradas con la foto de fondo y el texto encima; paginación con flechas y números debajo.
-   - **De a 6 por página** (pedido tuyo, en lugar de las 9 del wireframe): 3 columnas × 2 filas en escritorio, 2 columnas en tablet y 1 en móvil (`noticias.css`, `noticias.js`). Sin JS se ven todas.
+   - **De a 6 por página** (pedido tuyo, en lugar de las 9 del wireframe): 3 columnas × 2 filas en escritorio y 2 columnas en tablet. **En móvil, de a 3** (1 columna), para que no se haga muy largo (`noticias.css`, `noticias.js`). Sin JS se ven todas.
    - **Entrada de noticia:** todas usan el mismo marcado y las mismas clases (`card-noticia`, `card-noticia__imagen`, `card-noticia__titulo`, `card-noticia__extracto`, `card-noticia__boton`), con la fecha en `<time datetime="…">` (oculta a la vista, como en el wireframe; se usa para ordenar). En WordPress serían entradas (posts).
    - **Legibilidad:** degradado oscuro de abajo hacia arriba detrás del texto blanco; botón "Seguir leyendo" en la variante para fondos oscuros (`btn--oscuro`).
    - **PROVISORIO:** 12 noticias con título y descripción en lorem ipsum, fechas de ejemplo y la misma foto en todas (`sitio/assets/imagenes/novedades/noticia-provisoria.jpg`).

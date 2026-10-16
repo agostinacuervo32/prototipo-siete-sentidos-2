@@ -6,7 +6,7 @@
    ========================================================================== */
 
 .redes {
-  padding-bottom: var(--seccion-padding);
+  padding-bottom: 0;   /* la tarjeta queda apoyada sobre el footer */
 }
 
 .redes__contenedor {

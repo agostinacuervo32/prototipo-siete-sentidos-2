@@ -12,12 +12,16 @@
   padding-bottom: var(--seccion-padding);
 }
 
-/* ---------- Carrusel dentro de la retícula ---------- */
+/* ---------- Carrusel ----------
+   Móvil: a todo el ancho de la pantalla, sin corte a los costados (como la
+   galería). Desde tablet: dentro de la retícula. */
 .talleres .carrusel {
   --talleres-separacion: 16px;
   container-type: inline-size;
-  padding-top: 24px;   /* lugar para la pill que sobresale de la card */
   margin-top: -24px;
+  margin-inline: calc(-1 * var(--margen));
+  padding-top: 24px;   /* lugar para la pill que sobresale de la card */
+  padding-inline: var(--margen);
 }
 
 .talleres .carrusel__pista {
@@ -197,6 +201,11 @@
    Tablet: 2 cards · Escritorio: 3 cards · Pantallas grandes: 4 cards
    ========================================================================== */
 @media (min-width: 700px) {
+  .talleres .carrusel {
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
   .card-taller {
     width: calc((100cqi - var(--talleres-separacion)) / 2);
   }
