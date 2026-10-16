@@ -33,7 +33,6 @@
   <link rel="stylesheet" href="/assets/css/variables.css">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/botones.css">
-  <link rel="stylesheet" href="/assets/css/boton-video.css">
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/hero.css">
   <link rel="stylesheet" href="/assets/css/acordeon-paneles.css">
@@ -41,6 +40,7 @@
   <link rel="stylesheet" href="/assets/css/como-trabajamos.css">
   <link rel="stylesheet" href="/assets/css/beneficios.css">
   <link rel="stylesheet" href="/assets/css/precios.css">
+  <link rel="stylesheet" href="/assets/css/ingles.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
@@ -102,10 +102,6 @@
         <div class="hero__composicion hero__composicion--pagina">
           <div class="hero__pieza hero__pieza--1 hero__media">
             <video class="hero__video" id="hero-video" src="/assets/videos/WhatsApp%20Video%202026-10-15%20at%2020.14.20.mp4" width="848" height="478" autoplay muted loop playsinline disablepictureinpicture disableremoteplayback preload="metadata" tabindex="-1" aria-hidden="true"></video>
-            <button class="boton-video" type="button" aria-controls="hero-video" aria-label="Pausar el video" data-video-pausa data-texto-pausar="Pausar el video" data-texto-reproducir="Reproducir el video">
-              <svg class="icono boton-video__pausar" viewBox="0 0 256 256" aria-hidden="true"><rect x="152" y="40" width="56" height="176" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><rect x="48" y="40" width="56" height="176" rx="8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-              <svg class="icono boton-video__reproducir" viewBox="0 0 256 256" aria-hidden="true"><path d="M72,39.88V216.12a8,8,0,0,0,12.15,6.69l144.08-88.12a7.82,7.82,0,0,0,0-13.38L84.15,33.19A8,8,0,0,0,72,39.88Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-            </button>
           </div>
           <figure class="hero__pieza hero__pieza--2 hero__foto hero__foto--mesa">
             <img src="/assets/imagenes/apoyo-escolar/hero-mesa.jpg" alt="Una docente sonríe junto a un grupo de estudiantes en una mesa de apoyo escolar" width="900" height="675" fetchpriority="high">
@@ -114,8 +110,8 @@
           <figure class="hero__pieza hero__pieza--4 hero__foto hero__foto--estudiantes">
             <img src="/assets/imagenes/apoyo-escolar/hero-estudiantes.jpg" alt="Estudiantes hacen la tarea en una mesa de la fundación, frente a una pared con mariposas y flores" width="675" height="900">
           </figure>
-          <figure class="hero__pieza hero__pieza--5 hero__foto hero__foto--grupo">
-            <img src="/assets/imagenes/apoyo-escolar/hero-grupo.jpg" alt="Un grupo de niños muestra los cuadros que pintaron en la fundación" width="1200" height="900">
+          <figure class="hero__pieza hero__pieza--5 hero__foto hero__foto--mesa-juegos">
+            <img src="/assets/imagenes/apoyo-escolar/hero-mesa-juegos.jpg" alt="Integrantes de la fundación sonríen junto a un grupo de niñas en una mesa de juegos" width="1200" height="900">
           </figure>
         </div>
 
@@ -455,6 +451,15 @@
             <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20plan%20mensual%20de%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultá por el plan mensual por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
           </li>
 
+          <!-- PROPUESTA — a validar: textos de la card de combinación.
+               No lleva porcentaje: el descuento depende de la combinación. -->
+          <li class="card-plan card-plan--naranja card-plan--destacada card-plan--ancha">
+            <span class="card-plan__etiqueta">Descuento especial</span>
+            <h3 class="card-plan__titulo">Apoyo escolar + especialidad</h3>
+            <p class="card-plan__detalle">Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología o pediatría y accedé a un descuento especial.</p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultá por tu combinación por WhatsApp (se abre en una pestaña nueva)">Consultá por tu combinación</a>
+          </li>
+
         </ul>
 
         <div class="precios__notas">
@@ -468,6 +473,33 @@
       </div>
     </section>
     <!-- /PRECIOS -->
+
+    <!-- INGLES
+         Precio de informacion/precios-por-area.md y horario de
+         informacion/horarios.md (octubre 2026). -->
+    <section class="ingles" id="ingles" data-fondo="claro" aria-labelledby="ingles-titulo">
+      <div class="contenedor ingles__contenedor">
+
+        <figure class="ingles__imagen">
+          <img src="/assets/imagenes/apoyo-escolar/ingles.jpg" alt="Una docente trabaja con una niña en un escritorio de la fundación" width="900" height="1200" loading="lazy">
+        </figure>
+
+        <div class="ingles__info">
+          <header class="ingles__encabezado">
+            <h2 class="ingles__titulo" id="ingles-titulo">Inglés</h2>
+            <p class="ingles__bajada">Clases de inglés en la fundación, martes y viernes de 18:00 a 19:00.</p>
+          </header>
+
+          <div class="card-plan card-plan--rosa ingles__card">
+            <h3 class="card-plan__titulo">Inglés</h3>
+            <p class="card-plan__precio"><span class="card-plan__monto">$20.000</span> <span class="card-plan__unidad">por hora</span></p>
+            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20las%20clases%20de%20ingl%C3%A9s." target="_blank" rel="noopener" aria-label="Consultá por inglés por WhatsApp (se abre en una pestaña nueva)">Consultá por inglés</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /INGLES -->
 
   </main>
 

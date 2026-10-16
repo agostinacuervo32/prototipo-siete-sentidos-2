@@ -170,7 +170,7 @@
 
 .hero__foto--estudiantes img { object-position: 40% 50%; }
 .hero__foto--mesa img { object-position: 50% 40%; }
-.hero__foto--grupo img { object-position: 50% 55%; }
+.hero__foto--mesa-juegos img { object-position: 50% 35%; }
 
 /* Globo con la cola a la derecha, mirando hacia la foto de al lado */
 .hero__globo--lateral::after {
@@ -192,21 +192,30 @@
   aspect-ratio: auto;
 }
 
+/* El video es decorativo: no tiene controles ni se puede interactuar con él */
 .hero__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  pointer-events: none;
 }
 
-.hero__media .boton-video {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
+/* Botones de las páginas internas: los textos son largos y, al crecer con el
+   hover, pasaban de una fila a dos y movían el diseño. Si la columna del
+   texto no tiene lugar para los dos botones crecidos, van siempre apilados. */
+.hero--pagina .hero__texto {
+  container-type: inline-size;
 }
 
-/* Móvil: la composición se recorta 12.5vw por lado; el botón queda a la vista */
-.hero__composicion .hero__media .boton-video {
-  right: calc(12.5vw + 12px);
+.hero--pagina .hero__botones {
+  flex-direction: column;
+  align-items: center;
+}
+
+@container (min-width: 600px) {
+  .hero--pagina .hero__botones {
+    flex-direction: row;
+  }
 }
 
 /* ---------- Entrada ---------- */
@@ -303,9 +312,7 @@
     border-radius: var(--radio);
   }
 
-  .hero__media .boton-video,
-  .hero__composicion .hero__media .boton-video {
-    right: 20px;
-    bottom: 20px;
+  .hero--pagina .hero__botones {
+    align-items: flex-start;
   }
 }

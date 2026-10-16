@@ -1,10 +1,11 @@
 /* ==========================================================================
    PRECIOS Y FORMAS DE PAGO (Apoyo escolar)
-   Tres cards con la misma estructura (card-plan): una por nivel con su
-   precio por hora y el plan mensual destacado (otro relleno + etiqueta).
+   Cuatro cards con la misma estructura (card-plan): una por nivel con su
+   precio por hora, y destacadas (otro relleno + etiqueta) el plan mensual
+   y la combinación de apoyo escolar con una especialidad.
    Debajo, las notas (qué incluye y que los servicios son arancelados) y el
    link al acompañamiento integral.
-   Móvil: cards apiladas. Desde 768px: tres en fila.
+   Móvil: cards apiladas. Desde 768px: dos por fila. Desde 1200px: cuatro.
    ========================================================================== */
 
 .precios {
@@ -50,6 +51,7 @@
 .card-plan--verde    { --card-fondo: var(--verde-pastel);    --card-medio: var(--verde);    --card-texto: var(--verde-oscuro); }
 .card-plan--rosa     { --card-fondo: var(--rosa-pastel);     --card-medio: var(--rosa);     --card-texto: var(--rosa-oscuro); }
 .card-plan--amarillo { --card-fondo: var(--amarillo-pastel); --card-medio: var(--amarillo); --card-texto: var(--amarillo-oscuro); }
+.card-plan--naranja  { --card-fondo: var(--naranja-pastel);  --card-medio: var(--naranja);  --card-texto: var(--naranja-oscuro); }
 
 .card-plan {
   position: relative;
@@ -172,17 +174,64 @@
 }
 
 /* ==========================================================================
-   Tablet y escritorio (desde 768px): tres cards en fila
+   Tablet (desde 768px): los dos niveles en fila y las destacadas a lo ancho.
+   Escritorio (desde 1200px): los tres planes en fila y la combinación
+   (card-plan--ancha) a lo ancho debajo, en horizontal.
    ========================================================================== */
 @media (min-width: 768px) {
 
   .precios__grilla {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(16px, 2.29vw, 44px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px clamp(16px, 2.29vw, 44px);
     margin-top: 48px;
   }
 
   .card-plan {
     padding: 44px 28px 32px;
+  }
+
+  .card-plan--destacada {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .precios__grilla {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .card-plan--destacada {
+    grid-column: auto;
+  }
+
+  /* Combinación: título, texto y botón en una fila */
+  .card-plan--ancha {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: 32px 48px;
+    padding: 40px 48px;
+    text-align: left;
+  }
+
+  .card-plan--ancha .card-plan__titulo {
+    flex: 0 1 auto;
+    max-width: 9em;   /* "Apoyo escolar + / especialidad" en dos líneas */
+  }
+
+  .card-plan--ancha .card-plan__detalle {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .card-plan--ancha .card-plan__boton {
+    flex: none;
+    margin-top: 0;
+  }
+
+  .card-plan--ancha .card-plan__etiqueta {
+    left: 48px;
+    transform: translateY(-50%);
   }
 }
