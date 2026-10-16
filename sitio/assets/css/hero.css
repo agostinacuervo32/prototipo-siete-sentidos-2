@@ -154,7 +154,29 @@
   to   { transform: scale(1.04); }
 }
 
-/* ---------- Páginas internas: un video en lugar de la composición ---------- */
+/* ---------- Páginas internas: video + fotos y un globo ----------
+   Medidas de la referencia: recuadro de 853 × 552px. El video va arriba a
+   la derecha; debajo, una foto vertical a la izquierda, el globo (con la
+   cola hacia la derecha) y dos fotos abajo a la derecha. */
+.hero__composicion--pagina {
+  aspect-ratio: 853 / 552;
+}
+
+.hero__composicion--pagina .hero__pieza--1 { left: 31.89%; top: 0;      width: 68.11%; height: 66.67%; }
+.hero__composicion--pagina .hero__pieza--2 { left: 0;      top: 33.51%; width: 27.32%; height: 49.28%; }
+.hero__composicion--pagina .hero__pieza--3 { left: 14.19%; top: 89.13%; width: 26.73%; height: 10.87%; }
+.hero__composicion--pagina .hero__pieza--4 { left: 45.49%; top: 73.37%; width: 31.54%; height: 26.63%; }
+.hero__composicion--pagina .hero__pieza--5 { left: 81.83%; top: 73.73%; width: 18.17%; height: 26.09%; }
+
+.hero__foto--estudiantes img { object-position: 40% 50%; }
+.hero__foto--mesa img { object-position: 50% 40%; }
+
+/* Globo con la cola a la derecha, mirando hacia la foto de al lado */
+.hero__globo--lateral::after {
+  top: calc(50% - var(--cola) / 2);
+  right: calc(var(--cola) / -2.6);
+}
+
 .hero__media {
   position: relative;
   overflow: hidden;
@@ -162,6 +184,11 @@
   border-radius: 14px;
   background-color: var(--verde-pastel);
   animation: hero-foto .8s var(--ease) .15s both;
+}
+
+/* Dentro de la composición, el alto lo da la pieza */
+.hero__composicion .hero__media {
+  aspect-ratio: auto;
 }
 
 .hero__video {
@@ -174,6 +201,11 @@
   position: absolute;
   right: 12px;
   bottom: 12px;
+}
+
+/* Móvil: la composición se recorta 12.5vw por lado; el botón queda a la vista */
+.hero__composicion .hero__media .boton-video {
+  right: calc(12.5vw + 12px);
 }
 
 /* ---------- Entrada ---------- */
@@ -270,7 +302,8 @@
     border-radius: var(--radio);
   }
 
-  .hero__media .boton-video {
+  .hero__media .boton-video,
+  .hero__composicion .hero__media .boton-video {
     right: 20px;
     bottom: 20px;
   }
