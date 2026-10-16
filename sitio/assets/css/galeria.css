@@ -16,28 +16,7 @@
   scroll-margin-top: calc(var(--header-top-fijo) + var(--header-alto) + 16px);   /* que el menú fijo no tape el título */
 }
 
-/* ---------- Título con las flechas al lado ---------- */
-.galeria__encabezado {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: var(--stack-md);
-}
-
-.galeria__titulo {
-  margin-right: 8px;
-  font-family: var(--fuente-titulo);
-  font-weight: 800;
-  font-size: var(--fs-h2);
-  line-height: 1.1;
-  letter-spacing: -0.015em;
-  color: var(--verde);
-}
-
-.galeria__flechas {
-  display: flex;
-  gap: 10px;
-}
+/* El título con las flechas al lado es .carrusel-encabezado (carrusel.css) */
 
 /* ---------- Carrusel a todo el ancho de la pantalla ---------- */
 .galeria .carrusel {

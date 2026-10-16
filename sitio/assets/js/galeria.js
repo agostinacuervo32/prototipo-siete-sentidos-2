@@ -1,7 +1,7 @@
 /* ==========================================================================
    GALERÍA — abre una foto del mosaico en el visor (<dialog class="galeria-visor">)
-   El movimiento del mosaico lo maneja carrusel.js. Las copias del loop son
-   inertes (no reciben clics), así que la foto tocada se busca por posición.
+   El movimiento del mosaico lo maneja carrusel.js. La foto tocada se busca
+   por posición, así funciona igual en las fotos originales y en las copias.
    Si hubo arrastre, el clic no abre nada.
    ========================================================================== */
 

@@ -24,11 +24,15 @@
     const anterior = document.querySelector(`.carrusel__flecha--anterior[aria-controls="${pista.id}"]`);
     const siguiente = document.querySelector(`.carrusel__flecha--siguiente[aria-controls="${pista.id}"]`);
 
-    // Copias antes y después del set original para que el loop no tenga cortes
+    // Copias antes y después del set original para que el loop no tenga cortes.
+    // Quedan ocultas para lectores de pantalla y fuera del orden del teclado,
+    // pero se pueden tocar (ej. el botón de una card copiada).
     const copiar = elemento => {
       const copia = elemento.cloneNode(true);
       copia.setAttribute('aria-hidden', 'true');
-      copia.inert = true;
+      [copia, ...copia.querySelectorAll('[id]')].forEach(el => el.removeAttribute('id'));
+      copia.querySelectorAll('a, button, input, select, textarea, [tabindex]')
+        .forEach(el => el.setAttribute('tabindex', '-1'));
       return copia;
     };
     pista.prepend(...originales.map(copiar));

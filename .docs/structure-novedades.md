@@ -27,26 +27,35 @@
      - Doble CTA (de la captura): "Ver galería de talleres" (principal, ancla a `#galeria-talleres`, una galería más abajo en la página; PENDIENTE de capturas) y "Ver noticias" (secundario, ancla a `#noticias`).
    - **REQUERIMIENTO OBLIGATORIO:** en el primer vistazo tiene que quedar claro que acá están los talleres vigentes y las novedades de la fundación.
 
-2. **Talleres vigentes (niños y adultos)**
-   - Antetítulo: "TALLERES" · Título (PROVISORIO): "Talleres para chicos y adultos".
-   - **Separación por público (captura):** dos cards, "Talleres para niños" y "Talleres para adultos". **REUTILIZA** las cards con video de Apoyo escolar y Especialidades del Inicio (`servicios`, `card-servicio`, `servicios.css`): misma dinámica (en escritorio con cursor, la card elegida crece y se despega la ventana con la info; en móvil, la info visible y el video abajo). Textos PROVISORIOS. **Medios:** niños, video `sitio/assets/videos/WhatsApp Video 2026-10-14 at 19.35.57.mp4`; adultos, foto PROVISORIA `sitio/assets/imagenes/novedades/taller-arte-adultos.jpg` hasta tener su video.
+2. **Talleres vigentes (jóvenes y adultos)**
+   - **Separación por público (captura):** dos cards, "Talleres para jóvenes" y "Talleres para adultos". **REUTILIZA** las cards con video del Inicio (`servicios`, `card-servicio`), más altas en escritorio (`servicios--talleres`) para que entre la información: en escritorio con cursor, la card elegida crece y se despega la ventana con la info; en móvil, la info visible y el video abajo.
+   - **Medios:** jóvenes, video `sitio/assets/videos/WhatsApp Video 2026-10-14 at 19.35.57.mp4`; adultos, foto PROVISORIA `sitio/assets/imagenes/novedades/taller-arte-adultos.jpg` hasta tener su video.
+   - **Contenido de cada card:** una línea de presentación (PROVISORIO), la aclaración "Todos los talleres incluyen lo necesario para hacerlos: no hace falta llevar nada." y un **acordeón con los talleres** (**REUTILIZA** `acordeon.css` y `acordeon.js`, el de preguntas frecuentes del Inicio). Cada taller se despliega y muestra el día y lo que incluye.
+   - **REQUERIMIENTO OBLIGATORIO:** todos los talleres (los actuales y los que se sumen) incluyen todo lo necesario; en ninguno hay que llevar nada.
+   - **Talleres para jóvenes:**
+     1. **Taller de arte (pintura):** sábados a la mañana, una vez por mes. Incluye los materiales de pintura y el cuadro. Precio: **PENDIENTE** (en `brief.md`, $30.000).
+     2. **Taller de cocina:** $25.000. Incluye todos los ingredientes. Días y horario: **PENDIENTE**.
+     3. **Orientación vocacional:** para 4.° y 5.° año, a cargo de las psicólogas, desde octubre. Incluye todos los materiales. Días, horario y precio: **PENDIENTE**.
+   - **Talleres para adultos:**
+     1. **Taller de arte (pintura):** sábados a la tarde, una vez por mes. $50.000. Incluye los materiales de pintura y el cuadro.
+     2. **Taller de nutrición y alimentación saludable:** domingos y miércoles. Incluye todos los materiales. Horario y precio: **PENDIENTE**.
+     3. **Habitar el cuidado (solo en octubre):** por el mes de la lucha contra el cáncer de mama; trabaja alimentación protectora y antiinflamatoria, emociones y autocuidado. Incluye todos los materiales. Días, horario y precio: **PENDIENTE**.
+   - **CTA de cada card:** "Reservar mi lugar", a WhatsApp (3516095374) con el público en el mensaje prearmado. Sin botón "Ver talleres": los talleres se despliegan en la misma card.
+   - **ID de ancla:** `#talleres`.
+   - **REQUERIMIENTO OBLIGATORIO:** los días, lo que incluye y los precios se escriben en el HTML, en un único lugar por taller, para poder actualizarlos.
+   - **Talleres disponibles (captura `imagenes de referencia/Captura de pantalla 2026-10-16 115414.png`):** debajo de las dos cards y antes de la galería, con ancla `#talleres-disponibles`.
+     - Título "Talleres disponibles" con las flechas al lado (`carrusel-encabezado`, compartido con la galería).
+     - Carrusel de cards (**REUTILIZA** `carrusel.js`): pasa solo y, al tocar una flecha, se frena y avanza card por card. Se ven 4 cards en pantallas grandes, 3 en escritorio, 2 en tablet y 1 y un poco en móvil (`talleres.css`).
+     - **Card de taller (`card-taller`):** fondo pastel de una familia de color, foto enmarcada, nombre, descripción (PROVISORIO), a quién está dirigido ("Para jóvenes" o "Para adultos") y botón "Reservar mi lugar" a WhatsApp con el taller en el mensaje. Todas usan el mismo marcado (en WordPress, un bloque o tipo de entrada).
+     - **Etiquetas opcionales:** pill inclinada sobre la card (`card-taller__etiqueta`, ej. "Octubre rosa") y franja "Nuevo" cruzando la foto, que corre en loop (`card-taller__nuevo`; quieta con `prefers-reduced-motion`).
+     - **Cards (6):** Taller de arte (jóvenes), Habitar el cuidado (adultos; "Octubre rosa" + "Nuevo"), Taller de cocina (jóvenes), Taller de arte (adultos), Orientación vocacional (jóvenes), Nutrición y alimentación saludable (adultos). El taller de arte va en dos cards, una por público.
+     - **PENDIENTE:** fotos de Habitar el cuidado, Orientación vocacional y Nutrición (por ahora, un ícono de Phosphor sobre blanco).
    - **Galería de fotos (captura `imagenes de referencia/Captura de pantalla 2026-10-16 110530.png`):** debajo de las dos cards, con ancla `#galeria-talleres` (a donde lleva "Ver galería de talleres" del hero).
      - Título "Galería de fotos" con las flechas al lado.
      - Mosaico de fotos de distintos tamaños con las medidas exactas del wireframe (separación 22; filas de 88 y 136; anchos 130, 172, 194 y 236), que encajan sin dejar huecos y se repiten en loop (`galeria.css`).
      - **REUTILIZA** el carrusel de las reseñas del Inicio (`carrusel.js`, `carrusel.css`): pasa solo como un marquee, se puede arrastrar y, al tocar una flecha, se frena y avanza de a una columna.
      - Al tocar una foto se abre en un visor (`<dialog>`, `galeria.js`) con un recuadro blanco y 70vh de alto como máximo. Se cierra con la X, con Escape o tocando afuera.
      - **PROVISORIO:** las 9 fotos se eligieron entre las de la fundación (cocina, arte niños, arte adultos, actividades grupales y merienda). A confirmar cuáles son de talleres.
-   - **Detalle de cada taller (PENDIENTE de capturas):** debajo de las dos cards, con anclas `#talleres-ninos` y `#talleres-adultos` (los botones "Ver talleres" de las cards ya apuntan ahí).
-   - **Card de taller:** todas usan el mismo marcado y las mismas clases (ej. `card-taller`, `card-taller__titulo`, `card-taller__publico`, `card-taller__dias`, `card-taller__precio`), pensando en que en WordPress pasen a ser un bloque o un tipo de entrada. Cada card muestra nombre, a quién está dirigido, días y horario, precio y qué incluye.
-   - **Talleres (datos de `brief.md` y confirmados por vos):**
-     1. **Taller de arte para niños (pintura):** mensual, sábados a la mañana. Precio: **PENDIENTE** (en `brief.md` figura $30.000 para el taller de arte, incluye materiales y cuadro; confirmar si sigue siendo el precio del taller para niños).
-     2. **Taller de cocina para chicos:** $25.000, incluye todos los ingredientes. Días y horario: **PENDIENTE**.
-     3. **Taller de orientación vocacional:** para adolescentes de 4.° y 5.° año, a cargo de las psicólogas, desde octubre. Días, horario y precio: **PENDIENTE**.
-     4. **Taller de arte para adultos (pintura):** mensual, sábados a la tarde. $50.000. Qué incluye: **PENDIENTE** (confirmar si, como el de niños, incluye materiales y cuadro).
-     5. **Taller de nutrición / alimentación saludable para adultos:** domingos y miércoles. Horario y precio: **PENDIENTE**.
-   - **CTA de cada card:** "Quiero inscribirme" (PROVISORIO), a WhatsApp (3516095374) con el nombre del taller en el mensaje prearmado (mismo criterio que "Consultar" en las cards de precios).
-   - **ID de ancla:** `#talleres`.
-   - **REQUERIMIENTO OBLIGATORIO:** los precios, días y horarios se escriben en el HTML, en un único lugar por card, para poder actualizarlos.
    - **REQUERIMIENTO OBLIGATORIO:** no usar "accesible" para hablar de precios.
 
 3. **Noticias**
@@ -73,7 +82,7 @@
 |---|---|---|---|
 | Header | — | Contactate | WhatsApp |
 | 1. Hero | Ver talleres | — | `#talleres` |
-| 2. Talleres | Quiero inscribirme (en cada card) | — | WhatsApp |
+| 2. Talleres | Reservar mi lugar (en cada card) | — | WhatsApp |
 | 3. Noticias | Seguir leyendo (en cada card) | — | PENDIENTE (página de cada nota) |
 | 4. Redes | Ver en Instagram | — | Instagram |
 

@@ -47,7 +47,7 @@
   width: 100%;
   max-width: 616px;
   padding: clamp(20px, 2.08vw, 40px) clamp(20px, 2.6vw, 50px);
-  border-radius: var(--radio);
+  border-radius: var(--radio) var(--radio) 0 0;   /* abajo recto, como en el wireframe */
   background: var(--verde-pastel);
 }
 
