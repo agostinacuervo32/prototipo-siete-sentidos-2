@@ -57,8 +57,9 @@
   margin-top: var(--stack-md);
 }
 
+/* Horizontal, para que no ocupe tanto alto */
 .integral__imagen {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
   border-radius: var(--radio);
   overflow: hidden;
   background-color: var(--verde-pastel);
@@ -87,13 +88,14 @@
   }
 
   /* Con 4 paneles en media página, los cerrados van angostos (como en
-     Cómo trabajamos de Apoyo escolar) */
+     Cómo trabajamos de Apoyo escolar). El alto lo marca la imagen
+     horizontal y el acordeón se estira hasta ese alto. */
   .integral__contenido .acordeon-paneles {
     --panel-cerrado: 12cqw;
-    min-height: 480px;
+    min-height: 320px;
   }
 
   .integral__imagen {
-    aspect-ratio: auto;
+    align-self: start;
   }
 }

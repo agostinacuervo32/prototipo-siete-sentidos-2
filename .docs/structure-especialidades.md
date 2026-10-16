@@ -48,9 +48,9 @@
      - **Fonoaudiología:** Trabaja el desarrollo del habla y del lenguaje oral, la pronunciación y la comprensión.
      - **Psicología:** Acompaña lo emocional y lo conductual del niño, en diálogo con su familia y su escuela.
      - **Pediatría:** Revisiones preventivas, controles y fichas médicas, en coordinación con el resto del equipo.
-   - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): una imagen.
+   - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): una imagen horizontal (3:2), para que no ocupe tanto alto; el acordeón se estira hasta el alto de la imagen.
    - **Imagen (provisoria):** `sitio/assets/imagenes/especialidades/acompanamiento-integral.jpg` (juegos didácticos de madera junto a la ventana). PENDIENTE la imagen definitiva.
-   - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la imagen debajo.
+   - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la imagen horizontal (3:2) debajo.
    - CTA principal: "Consultá por el acompañamiento integral" (WhatsApp con mensaje prearmado).
    - **REQUERIMIENTO OBLIGATORIO:** no se promete un porcentaje de descuento: depende de la combinación y se invita a consultar por WhatsApp (`contexto.md`, sección 7).
    - **REQUERIMIENTO OBLIGATORIO:** pediatría se comunica como revisión y controles, no como atención pediátrica general (nota de `keywords.md`).
