@@ -41,7 +41,7 @@
    - **Imagen (PROVISORIO):** la ilustración de la taza del Inicio en todas las cards.
    - **Cards (textos de `donaciones.md`, mejorados, PROVISORIOS):**
      1. **Didácticos:** Juegos, material didáctico, hojas, lápices y cuadernos para las clases, y libros para el trabajo de los profesionales.
-     2. **Mantenimiento:** Pintura: pintamos seguido para que los espacios de la fundación estén siempre cuidados.
+     2. **Mantenimiento:** Pintura, pinceles, rodillos, tinner y otros materiales de pintura: pintamos seguido para que los espacios de la fundación estén siempre cuidados.
      3. **Higiene y limpieza:** Papel higiénico, rollos de cocina, palos de piso y trapos. Limpiamos a la mañana y a la tarde, como en una escuela.
      4. **Merienda:** Té, azúcar, mate cocido y galletitas comunes para la merienda de todos los niños durante su turno.
      5. **Mobiliario:** Sillas, mesas y manteles de hule. Con el uso diario, los manteles se renuevan cada 5 o 6 meses.

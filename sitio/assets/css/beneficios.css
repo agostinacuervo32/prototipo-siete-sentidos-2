@@ -56,7 +56,12 @@
 }
 
 /* ---------- Encabezado lateral (Doná): título y botón en una fila ----------
-   Móvil: el botón va debajo del título, centrado. */
+   Móvil: el botón va debajo del título, centrado.
+   Es la última sección de la página: sin padding abajo, el footer pone la separación. */
+.beneficios--encabezado-lateral {
+  padding-bottom: 0;
+}
+
 .beneficios--encabezado-lateral .beneficios__encabezado {
   gap: var(--stack-sm);
 }
