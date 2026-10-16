@@ -40,7 +40,8 @@
   <link rel="stylesheet" href="/assets/css/como-trabajamos.css">
   <link rel="stylesheet" href="/assets/css/beneficios.css">
   <link rel="stylesheet" href="/assets/css/precios.css">
-  <link rel="stylesheet" href="/assets/css/ingles.css">
+  <link rel="stylesheet" href="/assets/css/formulario.css">
+  <link rel="stylesheet" href="/assets/css/contacto.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
@@ -411,7 +412,6 @@
         </ul>
 
         <div class="grupo-botones beneficios__botones">
-          <!-- #contacto: sección 6 (formulario), todavía no está armada -->
           <a class="btn" href="#contacto">Hacé tu consulta</a>
         </div>
 
@@ -420,8 +420,6 @@
     <!-- /SERVICIOS INCLUIDOS -->
 
     <!-- PRECIOS
-         PRUEBA — FORMA 1: cuatro cards de apoyo escolar (Inglés va en su
-         propia sección, debajo). Se compara con la FORMA 2 (#precios-2).
          Precios de informacion/precios-por-area.md (octubre 2026). Para
          actualizarlos, cambiá el monto de cada card (card-plan__monto). -->
     <section class="precios" id="precios" data-fondo="claro" aria-labelledby="precios-titulo">
@@ -429,149 +427,6 @@
 
         <header class="precios__encabezado">
           <h2 class="precios__titulo" id="precios-titulo">Precios y formas de pago</h2>
-          <p class="precios__bajada">Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual.</p>
-        </header>
-
-        <ul class="precios__grilla">
-
-          <li class="card-plan card-plan--verde">
-            <h3 class="card-plan__titulo">Inicial y Primaria</h3>
-            <p class="card-plan__precio"><span class="card-plan__monto">$12.000</span> <span class="card-plan__unidad">por hora</span></p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20apoyo%20escolar%20de%20Inicial%20y%20Primaria." target="_blank" rel="noopener" aria-label="Consultá por el apoyo escolar de Inicial y Primaria por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-          <li class="card-plan card-plan--rosa">
-            <h3 class="card-plan__titulo">Secundaria</h3>
-            <p class="card-plan__precio"><span class="card-plan__monto">$14.000</span> <span class="card-plan__unidad">por hora</span></p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20apoyo%20escolar%20de%20Secundaria." target="_blank" rel="noopener" aria-label="Consultá por el apoyo escolar de Secundaria por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-          <li class="card-plan card-plan--amarillo card-plan--destacada">
-            <span class="card-plan__etiqueta">10% de descuento</span>
-            <h3 class="card-plan__titulo">Plan mensual</h3>
-            <p class="card-plan__detalle">Abonando del 1 al 10 de cada mes.</p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20plan%20mensual%20de%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultá por el plan mensual por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-          <!-- PROPUESTA — a validar: textos de la card de combinación.
-               No lleva porcentaje: el descuento depende de la combinación. -->
-          <li class="card-plan card-plan--naranja card-plan--destacada">
-            <span class="card-plan__etiqueta">Descuento especial</span>
-            <h3 class="card-plan__titulo">Apoyo escolar + especialidad</h3>
-            <p class="card-plan__detalle">Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología o pediatría y accedé a un descuento especial.</p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultá por tu combinación por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-        </ul>
-
-        <div class="precios__notas">
-          <p>La merienda y el área protegida están incluidas en todas las formas de pago.</p>
-          <p>Siete Sentidos es una fundación, pero sus servicios son arancelados.</p>
-        </div>
-
-      </div>
-    </section>
-    <!-- /PRECIOS -->
-
-    <!-- INGLES
-         Precio de informacion/precios-por-area.md y horario de
-         informacion/horarios.md (octubre 2026). -->
-    <section class="ingles" id="ingles" data-fondo="claro" aria-labelledby="ingles-titulo">
-      <div class="contenedor ingles__contenedor">
-
-        <figure class="ingles__imagen">
-          <img src="/assets/imagenes/apoyo-escolar/ingles.jpg" alt="Una docente trabaja con una niña en un escritorio de la fundación" width="900" height="1200" loading="lazy">
-        </figure>
-
-        <div class="ingles__info">
-          <header class="ingles__encabezado">
-            <h2 class="ingles__titulo" id="ingles-titulo">Inglés</h2>
-            <p class="ingles__bajada">Clases de inglés en la fundación, martes y viernes de 18:00 a 19:00.</p>
-          </header>
-
-          <div class="card-plan card-plan--rosa ingles__card">
-            <h3 class="card-plan__titulo">Inglés</h3>
-            <p class="card-plan__precio"><span class="card-plan__monto">$20.000</span> <span class="card-plan__unidad">por hora</span></p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20las%20clases%20de%20ingl%C3%A9s." target="_blank" rel="noopener" aria-label="Consultá por inglés por WhatsApp (se abre en una pestaña nueva)">Consultá por inglés</a>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- /INGLES -->
-
-    <!-- PRECIOS (FORMA 2)
-         PRUEBA — FORMA 2: Inglés, Apoyo escolar (precio por nivel), Plan
-         mensual y Apoyo escolar + especialidad en una sola fila. Se compara
-         con la FORMA 1 (#precios). Al elegir una, se borra la otra.
-         Precios de informacion/precios-por-area.md (octubre 2026). -->
-    <section class="precios" id="precios-2" data-fondo="claro" aria-labelledby="precios-2-titulo">
-      <div class="contenedor">
-
-        <header class="precios__encabezado">
-          <h2 class="precios__titulo" id="precios-2-titulo">Precios y formas de pago</h2>
-          <p class="precios__bajada">Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual.</p>
-        </header>
-
-        <ul class="precios__grilla">
-
-          <li class="card-plan card-plan--rosa">
-            <h3 class="card-plan__titulo">Inglés</h3>
-            <p class="card-plan__precio"><span class="card-plan__monto">$20.000</span> <span class="card-plan__unidad">por hora</span></p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20las%20clases%20de%20ingl%C3%A9s." target="_blank" rel="noopener" aria-label="Consultá por inglés por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-          <li class="card-plan card-plan--verde">
-            <h3 class="card-plan__titulo">Apoyo escolar</h3>
-            <ul class="card-plan__niveles">
-              <li class="card-plan__nivel">
-                <span class="card-plan__nivel-nombre">Inicial y Primaria</span>
-                <span class="card-plan__precio"><span class="card-plan__monto">$12.000</span> <span class="card-plan__unidad">por hora</span></span>
-              </li>
-              <li class="card-plan__nivel">
-                <span class="card-plan__nivel-nombre">Secundaria</span>
-                <span class="card-plan__precio"><span class="card-plan__monto">$14.000</span> <span class="card-plan__unidad">por hora</span></span>
-              </li>
-            </ul>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultá por el apoyo escolar por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-          <li class="card-plan card-plan--amarillo card-plan--destacada">
-            <span class="card-plan__etiqueta">10% de descuento</span>
-            <h3 class="card-plan__titulo">Plan mensual</h3>
-            <p class="card-plan__detalle">Abonando del 1 al 10 de cada mes.</p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20el%20plan%20mensual%20de%20apoyo%20escolar." target="_blank" rel="noopener" aria-label="Consultá por el plan mensual por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-          <li class="card-plan card-plan--naranja card-plan--destacada">
-            <span class="card-plan__etiqueta">Descuento especial</span>
-            <h3 class="card-plan__titulo">Apoyo escolar + especialidad</h3>
-            <p class="card-plan__detalle">Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología o pediatría y accedé a un descuento especial.</p>
-            <a class="btn card-plan__boton" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20consultar%20por%20combinar%20apoyo%20escolar%20con%20una%20especialidad." target="_blank" rel="noopener" aria-label="Consultá por tu combinación por WhatsApp (se abre en una pestaña nueva)">Consultá por este plan</a>
-          </li>
-
-        </ul>
-
-        <div class="precios__notas">
-          <p>La merienda y el área protegida están incluidas en todas las formas de pago.</p>
-          <p>Siete Sentidos es una fundación, pero sus servicios son arancelados.</p>
-        </div>
-
-      </div>
-    </section>
-    <!-- /PRECIOS (FORMA 2) -->
-
-    <!-- PRECIOS (FORMA 3)
-         PRUEBA — FORMA 3 (referencia "Captura de pantalla 2026-10-15 222832"):
-         cinco cards en una fila, con el precio arriba de "por hora", botón
-         "Consultar" y la etiqueta girada en la esquina superior derecha.
-         Se compara con las FORMAS 1 y 2. Al elegir una, se borran las otras.
-         Precios de informacion/precios-por-area.md (octubre 2026). -->
-    <section class="precios precios--cinco" id="precios-3" data-fondo="claro" aria-labelledby="precios-3-titulo">
-      <div class="contenedor">
-
-        <header class="precios__encabezado">
-          <h2 class="precios__titulo" id="precios-3-titulo">Precios y formas de pago</h2>
           <p class="precios__bajada">Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual.</p>
         </header>
 
@@ -618,7 +473,81 @@
 
       </div>
     </section>
-    <!-- /PRECIOS (FORMA 3) -->
+    <!-- /PRECIOS -->
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto" data-fondo="claro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__contenedor">
+        <div class="contacto__tarjeta">
+          <h2 class="contacto__titulo" id="contacto-titulo">Contacto</h2>
+
+          <!-- Al enviar abre WhatsApp con un mensaje armado con los datos (formulario-whatsapp.js) -->
+          <form class="formulario" action="https://wa.me/5493516095374" method="get" target="_blank" novalidate data-formulario-whatsapp="5493516095374">
+
+            <div class="formulario__fila">
+
+              <div class="campo">
+                <div class="campo__caja">
+                  <input class="campo__control" type="text" id="contacto-nombre" name="nombre" placeholder=" " autocomplete="name" required aria-describedby="contacto-nombre-error" data-error-vacio="Falta tu nombre y apellido para saber con quién hablamos.">
+                  <label class="campo__label" for="contacto-nombre">Nombre y apellido</label>
+                </div>
+                <p class="campo__error" id="contacto-nombre-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+              </div>
+
+              <div class="campo campo--telefono">
+                <div class="campo__caja">
+                  <div class="campo__prefijo">
+                    <img class="campo__bandera" src="/assets/imagenes/banderas/ar.svg" alt="" width="30" height="20">
+                    <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    <select class="campo__prefijo-select" id="contacto-prefijo" name="prefijo" aria-label="Prefijo de país" data-campo-prefijo>
+                      <option value="+54" data-bandera="ar" selected>Argentina (+54)</option>
+                      <option value="+591" data-bandera="bo">Bolivia (+591)</option>
+                      <option value="+55" data-bandera="br">Brasil (+55)</option>
+                      <option value="+56" data-bandera="cl">Chile (+56)</option>
+                      <option value="+595" data-bandera="py">Paraguay (+595)</option>
+                      <option value="+51" data-bandera="pe">Perú (+51)</option>
+                      <option value="+598" data-bandera="uy">Uruguay (+598)</option>
+                    </select>
+                  </div>
+                  <input class="campo__control" type="tel" id="contacto-telefono" name="telefono" placeholder=" " inputmode="tel" autocomplete="tel-national" required aria-describedby="contacto-telefono-error" data-error-vacio="Falta el teléfono para poder contactarte." data-error-formato="Revisá el teléfono: tiene que tener al menos 8 números, con la característica.">
+                  <label class="campo__label" for="contacto-telefono">Teléfono</label>
+                </div>
+                <p class="campo__error" id="contacto-telefono-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+              </div>
+
+            </div>
+
+            <div class="campo campo--desplegable">
+              <div class="campo__caja">
+                <select class="campo__control" id="contacto-servicio" name="servicio" required aria-describedby="contacto-servicio-error" data-error-vacio="Elegí un servicio para que podamos orientarte.">
+                  <option value="" selected disabled hidden></option>
+                  <option>Apoyo escolar</option>
+                  <option>Psicopedagogía</option>
+                  <option>Fonoaudiología</option>
+                  <option>Psicología</option>
+                  <option>Pediatría</option>
+                  <option>Acompañamiento integral</option>
+                </select>
+                <label class="campo__label" for="contacto-servicio">Servicio de interés</label>
+                <svg class="icono campo__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              </div>
+              <p class="campo__error" id="contacto-servicio-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+            </div>
+
+            <div class="campo campo--mensaje">
+              <div class="campo__caja">
+                <textarea class="campo__control" id="contacto-mensaje" name="mensaje" placeholder=" " rows="4"></textarea>
+                <label class="campo__label" for="contacto-mensaje">Mensaje</label>
+              </div>
+            </div>
+
+            <button class="btn formulario__enviar" type="submit">Enviar</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /CONTACTO -->
 
   </main>
 
@@ -679,5 +608,7 @@
   <script src="/assets/js/acordeon-paneles.js" defer></script>
   <script src="/assets/js/agenda.js" defer></script>
   <script src="/assets/js/card-giro.js" defer></script>
+  <script src="/assets/js/campo-telefono.js" defer></script>
+  <script src="/assets/js/formulario-whatsapp.js" defer></script>
 </body>
 </html>
