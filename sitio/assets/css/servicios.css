@@ -75,7 +75,8 @@
   margin-top: 8px;
 }
 
-/* ---------- Video de fondo (sin controles, sin sonido, sin interacción) ---------- */
+/* ---------- Video de fondo (sin controles, sin sonido, sin interacción).
+   Si todavía no hay video, va una foto con el mismo recorte ---------- */
 .card-servicio__media {
   position: relative;
   aspect-ratio: 357 / 210;
@@ -84,13 +85,19 @@
   background: var(--verde-pastel);
 }
 
-.card-servicio__video {
+.card-servicio__video,
+.card-servicio__imagen {
   width: 100%;
   height: 100%;
   max-width: none;
   object-fit: cover;
   pointer-events: none;
   user-select: none;
+}
+
+/* Las fotos (verticales) se recortan a la altura de las personas */
+.card-servicio__imagen {
+  object-position: 50% 62%;
 }
 
 /* El nombre sobre el video solo se usa en escritorio */

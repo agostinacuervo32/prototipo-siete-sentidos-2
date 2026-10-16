@@ -96,26 +96,21 @@ Leé `.docs/instructions.md` para saber cómo accionar.
 ### Si dos archivos se contradicen
 No elijas por tu cuenta: avisame cuál es la contradicción y esperá que te diga cuál manda.
 
-## Wireframe de Figma (Inicio)
-El Inicio ya está diseñado en un **wireframe de baja fidelidad** en Figma. Tenés que **copiarlo con el MCP de Figma**:
+## Wireframes de Figma (capturas)
+Los diseños están en Figma (el Inicio, en un **wireframe de baja fidelidad** con los frames "Home – Escritorio" de 1920 px e "iPhone 16" de 393 px), pero **no se usa el MCP de Figma** (requiere un plan pago). En su lugar, **te guiás por las capturas de pantalla que te envío desde Figma**.
 
-- **Archivo:** https://www.figma.com/design/4FoHQGNjn1p9V0ZW2LaXiU/wireframes-en-baja-del-inicio?node-id=0-1
-- **fileKey:** `4FoHQGNjn1p9V0ZW2LaXiU` · **nodeId:** `0:1`
-- **Frames:** "Home – Escritorio" (1920 px) y "iPhone 16" (393 px).
-
-Cómo usarlo:
-1. Antes de llamar a `get_design_context`, cargá el skill `figma-design-to-code` (obligatorio).
-2. Para cada sección, ubicá su nodo en los dos frames (escritorio y móvil) con `get_metadata`, y traé `get_design_context` y `get_screenshot` **solo de esa sección**.
-3. Del wireframe se copia: **estructura, distribución, orden de los elementos, medidas, radios, espaciados y textos**.
-4. Del wireframe **no** se copia:
+Cómo usarlas:
+1. Para cada sección, trabajá con las capturas que te mande de esa sección (escritorio y móvil). Si falta alguna, o no se lee una medida o un texto, preguntame en vez de suponerlo.
+2. De las capturas se copia: **estructura, distribución, orden de los elementos, medidas, radios, espaciados y textos**.
+3. De las capturas **no** se copia:
    - **Colores:** el wireframe está en escala de grises. Los colores salen de `style.md`.
    - **Tipografía Inter:** es un placeholder. Botones y menú van en Lexend, según `style.md`.
    - Imágenes grises de placeholder: no se reemplazan por imágenes inventadas.
-5. Las instrucciones para traducir el wireframe están repartidas entre `structure.md` (qué va en cada sección y cómo se distribuye) y `style.md` (cómo se ve). Si el wireframe y estos archivos no coinciden, o algo del wireframe no está resuelto (ver "A definir" y "Pendientes" en `structure.md`), preguntame antes de decidir.
+4. Las instrucciones para traducir el wireframe están repartidas entre `structure.md` (qué va en cada sección y cómo se distribuye) y `style.md` (cómo se ve). Si el wireframe y estos archivos no coinciden, o algo del wireframe no está resuelto (ver "A definir" y "Pendientes" en `structure.md`), preguntame antes de decidir.
 
 ## Cómo trabajamos
 - Una sección por vez, en el orden de `structure.md`, y solo cuando yo la pida.
-- Para cada sección: leé su apartado en `structure.md`, los componentes que use en `style.md`, sus textos en `contexto.md` y su nodo en Figma. Recién después escribí código.
+- Para cada sección: leé su apartado en `structure.md`, los componentes que use en `style.md`, sus textos en `contexto.md` y las capturas de Figma que te envíe. Recién después escribí código.
 - No crear ni modificar archivos sin que yo lo pida explícitamente.
 - Ante cualquier dato de negocio que falte (precios, horarios, reseñas, fotos, obras sociales, números), preguntar en vez de completar.
 - Los textos se copian tal cual de `structure.md` y `contexto.md`. No reescribirlos ni "mejorarlos" sin que yo lo pida.

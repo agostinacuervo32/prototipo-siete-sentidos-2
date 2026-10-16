@@ -331,3 +331,32 @@
     align-items: flex-start;
   }
 }
+
+/* ==========================================================================
+   Hero centrado (Novedades): solo texto, sin composición de fotos.
+   Las cards de talleres van pegadas debajo, como en el wireframe.
+   ========================================================================== */
+.hero--centrado {
+  padding-bottom: var(--stack-lg);
+}
+
+@media (min-width: 1024px) {
+  .hero--centrado .hero__contenedor {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero--centrado .hero__texto {
+    align-items: center;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero--centrado .hero__titulo {
+    max-width: 20em;
+  }
+
+  .hero--centrado .hero__botones {
+    justify-content: center;
+    align-items: center;
+  }
+}

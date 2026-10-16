@@ -30,55 +30,24 @@
   color: var(--verde);
 }
 
-/* ---------- Flechas (íconos lineales dentro de un círculo) ---------- */
-.carrusel__flecha {
+/* ---------- Flechas (estilo común en carrusel.css) ---------- */
+.opiniones .carrusel__flecha {
   grid-row: 1;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  border: var(--borde-boton) solid var(--verde);
-  border-radius: var(--radio-full);
-  color: var(--verde);
-  transition:
-    background-color var(--duracion-corta) var(--ease),
-    transform var(--duracion-corta) var(--ease-rebote);
 }
 
-.carrusel__flecha--anterior { grid-column: 2; }
-.carrusel__flecha--siguiente { grid-column: 3; }
-
-.carrusel__flecha .icono {
-  width: 22px;
-  height: 22px;
-}
-
-@media (hover: hover) {
-  .carrusel__flecha:hover {
-    background-color: var(--verde-pastel);
-  }
-}
-
-.carrusel__flecha:active {
-  transform: scale(.9);
-}
+.opiniones .carrusel__flecha--anterior { grid-column: 2; }
+.opiniones .carrusel__flecha--siguiente { grid-column: 3; }
 
 /* ---------- Carrusel (a todo el ancho de la pantalla en móvil) ---------- */
-.carrusel {
+.opiniones .carrusel {
   grid-column: 1 / -1;
   grid-row: 2;
   margin-inline: calc(-1 * var(--margen));
   padding-inline: var(--margen);
-  overflow: hidden;
-  touch-action: pan-y;   /* el arrastre horizontal lo maneja carrusel.js */
 }
 
-.carrusel__pista {
-  display: flex;
-  align-items: stretch;
+.opiniones .carrusel__pista {
   gap: 12px;
-  width: max-content;
-  will-change: transform;
 }
 
 /* ---------- Card de reseña: franja con estrellas + cuerpo, separados 3px ---------- */
@@ -140,15 +109,15 @@
     align-self: end;
   }
 
-  .carrusel__flecha {
+  .opiniones .carrusel__flecha {
     grid-row: 2;
     align-self: start;
   }
 
-  .carrusel__flecha--anterior { grid-column: 1; }
-  .carrusel__flecha--siguiente { grid-column: 2; justify-self: start; }
+  .opiniones .carrusel__flecha--anterior { grid-column: 1; }
+  .opiniones .carrusel__flecha--siguiente { grid-column: 2; justify-self: start; }
 
-  .carrusel {
+  .opiniones .carrusel {
     grid-column: 3;
     grid-row: 1 / 3;
     align-self: center;
@@ -157,7 +126,7 @@
     padding-inline: 0;
   }
 
-  .carrusel__pista {
+  .opiniones .carrusel__pista {
     gap: 20px;
   }
 

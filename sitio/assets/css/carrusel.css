@@ -1,0 +1,21 @@
+/* ==========================================================================
+   CARRUSEL — piezas comunes (reseñas del Inicio y galería de Novedades)
+   En reposo pasa solo y se puede arrastrar; al tocar una flecha se frena
+   y avanza de a un elemento (ver carrusel.js). La distribución de cada
+   carrusel (dónde van el título y las flechas) va en el CSS de su sección.
+   ========================================================================== */
+
+/* Las flechas usan el botón circular de botones.css (.boton-circular) */
+
+/* ---------- Carrusel y pista ---------- */
+.carrusel {
+  overflow: hidden;
+  touch-action: pan-y;   /* el arrastre horizontal lo maneja carrusel.js */
+}
+
+.carrusel__pista {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  will-change: transform;
+}

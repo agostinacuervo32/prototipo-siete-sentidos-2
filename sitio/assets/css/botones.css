@@ -68,6 +68,42 @@
   --btn-inverso: var(--verde);
 }
 
+/* ---------- Botón circular con ícono (flechas, cerrar) ---------- */
+.boton-circular {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: var(--borde-boton) solid var(--verde);
+  border-radius: var(--radio-full);
+  background-color: var(--blanco);
+  color: var(--verde);
+  transition:
+    background-color var(--duracion-corta) var(--ease),
+    transform var(--duracion-corta) var(--ease-rebote);
+}
+
+.boton-circular .icono {
+  width: 22px;
+  height: 22px;
+}
+
+@media (hover: hover) {
+  .boton-circular:hover {
+    background-color: var(--verde-pastel);
+  }
+}
+
+.boton-circular:active {
+  transform: scale(.9);
+}
+
+.boton-circular:disabled {
+  opacity: .4;
+  pointer-events: none;
+}
+
 /* ---------- Estados ---------- */
 
 /* Hover con blob: el texto crece 3pt (la clase la pone boton-blob.js) */
