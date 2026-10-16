@@ -125,6 +125,8 @@
   width: 78%;
   height: 92%;
   object-fit: contain;
+  /* Los PNG traen mucho margen transparente: se agrandan y lo que sobra queda fuera del recuadro */
+  scale: 1.35;
 }
 
 .card-beneficio__titulo {
