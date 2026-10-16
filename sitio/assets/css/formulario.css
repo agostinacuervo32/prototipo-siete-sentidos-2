@@ -11,7 +11,7 @@
 .formulario {
   --campo-entorno: var(--blanco);
   --campo-fondo: var(--blanco);
-  --campo-borde: var(--verde);
+  --campo-borde: transparent;   /* los campos no llevan borde; solo se marca el error */
 
   display: grid;
   gap: 14px;

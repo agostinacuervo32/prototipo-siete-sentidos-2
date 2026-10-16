@@ -40,6 +40,7 @@
   max-width: 862px;
   margin-inline: auto;
   padding: 18px 18px 24px;
+  border: var(--borde-linea) solid var(--verde-oscuro);
   border-radius: var(--radio-lg);
   background: var(--verde-pastel);
 }
