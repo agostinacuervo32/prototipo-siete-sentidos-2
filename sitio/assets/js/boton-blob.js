@@ -3,7 +3,9 @@
    Hover: el cursor se convierte en un blob con resorte; dentro del blob se ve
    una copia del botón en el color inverso. Efecto magnético y texto +3pt.
    Presionado: el botón se rellena con el color del blob y el blob se va.
-   Se aplica a todos los elementos con la clase .btn.
+   Se aplica a todos los elementos con la clase .btn, también a los que se
+   crean después de cargar la página (ej. las copias del loop de carrusel.js):
+   los eventos se escuchan desde el documento.
    ========================================================================== */
 
 (function () {
@@ -13,8 +15,7 @@
 
   if (!puedeAnimar) return;
 
-  const botones = document.querySelectorAll('.btn');
-  if (!botones.length) return;
+  if (!document.querySelector('.btn')) return;
 
   document.documentElement.classList.add('blob-activo');
 
@@ -46,48 +47,66 @@
   addEventListener('pointermove', e => { mx = e.clientX; my = e.clientY; visible = true; });
   document.documentElement.addEventListener('mouseleave', () => { visible = false; });
 
-  botones.forEach(btn => {
-    btn.addEventListener('pointerenter', () => {
-      activo = btn;
-      btn.classList.add('is-abrazado');
-      path.style.fill = getComputedStyle(btn).getPropertyValue('--btn-blob');
+  const botonDe = objetivo => (objetivo instanceof Element ? objetivo.closest('.btn') : null);
 
-      fantasma = btn.cloneNode(true);
-      fantasma.removeAttribute('id');
-      fantasma.removeAttribute('href');
-      fantasma.removeAttribute('style');
-      fantasma.classList.remove('is-abrazado', 'is-presionado');
-      capa.replaceChildren(fantasma);
-    });
+  function entrar(btn) {
+    activo = btn;
+    btn.classList.add('is-abrazado');
+    path.style.fill = getComputedStyle(btn).getPropertyValue('--btn-blob');
 
-    // Mientras se mantiene presionado: botón relleno y sin blob
-    btn.addEventListener('pointerdown', () => {
-      presionado = true;
-      btn.classList.add('is-presionado');
-      R = 0;                       // el blob se va de golpe
-      dx = dy = dvx = dvy = 0;
-    });
+    fantasma = btn.cloneNode(true);
+    fantasma.removeAttribute('id');
+    fantasma.removeAttribute('href');
+    fantasma.removeAttribute('style');
+    fantasma.classList.remove('is-abrazado', 'is-presionado');
+    capa.replaceChildren(fantasma);
+  }
 
-    btn.addEventListener('pointerleave', () => {
-      if (activo === btn) activo = null;
-      presionado = false;
-      btn.classList.remove('is-abrazado', 'is-presionado');
-      btn.style.transform = '';
-    });
+  function salir(btn) {
+    if (activo === btn) activo = null;
+    presionado = false;
+    btn.classList.remove('is-abrazado', 'is-presionado');
+    btn.style.transform = '';
+  }
 
-    // Efecto magnético muy sutil (el protagonista es el blob)
-    btn.addEventListener('pointermove', e => {
-      const r = btn.getBoundingClientRect();
-      const ox = e.clientX - (r.left + r.width / 2);
-      const oy = e.clientY - (r.top + r.height / 2);
-      btn.style.transform = `translate(${ox * 0.045}px, ${oy * 0.06}px)`;
-    });
+  // Entrar y salir de un botón (pointerover/out burbujean, a diferencia de enter/leave)
+  document.addEventListener('pointerover', e => {
+    const btn = botonDe(e.target);
+    if (!btn || btn === activo) return;
+    if (activo) salir(activo);
+    entrar(btn);
+  });
+
+  document.addEventListener('pointerout', e => {
+    const btn = botonDe(e.target);
+    if (!btn || btn.contains(e.relatedTarget)) return;
+    salir(btn);
+  });
+
+  // Mientras se mantiene presionado: botón relleno y sin blob
+  document.addEventListener('pointerdown', e => {
+    const btn = botonDe(e.target);
+    if (!btn) return;
+    presionado = true;
+    btn.classList.add('is-presionado');
+    R = 0;                       // el blob se va de golpe
+    dx = dy = dvx = dvy = 0;
+  });
+
+  // Efecto magnético muy sutil (el protagonista es el blob)
+  document.addEventListener('pointermove', e => {
+    const btn = botonDe(e.target);
+    if (!btn || btn !== activo) return;
+    const r = btn.getBoundingClientRect();
+    const ox = e.clientX - (r.left + r.width / 2);
+    const oy = e.clientY - (r.top + r.height / 2);
+    btn.style.transform = `translate(${ox * 0.045}px, ${oy * 0.06}px)`;
   });
 
   // Al soltar (sobre el botón o fuera de él) vuelve a la normalidad
   const soltar = () => {
     presionado = false;
-    botones.forEach(b => b.classList.remove('is-presionado'));
+    document.querySelectorAll('.btn.is-presionado').forEach(b => b.classList.remove('is-presionado'));
   };
   addEventListener('pointerup', soltar);
   addEventListener('pointercancel', soltar);

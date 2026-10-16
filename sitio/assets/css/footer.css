@@ -28,10 +28,12 @@
   height: auto;
 }
 
-/* Móvil: los botones primero y los datos en grilla de 2 columnas */
+/* Móvil: los botones primero y los datos en grilla de 2 columnas
+   (en celulares muy chicos, menos de ~340px, pasan a 1 columna para que
+   "sietesentidos2023" no se salga de la pantalla) */
 .footer__columnas {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 18px 12px;
   width: 100%;
   max-width: 420px;

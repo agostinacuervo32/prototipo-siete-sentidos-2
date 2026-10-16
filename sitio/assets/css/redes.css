@@ -11,12 +11,14 @@
 
 .redes__contenedor {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);   /* nunca más ancha que la pantalla */
   justify-items: center;
   gap: var(--stack-md);
 }
 
 /* ---------- Texto ---------- */
 .redes__texto {
+  width: 100%;
   max-width: 26em;
   text-align: center;
 }
@@ -43,10 +45,10 @@
 .perfil-red {
   display: flex;
   align-items: center;
-  gap: clamp(20px, 1.67vw, 32px);
+  gap: clamp(14px, 1.67vw, 32px);
   width: 100%;
   max-width: 616px;
-  padding: clamp(20px, 2.08vw, 40px) clamp(20px, 2.6vw, 50px);
+  padding: clamp(16px, 2.08vw, 40px) clamp(16px, 2.6vw, 50px);
   border-radius: var(--radio) var(--radio) 0 0;   /* abajo recto, como en el wireframe */
   background: var(--verde-pastel);
 }
@@ -56,7 +58,7 @@
   display: flex;
   align-items: center;
   flex: none;
-  --perfil-foto: clamp(96px, 8.65vw, 166px);
+  --perfil-foto: clamp(64px, 18vw, 80px);   /* móvil: más chica para que la tarjeta entre en 320px */
   width: var(--perfil-foto);
   aspect-ratio: 1;
   padding: calc(var(--perfil-foto) * 0.14);   /* margen del logo dentro del círculo */
@@ -106,6 +108,10 @@
    Escritorio: texto y tarjeta lado a lado, centrados
    ========================================================================== */
 @media (min-width: 1024px) {
+  .perfil-red__foto {
+    --perfil-foto: clamp(96px, 8.65vw, 166px);
+  }
+
   .redes__contenedor {
     grid-template-columns: auto minmax(0, 616px);
     justify-content: center;

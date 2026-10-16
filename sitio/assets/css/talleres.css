@@ -118,9 +118,6 @@
 .card-taller__publico {
   align-self: flex-start;
   margin-top: auto;   /* abajo de todo, alineado entre cards */
-  padding: 4px 12px;
-  border: var(--borde-boton) solid var(--familia-oscuro);
-  border-radius: var(--radio-full);
   color: var(--familia-oscuro);
   font-family: var(--fuente-subtitulo);
   font-weight: 500;
