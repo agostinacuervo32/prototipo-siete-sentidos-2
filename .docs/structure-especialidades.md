@@ -1,4 +1,4 @@
-# Arquitectura de la página Especialidades (Fundación Siete Sentidos — Sitio institucional)
+# Estructura de la página Especialidades (Fundación Siete Sentidos — Sitio institucional)
 
 *Este documento define la "receta" de secciones de la página **Especialidades** (`sitio/especialidades/index.html`, URL `/especialidades/`). La página sigue el orden de las preguntas de una familia que sospecha que su hijo necesita algo más que apoyo escolar: qué especialidades hay y para qué sirve cada una, qué gana si las combina con el apoyo escolar, qué incluye sin costo adicional, cuánto cuesta cada una y cómo pedir un turno. Se respeta este flujo de arriba hacia abajo, sin agregar, quitar ni reordenar secciones.*
 
@@ -19,7 +19,7 @@
    - Si cambia algo del header o del footer, se actualiza en todos los `index.html`.
 
 1. **Hero con video (Introducción)**
-   - **REUTILIZA** el hero de las páginas internas de Apoyo Escolar (`hero hero--pagina` + `hero__composicion--pagina`), con la **misma distribución**: texto a la izquierda; a la derecha, el video arriba, una foto ancha abajo, dos fotos apiladas a la izquierda y un globo de diálogo (`hero__globo--lateral`) debajo de ellas.
+   - **REUTILIZA** el hero de las páginas internas de Apoyo Escolar (`hero hero--pagina` + `hero__composicion--pagina`), con una distribución propia (`hero__composicion--especialidades`, según la referencia en `imagenes de referencia/Captura de pantalla 2026-10-16 001341.png`): a la derecha, el video vertical, que es la pieza más grande; a la izquierda, una foto chica arriba, una foto más grande abajo y debajo el globo de diálogo (`hero__globo--lateral`) con la cola hacia el video.
    - **Escritorio:** dos columnas (texto + composición), como en Apoyo Escolar.
    - **Móvil:** el texto arriba y la composición debajo, recortada en los bordes laterales de la pantalla.
    - **Contenido (PROVISORIO):**
@@ -31,26 +31,26 @@
      - Video: `sitio/assets/videos/WhatsApp Video 2026-10-14 at 19.38.23.mp4` (indicado por vos).
      - Fotos (elegidas entre las de la fundación que no se usan en Inicio ni en Apoyo Escolar), en `sitio/assets/imagenes/especialidades/`:
        - `hero-encastre.jpg` (foto chica de arriba): encastre de cilindros de colores.
-       - `hero-consultorio.jpg` (foto vertical): dos niños trabajando en una sala de la fundación.
-       - `hero-materiales.jpg` (foto ancha): materiales didácticos de madera sobre un escritorio.
+       - `hero-consultorio.jpg` (foto grande de la izquierda): dos niños trabajando en una sala de la fundación.
    - **Interacción:** el video se reproduce sin sonido y en loop solo mientras está en pantalla, y con `prefers-reduced-motion` arranca pausado (**REUTILIZA** `video-fondo.js`).
    - **PENDIENTE:** botón de pausa del video. `video-fondo.js` ya lo soporta (`data-video-pausa`), pero Apoyo Escolar todavía no lo tiene en el HTML; se suma en las dos páginas a la vez para que queden iguales.
    - **REQUERIMIENTO OBLIGATORIO:** en el primer vistazo tiene que quedar claro qué especialidades hay, que trabajan junto con el apoyo escolar y cómo pedir un turno.
 
 2. **Acompañamiento integral (descuentos) + Servicios incluidos**
-   - Una sola sección con dos bloques: primero el descuento por combinar servicios, después lo que se incluye sin costo adicional.
-   - **ID de ancla:** `#acompanamiento-integral`.
+   - Dos bloques seguidos (en el HTML, dos `<section>` dentro del mismo tramo): primero el descuento por combinar servicios, después lo que se incluye sin costo adicional.
+   - **ID de ancla:** `#acompanamiento-integral` (2a) y `#servicios-incluidos` (2b).
 
    **2a. Acompañamiento integral**
    - Antetítulo: "ACOMPAÑAMIENTO INTEGRAL" · Título: "Combiná especialidades con apoyo escolar" (PROVISORIO).
    - Bajada (PROVISORIO): "Cuando un niño hace apoyo escolar y una o más especialidades en la fundación, docentes y profesionales comparten lo que observan y trabajan sobre los mismos objetivos. Además, combinar servicios tiene un descuento especial."
-   - **Bloques por especialidad (PROVISORIO):** Psicopedagogía, Fonoaudiología, Psicología y Pediatría, cada uno con foto, nombre y una línea de qué aborda:
+   - **Bloques por especialidad (PROVISORIO):** Psicopedagogía, Fonoaudiología, Psicología y Pediatría, cada panel con nombre y una línea de qué aborda, sin imagen:
      - **Psicopedagogía:** Acompaña las dificultades de aprendizaje: lectura, escritura, cálculo, atención y organización del estudio.
      - **Fonoaudiología:** Trabaja el desarrollo del habla y del lenguaje oral, la pronunciación y la comprensión.
      - **Psicología:** Acompaña lo emocional y lo conductual del niño, en diálogo con su familia y su escuela.
-     - **Pediatría:** Revisiones preventivas, controles y fichas médicas (no atención pediátrica general).
-   - **Escritorio (A DEFINIR):** fila de 4 bloques que se expanden y achican (misma mecánica de las cards de servicios del Inicio).
-   - **Móvil:** acordeón de paneles vertical (**REUTILIZA** `acordeon-paneles.js`), con un panel siempre abierto.
+     - **Pediatría:** Revisiones preventivas, controles y fichas médicas, en coordinación con el resto del equipo.
+   - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): una imagen.
+   - **Imagen (provisoria):** `sitio/assets/imagenes/especialidades/acompanamiento-integral.jpg` (juegos didácticos de madera junto a la ventana). PENDIENTE la imagen definitiva.
+   - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la imagen debajo.
    - CTA principal: "Consultá por el acompañamiento integral" (WhatsApp con mensaje prearmado).
    - **REQUERIMIENTO OBLIGATORIO:** no se promete un porcentaje de descuento: depende de la combinación y se invita a consultar por WhatsApp (`contexto.md`, sección 7).
    - **REQUERIMIENTO OBLIGATORIO:** pediatría se comunica como revisión y controles, no como atención pediátrica general (nota de `keywords.md`).
@@ -58,8 +58,8 @@
    **2b. Servicios incluidos (sin costo adicional)**
    - Título (PROVISORIO): "Qué incluye cada consulta".
    - Bajada (**APROBADO**, Inicio): "Miramos a cada niño de manera integral. Por eso, junto con cada clase o consulta, incluimos estos servicios sin costo adicional".
-   - **REUTILIZA** las cards de beneficios (`card-beneficio`, `card-giro.js`) con los textos **APROBADOS**: Área protegida, Merienda, Seguimiento con la escuela, Revisión pediátrica.
-   - **PENDIENTE:** si Merienda y Mesa de juegos aplican también a quienes van solo a una especialidad (`contexto.md` dice que la mesa de juegos es para los turnos de apoyo escolar de 2 horas o más). Por ahora no se incluye Mesa de juegos.
+   - **REUTILIZA** las cards de beneficios (`card-beneficio`, `card-giro.js`) con las 5 cards del Inicio en el mismo orden (Área protegida, Merienda, Seguimiento con la escuela, Revisión pediátrica y Mesa de juegos). Los textos son los **APROBADOS**, salvo Mesa de juegos.
+   - **Mesa de juegos (PROVISORIO):** en Especialidades la mesa de juegos se usa durante la consulta para trabajar con los pacientes. Texto: "Juegos y materiales que los profesionales usan durante la consulta para trabajar con cada niño."
    - CTA de cierre: "Hacé tu consulta" (**APROBADO**, al formulario).
 
 3. **Precios**
@@ -106,7 +106,7 @@
 | Elemento | Sección | Componente |
 |---|---|---|
 | Video de fondo | 1 | REUTILIZA `video-fondo.js` |
-| Bloques que se expanden (escritorio) / acordeón (móvil) | 2a | A DEFINIR / REUTILIZA `acordeon-paneles.js` |
+| Acordeón de paneles (horizontal en escritorio, vertical en móvil) | 2a | REUTILIZA `acordeon-paneles.js` |
 | Cards que giran con "Ver más" | 2b (móvil) | REUTILIZA `card-giro.js` |
 | Cards de precio | 3 | REUTILIZA `precios.css` |
 | Formulario → WhatsApp | 4 | REUTILIZA `formulario-whatsapp.js` y `campo-telefono.js` |
@@ -133,6 +133,5 @@
 - Unidad de cobro de cada especialidad (por hora o por sesión).
 - Si se incluye Nutrición.
 - Obras sociales aceptadas.
-- Si Merienda y Mesa de juegos aplican a quienes van solo a una especialidad.
-- Fotos de cada especialidad para los bloques de la sección 2a.
+- Imagen definitiva de la sección 2a.
 - Si se hace un wireframe en Figma de esta página antes de pasarla a código.

@@ -172,10 +172,20 @@
 .hero__foto--mesa img { object-position: 50% 40%; }
 .hero__foto--mesa-juegos img { object-position: 50% 35%; }
 
-/* Especialidades */
+/* Especialidades: recuadro de 768 × 593px. A la izquierda, una foto chica
+   arriba, una más grande abajo y el globo (con la cola hacia el video); a la
+   derecha, el video vertical, que es la pieza más grande. */
+.hero__composicion--especialidades {
+  aspect-ratio: 768 / 593;
+}
+
+.hero__composicion--especialidades .hero__pieza--1 { left: 50%;    top: 9.44%;  width: 50%;    height: 90.56%; }
+.hero__composicion--especialidades .hero__pieza--2 { left: 11.33%; top: 0;      width: 33.07%; height: 29.34%; }
+.hero__composicion--especialidades .hero__pieza--3 { left: 16.67%; top: 88.87%; width: 29.17%; height: 11.13%; }
+.hero__composicion--especialidades .hero__pieza--4 { left: 0;      top: 36.76%; width: 44.01%; height: 45.53%; }
+
 .hero__foto--encastre img { object-position: 50% 65%; }
 .hero__foto--consultorio img { object-position: 50% 70%; }
-.hero__foto--materiales img { object-position: 50% 55%; }
 
 /* Globo con la cola a la derecha, mirando hacia la foto de al lado */
 .hero__globo--lateral::after {
