@@ -4,8 +4,8 @@
    al borde superior con una animación; si se sale sin escribir, vuelve a
    bajar. Funciona solo con CSS: los inputs llevan placeholder=" " y el
    desplegable, una primera opción vacía (value="").
-   El fondo que rodea a los campos se declara con --campo-entorno, para que
-   el label cubra el borde al subir.
+   Al subir, el label lleva detrás una pill blanca para leerse sobre el
+   borde del campo. El fondo que rodea a los campos es --campo-entorno.
    ========================================================================== */
 
 .formulario {
@@ -95,13 +95,15 @@
     color var(--duracion-corta) var(--ease);
 }
 
-/* Al subir, el label tapa el borde: mitad color del entorno, mitad del campo */
+/* Al subir, el label queda sobre el borde del campo (donde cambia el color
+   del entorno al del campo); una pill blanca detrás lo hace legible */
 .campo__label::before {
   content: '';
   position: absolute;
-  inset: 0;
+  inset: -3px 0;
   z-index: -1;
-  background: linear-gradient(var(--campo-entorno) 50%, var(--campo-fondo) 50%);
+  border-radius: 50px;
+  background: var(--blanco);
   opacity: 0;
   transition: opacity var(--duracion-corta) var(--ease);
 }
