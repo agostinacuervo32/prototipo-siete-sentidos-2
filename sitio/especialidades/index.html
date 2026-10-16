@@ -39,6 +39,8 @@
   <link rel="stylesheet" href="/assets/css/integral.css">
   <link rel="stylesheet" href="/assets/css/beneficios.css">
   <link rel="stylesheet" href="/assets/css/precios.css">
+  <link rel="stylesheet" href="/assets/css/formulario.css">
+  <link rel="stylesheet" href="/assets/css/contacto.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
@@ -367,6 +369,82 @@
     </section>
     <!-- /PRECIOS -->
 
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto" data-fondo="claro" aria-labelledby="contacto-titulo">
+      <div class="contenedor contacto__contenedor">
+        <div class="contacto__tarjeta">
+          <h2 class="contacto__titulo" id="contacto-titulo">Contacto</h2>
+
+          <!-- Al enviar abre WhatsApp con un mensaje armado con los datos (formulario-whatsapp.js) -->
+          <form class="formulario" action="https://wa.me/5493516095374" method="get" target="_blank" novalidate data-formulario-whatsapp="5493516095374">
+
+            <div class="formulario__fila">
+
+              <div class="campo">
+                <div class="campo__caja">
+                  <input class="campo__control" type="text" id="contacto-nombre" name="nombre" placeholder=" " autocomplete="name" required aria-describedby="contacto-nombre-error" data-error-vacio="Falta tu nombre y apellido para saber con quién hablamos.">
+                  <label class="campo__label" for="contacto-nombre">Nombre y apellido</label>
+                </div>
+                <p class="campo__error" id="contacto-nombre-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+              </div>
+
+              <div class="campo campo--telefono">
+                <div class="campo__caja">
+                  <div class="campo__prefijo">
+                    <img class="campo__bandera" src="/assets/imagenes/banderas/ar.svg" alt="" width="30" height="20">
+                    <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                    <select class="campo__prefijo-select" id="contacto-prefijo" name="prefijo" aria-label="Prefijo de país" data-campo-prefijo>
+                      <option value="+54" data-bandera="ar" selected>Argentina (+54)</option>
+                      <option value="+591" data-bandera="bo">Bolivia (+591)</option>
+                      <option value="+55" data-bandera="br">Brasil (+55)</option>
+                      <option value="+56" data-bandera="cl">Chile (+56)</option>
+                      <option value="+595" data-bandera="py">Paraguay (+595)</option>
+                      <option value="+51" data-bandera="pe">Perú (+51)</option>
+                      <option value="+598" data-bandera="uy">Uruguay (+598)</option>
+                    </select>
+                  </div>
+                  <input class="campo__control" type="tel" id="contacto-telefono" name="telefono" placeholder=" " inputmode="tel" autocomplete="tel-national" required aria-describedby="contacto-telefono-error" data-error-vacio="Falta el teléfono para poder contactarte." data-error-formato="Revisá el teléfono: tiene que tener al menos 8 números, con la característica.">
+                  <label class="campo__label" for="contacto-telefono">Teléfono</label>
+                </div>
+                <p class="campo__error" id="contacto-telefono-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+              </div>
+
+            </div>
+
+            <div class="campo campo--desplegable">
+              <div class="campo__caja">
+                <select class="campo__control" id="contacto-servicio" name="servicio" required aria-describedby="contacto-servicio-error" data-error-vacio="Elegí un servicio para que podamos orientarte.">
+                  <option value="" selected disabled hidden></option>
+                  <option>Apoyo escolar</option>
+                  <option>Psicopedagogía</option>
+                  <option>Fonoaudiología</option>
+                  <option>Psicología</option>
+                  <option>Pediatría</option>
+                  <option>Nutrición</option>
+                  <option>Servicios adicionales</option>
+                  <option>Acompañamiento integral</option>
+                </select>
+                <label class="campo__label" for="contacto-servicio">Servicio de interés</label>
+                <svg class="icono campo__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              </div>
+              <p class="campo__error" id="contacto-servicio-error" hidden><svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><circle cx="128" cy="128" r="96" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="16"/><line x1="128" y1="136" x2="128" y2="80" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><circle cx="128" cy="172" r="12" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+            </div>
+
+            <div class="campo campo--mensaje">
+              <div class="campo__caja">
+                <textarea class="campo__control" id="contacto-mensaje" name="mensaje" placeholder=" " rows="4"></textarea>
+                <label class="campo__label" for="contacto-mensaje">Mensaje</label>
+              </div>
+            </div>
+
+            <button class="btn formulario__enviar" type="submit">Enviar</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- /CONTACTO -->
+
   </main>
 
   <!-- FOOTER -->
@@ -425,5 +503,7 @@
   <script src="/assets/js/video-fondo.js" defer></script>
   <script src="/assets/js/acordeon-paneles.js" defer></script>
   <script src="/assets/js/card-giro.js" defer></script>
+  <script src="/assets/js/campo-telefono.js" defer></script>
+  <script src="/assets/js/formulario-whatsapp.js" defer></script>
 </body>
 </html>

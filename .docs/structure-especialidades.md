@@ -83,7 +83,7 @@
 4. **Contacto (Formulario)**
    - **REUTILIZA** el formulario del Inicio y de Apoyo Escolar: mismo contenedor, mismos campos, mismos textos de error y mismo envío a WhatsApp (`formulario-whatsapp.js`, `campo-telefono.js`).
    - Título: "Contacto" (**APROBADO**).
-   - **Servicio de interés:** sin preselección (hay cuatro especialidades posibles). **A DEFINIR:** si los CTA de cada especialidad preseleccionan su opción.
+   - **Servicio de interés:** sin preselección, con las mismas opciones en todas las páginas: Apoyo escolar, Psicopedagogía, Fonoaudiología, Psicología, Pediatría, Nutrición, Servicios adicionales y Acompañamiento integral.
    - **ID de ancla:** `#contacto`.
    - **REQUERIMIENTO OBLIGATORIO:** formulario 100% en código. Nombre, teléfono y servicio son obligatorios. Al enviarlo abre WhatsApp (3516095374) con el mensaje prearmado.
 
