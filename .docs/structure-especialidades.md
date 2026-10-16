@@ -43,14 +43,15 @@
    **2a. Acompañamiento integral**
    - Antetítulo: "ACOMPAÑAMIENTO INTEGRAL" · Título: "Combiná especialidades con apoyo escolar" (PROVISORIO).
    - Bajada (PROVISORIO): "Cuando un niño hace apoyo escolar y una o más especialidades en la fundación, docentes y profesionales comparten lo que observan y trabajan sobre los mismos objetivos. Además, combinar servicios tiene un descuento especial."
-   - **Bloques por especialidad (PROVISORIO):** Psicopedagogía, Fonoaudiología, Psicología y Pediatría, cada panel con nombre y una línea de qué aborda, sin imagen:
+   - **Bloques por especialidad (PROVISORIO):** Psicopedagogía, Fonoaudiología, Psicología, Pediatría y Nutrición, cada panel con nombre y una línea de qué aborda, sin imagen:
      - **Psicopedagogía:** Acompaña las dificultades de aprendizaje: lectura, escritura, cálculo, atención y organización del estudio.
      - **Fonoaudiología:** Trabaja el desarrollo del habla y del lenguaje oral, la pronunciación y la comprensión.
      - **Psicología:** Acompaña lo emocional y lo conductual del niño, en diálogo con su familia y su escuela.
      - **Pediatría:** Revisiones preventivas, controles y fichas médicas, en coordinación con el resto del equipo.
-   - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): una imagen horizontal (3:2), para que no ocupe tanto alto; el acordeón se estira hasta el alto de la imagen.
-   - **Imagen (provisoria):** `sitio/assets/imagenes/especialidades/acompanamiento-integral.jpg` (juegos didácticos de madera junto a la ventana). PENDIENTE la imagen definitiva.
-   - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la imagen horizontal (3:2) debajo.
+     - **Nutrición:** Acompaña la alimentación de cada niño y de su familia, con hábitos saludables adaptados a sus necesidades.
+   - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): la agenda de las especialidades; el acordeón se estira hasta el alto de la agenda.
+   - **Agenda (REUTILIZA el componente de agenda del Inicio y `agenda.js`):** muestra solo las especialidades, con el desplegable reducido a Psicología, Pediatría, Fonoaudiología, Psicopedagogía y Nutrición (sin Apoyo escolar ni Inglés). Por defecto, Psicología. Los horarios salen de `informacion/horarios.md`.
+   - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la agenda debajo (lista por día, como en el Inicio).
    - CTA principal: "Consultá por el acompañamiento integral" (WhatsApp con mensaje prearmado).
    - **REQUERIMIENTO OBLIGATORIO:** no se promete un porcentaje de descuento: depende de la combinación y se invita a consultar por WhatsApp (`contexto.md`, sección 7).
    - **REQUERIMIENTO OBLIGATORIO:** pediatría se comunica como revisión y controles, no como atención pediátrica general (nota de `keywords.md`).
@@ -107,6 +108,7 @@
 |---|---|---|
 | Video de fondo | 1 | REUTILIZA `video-fondo.js` |
 | Acordeón de paneles (horizontal en escritorio, vertical en móvil) | 2a | REUTILIZA `acordeon-paneles.js` |
+| Agenda con desplegable (solo especialidades) | 2a | REUTILIZA `agenda.js` |
 | Cards que giran con "Ver más" | 2b (móvil) | REUTILIZA `card-giro.js` |
 | Cards de precio | 3 | REUTILIZA `precios.css` |
 | Formulario → WhatsApp | 4 | REUTILIZA `formulario-whatsapp.js` y `campo-telefono.js` |
@@ -133,5 +135,4 @@
 - Unidad de cobro de cada especialidad (por hora o por sesión).
 - Si Nutrición se suma también como especialidad en el hero y en la sección 2 (por ahora solo figura en Precios).
 - Obras sociales aceptadas.
-- Imagen definitiva de la sección 2a.
 - Si se hace un wireframe en Figma de esta página antes de pasarla a código.

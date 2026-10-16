@@ -1,10 +1,10 @@
 /* ==========================================================================
    ACOMPAÑAMIENTO INTEGRAL (Especialidades)
-   Encabezado centrado; debajo, el acordeón de paneles con las cuatro
-   especialidades y una imagen, y el botón a WhatsApp.
-   Móvil: se apilan el acordeón vertical y la imagen.
-   Desde 1200px: dos columnas de la misma altura, acordeón horizontal | imagen.
-   Componente: acordeon-paneles.css.
+   Encabezado centrado; debajo, el acordeón de paneles con las cinco
+   especialidades y la agenda de las especialidades, y el botón a WhatsApp.
+   Móvil: se apilan el acordeón vertical y la agenda (lista por día).
+   Desde 1200px: dos columnas de la misma altura, acordeón horizontal | agenda.
+   Componentes: acordeon-paneles.css y agenda.css.
    ========================================================================== */
 
 .integral {
@@ -50,26 +50,11 @@
   color: var(--negro);
 }
 
-/* ---------- Acordeón + imagen ---------- */
+/* ---------- Acordeón + agenda ---------- */
 .integral__contenido {
   display: grid;
   gap: var(--stack-sm);
   margin-top: var(--stack-md);
-}
-
-/* Horizontal, para que no ocupe tanto alto */
-.integral__imagen {
-  aspect-ratio: 3 / 2;
-  border-radius: var(--radio);
-  overflow: hidden;
-  background-color: var(--verde-pastel);
-}
-
-.integral__imagen img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 55%;
 }
 
 .integral__botones {
@@ -87,15 +72,20 @@
     gap: 32px;
   }
 
-  /* Con 4 paneles en media página, los cerrados van angostos (como en
-     Cómo trabajamos de Apoyo escolar). El alto lo marca la imagen
-     horizontal y el acordeón se estira hasta ese alto. */
+  /* Con 5 paneles en media página, los cerrados van angostos (como en
+     Cómo trabajamos de Apoyo escolar). El alto lo marca la agenda y el
+     acordeón se estira hasta ese alto. */
   .integral__contenido .acordeon-paneles {
     --panel-cerrado: 12cqw;
     min-height: 320px;
   }
 
-  .integral__imagen {
-    align-self: start;
+  .integral__agenda {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .integral__agenda .agenda {
+    flex: 1;
   }
 }

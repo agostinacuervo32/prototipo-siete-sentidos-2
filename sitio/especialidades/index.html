@@ -36,6 +36,7 @@
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/hero.css">
   <link rel="stylesheet" href="/assets/css/acordeon-paneles.css">
+  <link rel="stylesheet" href="/assets/css/agenda.css">
   <link rel="stylesheet" href="/assets/css/integral.css">
   <link rel="stylesheet" href="/assets/css/beneficios.css">
   <link rel="stylesheet" href="/assets/css/precios.css">
@@ -184,12 +185,202 @@
               </div>
             </div>
 
+            <div class="acordeon-paneles__panel acordeon-paneles__panel--amarillo">
+              <h3 class="acordeon-paneles__encabezado">
+                <button class="acordeon-paneles__boton" type="button" id="integral-nutricion-boton" aria-expanded="false" aria-controls="integral-nutricion">
+                  <span class="acordeon-paneles__titulo">Nutrición</span>
+                </button>
+              </h3>
+              <div class="acordeon-paneles__contenido" id="integral-nutricion" role="region" aria-labelledby="integral-nutricion-boton">
+                <div class="acordeon-paneles__interior">
+                  <p class="acordeon-paneles__texto">Acompaña la alimentación de cada niño y de su familia, con hábitos saludables adaptados a sus necesidades.</p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Imagen provisoria: se reemplaza cambiando el src -->
-          <figure class="integral__imagen">
-            <img src="/assets/imagenes/especialidades/acompanamiento-integral.jpg" alt="Juegos didácticos de madera y bloques de colores sobre un escritorio, junto a la ventana" width="900" height="1200" loading="lazy">
-          </figure>
+          <!-- AGENDA
+               Solo especialidades (sin apoyo escolar ni inglés). Mismo componente que el Inicio.
+               Para actualizar un horario, cambiá el texto de las horas (ej. 9:00 – 11:00).
+               Cada turno va dentro del día que corresponde (data-dia) y ordenado por hora.
+               Los horarios salen de informacion/horarios.md.
+               agenda__turno--1 / agenda__profesional--1: primera profesional (tono pastel).
+               agenda__turno--2 / agenda__profesional--2: segunda profesional (tono medio). -->
+          <div class="integral__agenda">
+            <h3 class="visualmente-oculto" id="agenda-titulo">Agenda de las especialidades</h3>
+
+            <div class="agenda" data-agenda>
+              <div class="agenda__calendario">
+
+                <!-- Desplegable de especialidad: cada opción apunta al id de su panel -->
+                <div class="agenda__control agenda__control--rosa">
+                  <label class="visualmente-oculto" for="agenda-especialidad">Especialidad</label>
+                  <select class="agenda__desplegable" id="agenda-especialidad" data-agenda-desplegable>
+                    <option value="agenda-psicologia" data-familia="rosa" selected>Psicología</option>
+                    <option value="agenda-pediatria" data-familia="naranja">Pediatría</option>
+                    <option value="agenda-fonoaudiologia" data-familia="amarillo">Fonoaudiología</option>
+                    <option value="agenda-psicopedagogia" data-familia="verde">Psicopedagogía</option>
+                    <option value="agenda-nutricion" data-familia="naranja">Nutrición</option>
+                  </select>
+                  <svg class="icono agenda__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+                </div>
+
+                <!-- Grilla de fondo (solo escritorio y tablet) -->
+                <div class="agenda__encabezado" aria-hidden="true">
+                  <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span>
+                </div>
+                <div class="agenda__horas" aria-hidden="true">
+                  <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+                </div>
+                <div class="agenda__fondo" aria-hidden="true">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+
+                <!-- Psicología -->
+                <div class="agenda__panel agenda__panel--rosa" id="agenda-psicologia" role="group" aria-label="Horarios de Psicología">
+                  <ul class="agenda__profesionales">
+                    <li class="agenda__profesional agenda__profesional--1">Edith Pintos</li>
+                    <li class="agenda__profesional agenda__profesional--2">Rocío Godoy</li>
+                  </ul>
+                  <ol class="agenda__dias">
+                    <li class="agenda__dia" data-dia="lunes">
+                      <h4 class="agenda__dia-nombre">Lunes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Edith Pintos</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="martes">
+                      <h4 class="agenda__dia-nombre">Martes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Rocío Godoy</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="miercoles">
+                      <h4 class="agenda__dia-nombre">Miércoles</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Edith Pintos</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="jueves">
+                      <h4 class="agenda__dia-nombre">Jueves</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Rocío Godoy</span></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+  
+                <!-- Pediatría -->
+                <div class="agenda__panel agenda__panel--naranja" id="agenda-pediatria" role="group" aria-label="Horarios de Pediatría">
+                  <ul class="agenda__profesionales">
+                    <li class="agenda__profesional agenda__profesional--1">Gabriela Cumpian</li>
+                  </ul>
+                  <ol class="agenda__dias">
+                    <li class="agenda__dia" data-dia="lunes">
+                      <h4 class="agenda__dia-nombre">Lunes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Gabriela Cumpian</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="jueves">
+                      <h4 class="agenda__dia-nombre">Jueves</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Gabriela Cumpian</span></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+  
+                <!-- Fonoaudiología -->
+                <div class="agenda__panel agenda__panel--amarillo" id="agenda-fonoaudiologia" role="group" aria-label="Horarios de Fonoaudiología">
+                  <ul class="agenda__profesionales">
+                    <li class="agenda__profesional agenda__profesional--1">Julieta Zeballos</li>
+                  </ul>
+                  <ol class="agenda__dias">
+                    <li class="agenda__dia" data-dia="lunes">
+                      <h4 class="agenda__dia-nombre">Lunes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Julieta Zeballos</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="miercoles">
+                      <h4 class="agenda__dia-nombre">Miércoles</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Julieta Zeballos</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="viernes">
+                      <h4 class="agenda__dia-nombre">Viernes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">15:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Julieta Zeballos</span></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+  
+                <!-- Psicopedagogía -->
+                <div class="agenda__panel agenda__panel--verde" id="agenda-psicopedagogia" role="group" aria-label="Horarios de Psicopedagogía">
+                  <ul class="agenda__profesionales">
+                    <li class="agenda__profesional agenda__profesional--1">Candelaria Gaitán</li>
+                    <li class="agenda__profesional agenda__profesional--2">Melisa Sol Riera</li>
+                  </ul>
+                  <ol class="agenda__dias">
+                    <li class="agenda__dia" data-dia="lunes">
+                      <h4 class="agenda__dia-nombre">Lunes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">11:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="martes">
+                      <h4 class="agenda__dia-nombre">Martes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">11:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                        <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">17:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">20:00</span></span> <span class="agenda__turno-nombre">Candelaria Gaitán</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="miercoles">
+                      <h4 class="agenda__dia-nombre">Miércoles</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">20:00</span></span> <span class="agenda__turno-nombre">Candelaria Gaitán</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="jueves">
+                      <h4 class="agenda__dia-nombre">Jueves</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--2"><span class="agenda__turno-horario"><span class="agenda__hora">14:00</span> – <span class="agenda__hora">15:00</span></span> <span class="agenda__turno-nombre">Melisa Sol Riera</span></li>
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">20:00</span></span> <span class="agenda__turno-nombre">Candelaria Gaitán</span></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+  
+                <!-- Nutrición -->
+                <div class="agenda__panel agenda__panel--naranja" id="agenda-nutricion" role="group" aria-label="Horarios de Nutrición">
+                  <ul class="agenda__profesionales">
+                    <li class="agenda__profesional agenda__profesional--1">Evelin Márquez</li>
+                  </ul>
+                  <ol class="agenda__dias">
+                    <li class="agenda__dia" data-dia="lunes">
+                      <h4 class="agenda__dia-nombre">Lunes</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">19:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Evelin Márquez</span></li>
+                      </ul>
+                    </li>
+                    <li class="agenda__dia" data-dia="miercoles">
+                      <h4 class="agenda__dia-nombre">Miércoles</h4>
+                      <ul class="agenda__turnos">
+                        <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">19:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Evelin Márquez</span></li>
+                      </ul>
+                    </li>
+                  </ol>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- /AGENDA -->
 
         </div>
 
@@ -502,6 +693,7 @@
   <script src="/assets/js/boton-blob.js" defer></script>
   <script src="/assets/js/video-fondo.js" defer></script>
   <script src="/assets/js/acordeon-paneles.js" defer></script>
+  <script src="/assets/js/agenda.js" defer></script>
   <script src="/assets/js/card-giro.js" defer></script>
   <script src="/assets/js/campo-telefono.js" defer></script>
   <script src="/assets/js/formulario-whatsapp.js" defer></script>
