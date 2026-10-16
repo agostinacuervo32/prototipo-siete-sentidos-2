@@ -171,6 +171,8 @@
 .hero__foto--estudiantes img { object-position: 40% 50%; }
 .hero__foto--mesa img { object-position: 50% 40%; }
 .hero__foto--mesa-juegos img { object-position: 50% 35%; }
+.hero__foto--cocina img { object-position: 40% 40%; }
+.hero__foto--abrazo img { object-position: 50% 45%; }
 
 /* Especialidades: recuadro de 768 × 593px. A la izquierda, una foto chica
    arriba, una más grande abajo y el globo (con la cola hacia el video); a la

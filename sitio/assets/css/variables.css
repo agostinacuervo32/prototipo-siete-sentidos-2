@@ -53,6 +53,8 @@
   --fs-boton: clamp(16px, 15.5px + 0.13vw, 18px);
   --fs-menu: 18px;
   --fs-antetitulo: 14px;
+  --fs-integrante-nombre: clamp(16px, 13.4px + 0.65vw, 26px);   /* nombre en las cards del equipo (Nosotros) */
+  --fs-integrante-cargo: clamp(12px, 11.2px + 0.2vw, 15px);     /* cargo en mayúsculas debajo del nombre */
   --fs-agenda: clamp(13px, 10.5px + 0.2vw, 14px);   /* textos dentro de la grilla de la agenda */
   --fs-ajuste-horarios: 0px;   /* en escritorio, agenda y FAQ van 2px más chicas */
 
