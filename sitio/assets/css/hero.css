@@ -155,21 +155,22 @@
 }
 
 /* ---------- Páginas internas: video + fotos y un globo ----------
-   Medidas de la referencia: recuadro de 853 × 552px. El video va arriba a
-   la derecha; debajo, una foto vertical a la izquierda, el globo (con la
-   cola hacia la derecha) y dos fotos abajo a la derecha. */
+   Medidas de la referencia: recuadro de 607 × 443px. A la izquierda, dos
+   fotos apiladas y debajo el globo (con la cola hacia la derecha); a la
+   derecha, el video arriba y una foto ancha abajo. */
 .hero__composicion--pagina {
-  aspect-ratio: 853 / 552;
+  aspect-ratio: 607 / 443;
 }
 
-.hero__composicion--pagina .hero__pieza--1 { left: 31.89%; top: 0;      width: 68.11%; height: 66.67%; }
-.hero__composicion--pagina .hero__pieza--2 { left: 0;      top: 33.51%; width: 27.32%; height: 49.28%; }
-.hero__composicion--pagina .hero__pieza--3 { left: 14.19%; top: 89.13%; width: 26.73%; height: 10.87%; }
-.hero__composicion--pagina .hero__pieza--4 { left: 45.49%; top: 73.37%; width: 31.54%; height: 26.63%; }
-.hero__composicion--pagina .hero__pieza--5 { left: 81.83%; top: 73.73%; width: 18.17%; height: 26.09%; }
+.hero__composicion--pagina .hero__pieza--1 { left: 36.74%; top: 9.26%;  width: 63.26%; height: 56.43%; }
+.hero__composicion--pagina .hero__pieza--2 { left: 0.99%;  top: 0;      width: 30.97%; height: 29.12%; }
+.hero__composicion--pagina .hero__pieza--3 { left: 0;      top: 88.94%; width: 36.9%;  height: 11.06%; }
+.hero__composicion--pagina .hero__pieza--4 { left: 0.66%;  top: 36.57%; width: 31.63%; height: 45.82%; }
+.hero__composicion--pagina .hero__pieza--5 { left: 42.01%; top: 72.69%; width: 57.99%; height: 27.31%; }
 
 .hero__foto--estudiantes img { object-position: 40% 50%; }
 .hero__foto--mesa img { object-position: 50% 40%; }
+.hero__foto--grupo img { object-position: 50% 55%; }
 
 /* Globo con la cola a la derecha, mirando hacia la foto de al lado */
 .hero__globo--lateral::after {
