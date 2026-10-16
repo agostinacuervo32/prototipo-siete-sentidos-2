@@ -36,6 +36,9 @@
   <link rel="stylesheet" href="/assets/css/boton-video.css">
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/acordeon-paneles.css">
+  <link rel="stylesheet" href="/assets/css/agenda.css">
+  <link rel="stylesheet" href="/assets/css/como-trabajamos.css">
   <link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
@@ -106,6 +109,194 @@
     </section>
     <!-- /HERO -->
 
+    <!-- COMO TRABAJAMOS -->
+    <section class="como-trabajamos" id="como-trabajamos" data-fondo="claro" aria-label="Cómo trabajamos y agenda de apoyo escolar">
+      <div class="contenedor como-trabajamos__contenedor">
+
+        <div class="como-trabajamos__bloque">
+          <h2 class="como-trabajamos__antetitulo" id="como-trabajamos-titulo">Cómo trabajamos</h2>
+
+          <div class="acordeon-paneles" data-acordeon-paneles>
+
+            <div class="acordeon-paneles__panel acordeon-paneles__panel--amarillo is-abierto">
+              <h3 class="acordeon-paneles__encabezado">
+                <button class="acordeon-paneles__boton" type="button" id="trabajo-materias-boton" aria-expanded="true" aria-controls="trabajo-materias">
+                  <span class="acordeon-paneles__titulo">Todas las materias</span>
+                </button>
+              </h3>
+              <div class="acordeon-paneles__contenido" id="trabajo-materias" role="region" aria-labelledby="trabajo-materias-boton">
+                <div class="acordeon-paneles__interior">
+                  <p class="acordeon-paneles__texto">Desde nivel inicial (motricidad, letras, números y nombre propio) hasta secundario. Lengua y Matemática son las materias que más se refuerzan.</p>
+                  <figure class="acordeon-paneles__imagen">
+                    <img src="/assets/imagenes/apoyo-escolar/todas-las-materias.jpg" alt="Lápices de colores y tarjetas con letras ilustradas sobre una mesa de la fundación" width="900" height="1200" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="acordeon-paneles__panel acordeon-paneles__panel--naranja">
+              <h3 class="acordeon-paneles__encabezado">
+                <button class="acordeon-paneles__boton" type="button" id="trabajo-fundacion-boton" aria-expanded="false" aria-controls="trabajo-fundacion">
+                  <span class="acordeon-paneles__titulo">En la fundación</span>
+                </button>
+              </h3>
+              <div class="acordeon-paneles__contenido" id="trabajo-fundacion" role="region" aria-labelledby="trabajo-fundacion-boton">
+                <div class="acordeon-paneles__interior">
+                  <p class="acordeon-paneles__texto">Las clases son en la fundación, no a domicilio, con docentes que conocen a cada estudiante.</p>
+                  <figure class="acordeon-paneles__imagen">
+                    <img src="/assets/imagenes/apoyo-escolar/en-la-fundacion.jpg" alt="Aula de la fundación con mesas de mantel rosa y sillas verdes" width="900" height="1200" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="acordeon-paneles__panel acordeon-paneles__panel--rosa">
+              <h3 class="acordeon-paneles__encabezado">
+                <button class="acordeon-paneles__boton" type="button" id="trabajo-jugando-boton" aria-expanded="false" aria-controls="trabajo-jugando">
+                  <span class="acordeon-paneles__titulo">Aprender jugando</span>
+                </button>
+              </h3>
+              <div class="acordeon-paneles__contenido" id="trabajo-jugando" role="region" aria-labelledby="trabajo-jugando-boton">
+                <div class="acordeon-paneles__interior">
+                  <p class="acordeon-paneles__texto">Usamos juegos como el UNO, el Jenga, el dominó, la lotería, las damas, el ajedrez y los encastres para trabajar los contenidos.</p>
+                  <figure class="acordeon-paneles__imagen">
+                    <img src="/assets/imagenes/apoyo-escolar/aprender-jugando.jpg" alt="Pila de juegos de mesa que se usan en la fundación" width="900" height="1200" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="acordeon-paneles__panel acordeon-paneles__panel--verde">
+              <h3 class="acordeon-paneles__encabezado">
+                <button class="acordeon-paneles__boton" type="button" id="trabajo-oficio-boton" aria-expanded="false" aria-controls="trabajo-oficio">
+                  <span class="acordeon-paneles__titulo">El oficio de estudiante</span>
+                </button>
+              </h3>
+              <div class="acordeon-paneles__contenido" id="trabajo-oficio" role="region" aria-labelledby="trabajo-oficio-boton">
+                <div class="acordeon-paneles__interior">
+                  <p class="acordeon-paneles__texto">Acompañamos a cada estudiante para que gane autonomía, valores y pensamiento crítico.</p>
+                  <figure class="acordeon-paneles__imagen">
+                    <img src="/assets/imagenes/apoyo-escolar/oficio-de-estudiante.jpg" alt="Una docente acompaña a un estudiante mientras lee su libro" width="1200" height="900" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- AGENDA
+             Para actualizar un horario, cambiá el texto de las horas (ej. 9:00 – 11:00).
+             Cada turno va dentro del día que corresponde (data-dia) y ordenado por hora.
+             Los horarios salen de informacion/horarios.md.
+             agenda__turno--1 / agenda__profesional--1: primera profesional (tono pastel).
+             agenda__turno--2 / agenda__profesional--2: segunda profesional (tono medio). -->
+        <div class="como-trabajamos__bloque">
+          <h2 class="como-trabajamos__antetitulo" id="agenda-titulo">Agenda</h2>
+
+          <div class="agenda" data-agenda>
+            <div class="agenda__calendario">
+
+              <!-- Desplegable de especialidad: cada opción apunta al id de su panel -->
+              <div class="agenda__control agenda__control--amarillo">
+                <label class="visualmente-oculto" for="agenda-especialidad">Especialidad</label>
+                <select class="agenda__desplegable" id="agenda-especialidad" data-agenda-desplegable>
+                  <option value="agenda-apoyo-escolar" data-familia="amarillo" selected>Apoyo escolar</option>
+                  <option value="agenda-ingles" data-familia="rosa">Inglés</option>
+                </select>
+                <svg class="icono agenda__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              </div>
+
+              <!-- Grilla de fondo (solo escritorio y tablet) -->
+              <div class="agenda__encabezado" aria-hidden="true">
+                <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span>
+              </div>
+              <div class="agenda__horas" aria-hidden="true">
+                <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span>21</span>
+              </div>
+              <div class="agenda__fondo" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+
+              <!-- Apoyo escolar -->
+              <div class="agenda__panel agenda__panel--amarillo" id="agenda-apoyo-escolar" role="group" aria-label="Horarios de Apoyo escolar">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Andrea Novero y Ana Rinaldi</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="lunes">
+                    <h4 class="agenda__dia-nombre">Lunes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">17:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="martes">
+                    <h4 class="agenda__dia-nombre">Martes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="miercoles">
+                    <h4 class="agenda__dia-nombre">Miércoles</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="jueves">
+                    <h4 class="agenda__dia-nombre">Jueves</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="viernes">
+                    <h4 class="agenda__dia-nombre">Viernes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">9:00</span> – <span class="agenda__hora">12:30</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">16:00</span> – <span class="agenda__hora">21:00</span></span> <span class="agenda__turno-nombre">Andrea Novero y Ana Rinaldi</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+              <!-- Inglés -->
+              <div class="agenda__panel agenda__panel--rosa" id="agenda-ingles" role="group" aria-label="Horarios de Inglés">
+                <ul class="agenda__profesionales">
+                  <li class="agenda__profesional agenda__profesional--1">Jaquelina del Valle Gutiérrez</li>
+                </ul>
+                <ol class="agenda__dias">
+                  <li class="agenda__dia" data-dia="martes">
+                    <h4 class="agenda__dia-nombre">Martes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Jaquelina del Valle Gutiérrez</span></li>
+                    </ul>
+                  </li>
+                  <li class="agenda__dia" data-dia="viernes">
+                    <h4 class="agenda__dia-nombre">Viernes</h4>
+                    <ul class="agenda__turnos">
+                      <li class="agenda__turno agenda__turno--1"><span class="agenda__turno-horario"><span class="agenda__hora">18:00</span> – <span class="agenda__hora">19:00</span></span> <span class="agenda__turno-nombre">Jaquelina del Valle Gutiérrez</span></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- /AGENDA -->
+
+        <div class="grupo-botones como-trabajamos__botones">
+          <a class="btn" href="https://wa.me/5493516095374" target="_blank" rel="noopener" aria-label="Consultá por un turno por WhatsApp (se abre en una pestaña nueva)">Consultá por un turno</a>
+          <!-- #precios: sección 4 (Precios y descuentos), todavía no está armada -->
+          <a class="btn btn--secundario" href="#precios">Ver precios</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- /COMO TRABAJAMOS -->
+
   </main>
 
   <!-- FOOTER -->
@@ -162,5 +353,7 @@
   <script src="/assets/js/menu.js" defer></script>
   <script src="/assets/js/boton-blob.js" defer></script>
   <script src="/assets/js/video-fondo.js" defer></script>
+  <script src="/assets/js/acordeon-paneles.js" defer></script>
+  <script src="/assets/js/agenda.js" defer></script>
 </body>
 </html>

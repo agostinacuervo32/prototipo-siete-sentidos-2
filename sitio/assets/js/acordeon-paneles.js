@@ -8,6 +8,9 @@
   document.querySelectorAll('[data-acordeon-paneles]').forEach(acordeon => {
     const paneles = [...acordeon.querySelectorAll('.acordeon-paneles__panel')];
 
+    // Cantidad de paneles: el CSS la usa para calcular el ancho del abierto
+    acordeon.style.setProperty('--paneles', paneles.length);
+
     function abrir(elegido) {
       paneles.forEach(panel => {
         const abierto = panel === elegido;
