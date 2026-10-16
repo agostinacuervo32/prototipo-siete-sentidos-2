@@ -30,18 +30,18 @@
    - **Card:** foto en blanco y negro (`style.md`) con `rounded.DEFAULT`; nombre (Lexend 500) y cargo (Lexend 400, mayúsculas) abajo a la izquierda, dentro de una etiqueta pastel para que se lean sobre cualquier foto. Los pasteles se alternan con modificadores (`card-integrante--rosa`, `--verde`, `--naranja`, `--amarillo`). El color no indica nada.
    - **Integrantes (en este orden; nombres y áreas de `informacion/horarios.md`):**
 
-     | # | Foto (`equipo/WhatsApp Image 2026-10-16 at …`) | Nombre | Cargo |
+     | # | Foto (`equipo/`, 901 × 901px) | Nombre | Cargo |
      |---|---|---|---|
-     | 1 | `13.58.12 (2)` | Ana Rinaldi | Fundadora y maestra de apoyo escolar nivel inicial |
-     | 2 | `13.58.12` | Jaquelina Gutiérrez | Profesora de inglés |
-     | 3 | `13.56.23 (1)` | Mariela Agüero | Auxiliar (ayuda en todas las áreas) |
-     | 4 | `13.57.14` | Rocío Godoy | Psicóloga |
-     | 5 | `13.56.22` | Evelin Márquez | Nutricionista |
-     | 6 | `13.56.23` | Melisa Riera | Psicopedagoga |
-     | 7 | `13.58.11 (1)` | Julieta Zeballos | Fonoaudióloga |
-     | 8 | `13.58.11` | Andrea Novero | Maestra de apoyo escolar secundario |
-     | 9 | `13.58.12 (3)` | Edith Pintos | Psicóloga |
-     | 10 | `13.58.12 (1)` | Candelaria Gaitán | Psicopedagoga |
+     | 1 | `foto equipo-03.png` | Ana Rinaldi | Fundadora y maestra de apoyo escolar nivel inicial |
+     | 2 | `foto equipo-01.png` | Jaquelina Gutiérrez | Profesora de inglés |
+     | 3 | `foto equipo-09.png` | Mariela Agüero | Auxiliar (ayuda en todas las áreas) |
+     | 4 | `foto equipo-07.png` | Rocío Godoy | Psicóloga |
+     | 5 | `foto equipo-10.png` | Evelin Márquez | Nutricionista |
+     | 6 | `foto equipo-08.png` | Melisa Riera | Psicopedagoga |
+     | 7 | `foto equipo-06.png` | Julieta Zeballos | Fonoaudióloga |
+     | 8 | `foto equipo-05.png` | Andrea Novero | Maestra de apoyo escolar secundario |
+     | 9 | `foto equipo-02.png` | Edith Pintos | Psicóloga |
+     | 10 | `foto equipo-04.png` | Candelaria Gaitán | Psicopedagoga |
      | 11 | **PROVISORIO:** `especialidades/hero-encastre.jpg` | Gabriela Cumpian | Pediatra |
 
    - **PENDIENTE:** foto de Gabriela Cumpian. Hasta tenerla, va la del encastre de Especialidades.
