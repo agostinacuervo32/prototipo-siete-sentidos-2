@@ -55,6 +55,12 @@
   margin-top: var(--stack-md);
 }
 
+/* ---------- Encabezado lateral (Doná): título y botón en una fila ----------
+   Móvil: el botón va debajo del título, centrado. */
+.beneficios--encabezado-lateral .beneficios__encabezado {
+  gap: var(--stack-sm);
+}
+
 /* ---------- Card: colores por familia ---------- */
 .card-beneficio--rosa     { --card-fondo: var(--rosa-pastel);     --card-texto: var(--rosa-oscuro); }
 .card-beneficio--naranja  { --card-fondo: var(--naranja-pastel);  --card-texto: var(--naranja-oscuro); }
@@ -231,6 +237,14 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 56px;
+  }
+
+  .beneficios--encabezado-lateral .beneficios__encabezado {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--stack-md);
+    text-align: left;
   }
 
   .card-beneficio,
