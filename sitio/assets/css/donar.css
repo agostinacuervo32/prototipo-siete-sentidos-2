@@ -115,16 +115,16 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
-  animation: paso-blob 6s ease-in-out infinite alternate;
+  animation: paso-blob 4s ease-in-out infinite alternate;
 }
 
 /* Cada número arranca en otro punto del ciclo para que no se muevan a la par */
 .card-pasos__paso:nth-child(2)::before {
-  animation-delay: -2s;
+  animation-delay: -1.3s;
 }
 
 .card-pasos__paso:nth-child(3)::before {
-  animation-delay: -4s;
+  animation-delay: -2.7s;
 }
 
 /* Blob: una piedrita redondeada que cambia de forma lentamente, nunca un círculo
