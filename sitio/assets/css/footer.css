@@ -89,6 +89,55 @@
   text-decoration-color: var(--verde);
 }
 
+/* ---------- Variante de las páginas internas: borde que se traza al hover ----------
+   Igual que los links del menú (header.css): el borde envuelve ícono + texto
+   y se revela de izquierda a derecha mientras las letras se aprietan.
+   El margen negativo compensa el padding para no mover la alineación. */
+.footer--trazo .footer__enlace {
+  position: relative;
+  margin: -8px -12px;
+  padding: 8px 12px;
+  border-radius: var(--radio-full);
+  text-decoration: none;
+  transition:
+    color var(--duracion-corta) var(--ease),
+    letter-spacing var(--duracion-corta) var(--ease);
+}
+
+.footer--trazo .footer__enlace::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: var(--borde-boton) solid var(--verde);
+  border-radius: inherit;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--duracion-larga) var(--ease);
+  pointer-events: none;
+}
+
+.footer--trazo .footer__enlace .icono {
+  transition: color var(--duracion-corta) var(--ease);
+}
+
+.footer--trazo .footer__enlace:hover,
+.footer--trazo .footer__enlace:focus-visible {
+  color: var(--rosa);
+  letter-spacing: -0.06em;
+  transition:
+    color var(--duracion-corta) var(--ease),
+    letter-spacing var(--duracion-larga) var(--ease);
+}
+
+.footer--trazo .footer__enlace:hover .icono,
+.footer--trazo .footer__enlace:focus-visible .icono {
+  color: var(--rosa);
+}
+
+.footer--trazo .footer__enlace:hover::after,
+.footer--trazo .footer__enlace:focus-visible::after {
+  clip-path: inset(0 0 0 0);
+}
+
 /* ---------- Derechos reservados ---------- */
 .footer__legal {
   padding: 8px var(--margen);
