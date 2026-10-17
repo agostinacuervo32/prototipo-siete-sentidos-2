@@ -153,6 +153,30 @@
   text-underline-offset: 6px;
 }
 
+/* ---------- Variante en prueba (solo Nosotros): borde que se traza al hover ----------
+   El borde (igual al de "Contactate") se revela de izquierda a derecha:
+   la mitad superior y la inferior avanzan a la vez y se cierran a la derecha. */
+.menu--trazo .menu__link {
+  position: relative;
+  font-size: calc(var(--fs-menu) - 2px);
+}
+
+.menu--trazo .menu__link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: var(--borde-boton) solid var(--verde);
+  border-radius: inherit;
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path var(--duracion-larga) var(--ease);
+  pointer-events: none;
+}
+
+.menu--trazo .menu__link:hover::after,
+.menu--trazo .menu__link:focus-visible::after {
+  clip-path: inset(0 0 0 0);
+}
+
 /* ---------- Escritorio ---------- */
 @media (min-width: 1200px) {
   .menu {
