@@ -159,6 +159,19 @@
 .menu--trazo .menu__link {
   position: relative;
   font-size: calc(var(--fs-menu) - 2px);
+  transition:
+    color var(--duracion-corta) var(--ease),
+    letter-spacing var(--duracion-corta) var(--ease);
+}
+
+/* Al cerrarse el borde, las letras se aprietan ("abrazo") y el botón,
+   que toma el ancho del texto, se achica con ellas */
+.menu--trazo .menu__link:hover,
+.menu--trazo .menu__link:focus-visible {
+  letter-spacing: -0.03em;
+  transition:
+    color var(--duracion-corta) var(--ease),
+    letter-spacing var(--duracion-corta) var(--ease-rebote) var(--duracion-larga);
 }
 
 .menu--trazo .menu__link::after {
