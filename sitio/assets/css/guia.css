@@ -92,6 +92,12 @@
     aspect-ratio: 792 / 297;   /* medida del wireframe */
   }
 
+  /* La foto es horizontal y la franja muy baja: se sube el encuadre
+     para que entren las caras de la fila de atrás */
+  .equipo__imagen img {
+    object-position: 50% 22%;
+  }
+
   .equipo__botones {
     margin-top: 28px;
   }

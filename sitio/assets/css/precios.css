@@ -6,6 +6,7 @@
    en la esquina. Debajo, las notas: qué incluye y que los servicios son
    arancelados.
    Móvil: apiladas. Desde 768px: de a dos, centradas. Desde 1440px: cinco.
+   En Especialidades se suma una card a lo ancho (card-plan--ancha).
    ========================================================================== */
 
 .precios {
@@ -190,6 +191,16 @@
   .card-plan {
     padding: 44px 28px 32px;
   }
+
+  /* Card a lo ancho (Servicios adicionales en Especialidades): ocupa toda
+     la fila, debajo de las demás */
+  .precios__grilla .card-plan--ancha {
+    flex: 1 1 100%;
+  }
+
+  .card-plan--ancha .card-plan__detalle {
+    max-width: 30em;
+  }
 }
 
 /* ==========================================================================
@@ -204,5 +215,27 @@
   .precios__grilla .card-plan {
     flex: 1 1 0;
     padding: 36px 16px 32px;
+  }
+
+  /* La card a lo ancho pone su contenido en una sola línea */
+  .precios__grilla .card-plan--ancha {
+    flex-basis: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: clamp(24px, 3vw, 56px);
+    padding: 28px 32px;
+  }
+
+  .precios__grilla .card-plan--ancha .card-plan__titulo {
+    min-height: 0;
+  }
+
+  .card-plan--ancha .card-plan__precio,
+  .card-plan--ancha .card-plan__detalle {
+    margin-bottom: 0;
+  }
+
+  .card-plan--ancha .card-plan__boton {
+    margin-top: 0;
   }
 }
