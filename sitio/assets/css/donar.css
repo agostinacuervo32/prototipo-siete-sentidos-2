@@ -115,6 +115,31 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
+  animation: paso-blob 9s ease-in-out infinite alternate;
+}
+
+/* Cada número arranca en otro punto del ciclo para que no se muevan a la par */
+.card-pasos__paso:nth-child(2)::before {
+  animation-delay: -3s;
+}
+
+.card-pasos__paso:nth-child(3)::before {
+  animation-delay: -6s;
+}
+
+/* Blob: el círculo cambia de forma sutil y lentamente */
+@keyframes paso-blob {
+  0%   { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  25%  { border-radius: 58% 42% 52% 48% / 45% 55% 45% 55%; }
+  50%  { border-radius: 45% 55% 42% 58% / 56% 44% 58% 42%; }
+  75%  { border-radius: 54% 46% 58% 42% / 42% 58% 48% 52%; }
+  100% { border-radius: 47% 53% 45% 55% / 55% 45% 52% 48%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-pasos__paso::before {
+    animation: none;
+  }
 }
 
 /* ---------- Tablet: los botones en fila ---------- */
