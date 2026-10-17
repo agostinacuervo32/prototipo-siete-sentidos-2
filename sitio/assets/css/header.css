@@ -164,14 +164,14 @@
     letter-spacing var(--duracion-corta) var(--ease);
 }
 
-/* Al cerrarse el borde, las letras se aprietan ("abrazo") y el botón,
+/* Mientras se traza el borde, las letras se aprietan ("abrazo") y el botón,
    que toma el ancho del texto, se achica con ellas */
 .menu--trazo .menu__link:hover,
 .menu--trazo .menu__link:focus-visible {
-  letter-spacing: -0.03em;
+  letter-spacing: -0.06em;
   transition:
     color var(--duracion-corta) var(--ease),
-    letter-spacing var(--duracion-corta) var(--ease-rebote) var(--duracion-larga);
+    letter-spacing var(--duracion-larga) var(--ease);
 }
 
 .menu--trazo .menu__link::after {
