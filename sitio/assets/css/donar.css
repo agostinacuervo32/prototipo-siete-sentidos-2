@@ -130,10 +130,10 @@
 /* Blob: el círculo cambia de forma sutil y lentamente */
 @keyframes paso-blob {
   0%   { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
-  25%  { border-radius: 58% 42% 52% 48% / 45% 55% 45% 55%; }
-  50%  { border-radius: 45% 55% 42% 58% / 56% 44% 58% 42%; }
-  75%  { border-radius: 54% 46% 58% 42% / 42% 58% 48% 52%; }
-  100% { border-radius: 47% 53% 45% 55% / 55% 45% 52% 48%; }
+  25%  { border-radius: 64% 36% 55% 45% / 40% 60% 38% 62%; }
+  50%  { border-radius: 38% 62% 35% 65% / 62% 38% 65% 35%; }
+  75%  { border-radius: 60% 40% 65% 35% / 35% 65% 45% 55%; }
+  100% { border-radius: 42% 58% 38% 62% / 60% 40% 56% 44%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
