@@ -125,8 +125,9 @@
   }
 
   .contacto__tarjeta--abrazo::after {
+    /* El alto de la curva queda igual: Chrome no acepta "50% + 2px" en el
+       radio del gradiente y la diferencia de 2px no se nota */
     --r-x: calc(var(--abrazo-radio-x) + var(--borde-linea));
-    --r-y: calc(var(--abrazo-radio-y) + var(--borde-linea));
 
     inset: 0 var(--abrazo-lados);
     border-radius: calc(var(--radio-lg) - var(--borde-linea));
