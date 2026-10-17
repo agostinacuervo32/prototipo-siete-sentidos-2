@@ -89,7 +89,7 @@
   text-decoration-color: var(--verde);
 }
 
-/* ---------- Variante de las páginas internas: borde que se traza al hover ----------
+/* ---------- Variante de todas las páginas: borde que se traza al hover ----------
    Igual que los links del menú (header.css): el borde envuelve ícono + texto
    y se revela de izquierda a derecha mientras las letras se aprietan.
    El margen negativo compensa el padding para no mover la alineación. */
