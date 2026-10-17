@@ -49,35 +49,6 @@
   --campo-entorno: var(--verde-pastel);
 }
 
-/* Hover (solo con mouse): la tarjeta se angosta de los costados. Se achica
-   solo el fondo con su borde; el formulario queda quieto para que el área
-   del hover no cambie y el texto no se reacomode. */
-@media (hover: hover) {
-  .contacto__tarjeta {
-    --tarjeta-apriete: 0px;
-
-    position: relative;
-    isolation: isolate;
-    border-color: transparent;
-    background: none;
-  }
-
-  .contacto__tarjeta::before {
-    content: '';
-    position: absolute;
-    inset: calc(var(--borde-linea) * -1) calc(var(--tarjeta-apriete) - var(--borde-linea));
-    z-index: -1;
-    border: var(--borde-linea) solid var(--verde-oscuro);
-    border-radius: var(--radio-lg);
-    background: var(--verde-pastel);
-    transition: inset var(--duracion-larga) var(--ease);
-  }
-
-  .contacto__tarjeta:hover {
-    --tarjeta-apriete: 16px;   /* cuánto se angosta cada costado */
-  }
-}
-
 .contacto__titulo {
   margin-bottom: 18px;
   font-family: var(--fuente-titulo);
