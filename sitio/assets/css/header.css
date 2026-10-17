@@ -186,8 +186,16 @@
 }
 
 .menu--trazo .menu__link:hover::after,
-.menu--trazo .menu__link:focus-visible::after {
+.menu--trazo .menu__link:focus-visible::after,
+.menu--trazo .menu__link[aria-current="page"]::after {
   clip-path: inset(0 0 0 0);
+}
+
+/* Link activo: queda fijo en el estado final del hover, sin subrayado */
+.menu--trazo .menu__link[aria-current="page"] {
+  color: var(--rosa);
+  letter-spacing: -0.06em;
+  text-decoration: none;
 }
 
 /* ---------- Escritorio ---------- */
