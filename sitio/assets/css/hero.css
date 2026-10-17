@@ -118,7 +118,7 @@
   --globo-color: var(--rosa-pastel);
   --cola: clamp(10px, 1.4vw, 22px);
 
-  border-radius: var(--radio-full);
+  border-radius: var(--radio);
   background-color: var(--globo-color);
   animation: globo-respira 5s var(--ease) infinite alternate;
 }
