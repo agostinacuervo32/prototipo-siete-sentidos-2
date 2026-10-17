@@ -115,26 +115,26 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
-  animation: paso-blob 9s ease-in-out infinite alternate;
+  animation: paso-blob 6s ease-in-out infinite alternate;
 }
 
 /* Cada número arranca en otro punto del ciclo para que no se muevan a la par */
 .card-pasos__paso:nth-child(2)::before {
-  animation-delay: -3s;
+  animation-delay: -2s;
 }
 
 .card-pasos__paso:nth-child(3)::before {
-  animation-delay: -6s;
+  animation-delay: -4s;
 }
 
 /* Blob: una piedrita redondeada que cambia de forma lentamente, nunca un círculo
    (en cada lado los dos radios suman 100 % para que el contorno no tenga tramos rectos) */
 @keyframes paso-blob {
-  0%   { border-radius: 58% 42% 48% 52% / 45% 40% 60% 55%; }
-  25%  { border-radius: 40% 60% 55% 45% / 55% 45% 55% 45%; }
-  50%  { border-radius: 50% 50% 38% 62% / 62% 48% 52% 38%; }
-  75%  { border-radius: 62% 38% 55% 45% / 40% 58% 42% 60%; }
-  100% { border-radius: 45% 55% 62% 38% / 52% 62% 38% 48%; }
+  0%   { border-radius: 65% 35% 60% 40% / 60% 38% 62% 40%; }
+  25%  { border-radius: 38% 62% 40% 60% / 40% 65% 35% 60%; }
+  50%  { border-radius: 62% 38% 68% 32% / 35% 60% 40% 65%; }
+  75%  { border-radius: 35% 65% 32% 68% / 65% 32% 68% 35%; }
+  100% { border-radius: 68% 32% 62% 38% / 62% 35% 65% 38%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
