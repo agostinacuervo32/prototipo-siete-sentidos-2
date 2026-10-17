@@ -118,15 +118,6 @@
   animation: paso-blob 4s ease-in-out infinite alternate;
 }
 
-/* Cada número arranca en otro punto del ciclo para que no se muevan a la par */
-.card-pasos__paso:nth-child(2)::before {
-  animation-delay: -1.3s;
-}
-
-.card-pasos__paso:nth-child(3)::before {
-  animation-delay: -2.7s;
-}
-
 /* Blob: una piedrita redondeada que cambia de forma lentamente, nunca un círculo
    (en cada lado los dos radios suman 100 % para que el contorno no tenga tramos rectos) */
 @keyframes paso-blob {
