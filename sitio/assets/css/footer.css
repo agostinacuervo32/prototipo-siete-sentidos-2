@@ -216,6 +216,12 @@
     order: 0;
   }
 
+  /* Separación extra entre Instagram y WhatsApp para que sus bordes
+     del hover no queden pegados */
+  .footer--trazo .footer__dato--whatsapp {
+    margin-top: 8px;
+  }
+
   .footer__legal span {
     display: inline;
   }
