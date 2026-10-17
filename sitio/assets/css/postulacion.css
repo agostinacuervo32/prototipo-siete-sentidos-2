@@ -1,0 +1,10 @@
+/* ==========================================================================
+   POSTULACIÓN (Sumate) — variante de la tarjeta de Contacto
+   Usa el mismo marcado y las mismas clases que Contacto (contacto.css).
+   Sumate se diferencia del resto del sitio con otro color: la franja de
+   fondo va en naranja pastel en lugar de rosa pastel.
+   ========================================================================== */
+
+.contacto--sumate::before {
+  background: var(--naranja-pastel);
+}
