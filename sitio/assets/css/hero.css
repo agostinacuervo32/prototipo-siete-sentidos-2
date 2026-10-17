@@ -123,15 +123,18 @@
   animation: globo-respira 5s var(--ease) infinite alternate;
 }
 
+/* Cola: la forma sale de cola.svg (con el pico hacia arriba) usada como
+   máscara, así toma el color de cada globo. Se mete un poco dentro del
+   globo para que la base no deje huecos contra el borde redondeado. */
 .hero__globo::after {
   content: '';
   position: absolute;
-  top: calc(var(--cola) / -2.6);
-  width: var(--cola);
+  top: calc(var(--cola) * -0.85);
+  width: calc(var(--cola) * 1.26);
   height: var(--cola);
-  border-radius: 4px;
   background-color: var(--globo-color);
-  transform: rotate(45deg) skew(8deg, 8deg);
+  -webkit-mask: url('/assets/imagenes/ilustraciones/cola.svg') center / 100% 100% no-repeat;
+  mask: url('/assets/imagenes/ilustraciones/cola.svg') center / 100% 100% no-repeat;
 }
 
 /* Globo izquierdo: cola arriba a la derecha */
@@ -189,10 +192,13 @@
 .hero__foto--encastre img { object-position: 50% 65%; }
 .hero__foto--consultorio img { object-position: 50% 70%; }
 
-/* Globo con la cola a la derecha, mirando hacia la foto de al lado */
+/* Globo con la cola a la derecha, mirando hacia la foto de al lado: la
+   misma cola girada 90° sobre el centro de su base */
 .hero__globo--lateral::after {
-  top: calc(50% - var(--cola) / 2);
-  right: calc(var(--cola) / -2.6);
+  top: calc(50% - var(--cola));
+  left: calc(100% - var(--cola) * 0.88);
+  transform-origin: 50% 100%;
+  transform: rotate(90deg);
 }
 
 .hero__media {
