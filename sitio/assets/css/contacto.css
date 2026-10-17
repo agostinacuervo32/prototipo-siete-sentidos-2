@@ -61,6 +61,80 @@
 }
 
 /* ==========================================================================
+   Variante "abrazo" (en prueba, solo Inicio): al pasar el mouse por la
+   tarjeta, se aprieta de los costados y los lados izquierdo y derecho se
+   curvan hacia adentro. Solo se mueve el fondo (dos capas: borde y relleno),
+   el formulario queda quieto para que el área del hover no cambie.
+   ========================================================================== */
+@property --abrazo-lados {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0px;
+}
+
+@property --abrazo-curva {
+  syntax: '<length>';
+  inherits: true;
+  initial-value: 0px;
+}
+
+@media (hover: hover) and (min-width: 768px) {
+  .contacto__tarjeta--abrazo {
+    --abrazo-radio-x: 40px;     /* ancho de la curva de cada costado */
+    --abrazo-radio-y: 50%;      /* alto de la curva */
+
+    position: relative;
+    isolation: isolate;
+    border-color: transparent;
+    background: none;
+    transition:
+      --abrazo-lados var(--duracion-larga) var(--ease-rebote),
+      --abrazo-curva var(--duracion-larga) var(--ease-rebote);
+  }
+
+  .contacto__tarjeta--abrazo:hover {
+    --abrazo-lados: 8px;    /* cuánto se aprieta cada costado */
+    --abrazo-curva: 14px;   /* cuánto se hunde el centro de cada costado */
+  }
+
+  /* Capa del borde (verde oscuro) y capa del relleno (verde pastel), 2px
+     más adentro: las dos usan la misma curva para que el borde mantenga
+     su grosor */
+  .contacto__tarjeta--abrazo::before,
+  .contacto__tarjeta--abrazo::after {
+    --r-x: var(--abrazo-radio-x);
+    --r-y: var(--abrazo-radio-y);
+
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-mask:
+      radial-gradient(var(--r-x) var(--r-y) at calc(var(--abrazo-curva) - var(--r-x)) 50%, #0000 98%, #000 100%),
+      radial-gradient(var(--r-x) var(--r-y) at calc(100% - var(--abrazo-curva) + var(--r-x)) 50%, #0000 98%, #000 100%);
+    -webkit-mask-composite: source-in;
+    mask:
+      radial-gradient(var(--r-x) var(--r-y) at calc(var(--abrazo-curva) - var(--r-x)) 50%, #0000 98%, #000 100%),
+      radial-gradient(var(--r-x) var(--r-y) at calc(100% - var(--abrazo-curva) + var(--r-x)) 50%, #0000 98%, #000 100%);
+    mask-composite: intersect;
+  }
+
+  .contacto__tarjeta--abrazo::before {
+    inset: calc(var(--borde-linea) * -1) calc(var(--abrazo-lados) - var(--borde-linea));
+    border-radius: var(--radio-lg);
+    background: var(--verde-oscuro);
+  }
+
+  .contacto__tarjeta--abrazo::after {
+    --r-x: calc(var(--abrazo-radio-x) + var(--borde-linea));
+    --r-y: calc(var(--abrazo-radio-y) + var(--borde-linea));
+
+    inset: 0 var(--abrazo-lados);
+    border-radius: calc(var(--radio-lg) - var(--borde-linea));
+    background: var(--verde-pastel);
+  }
+}
+
+/* ==========================================================================
    Desde 768px
    ========================================================================== */
 @media (min-width: 768px) {
