@@ -99,11 +99,9 @@
   text-transform: uppercase;
 }
 
-/* ---------- Agradecimiento ---------- */
-.agradecimiento {
-  padding-bottom: var(--seccion-padding);
-}
-
+/* ---------- Agradecimiento ----------
+   Es la última sección antes del footer: no lleva padding abajo, el
+   espacio lo da el padding superior del footer. */
 .agradecimiento__contenedor {
   display: grid;
   gap: var(--stack-md);
