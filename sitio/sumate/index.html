@@ -248,10 +248,20 @@
 
             <button class="btn formulario__enviar" type="submit">Enviá tu postulación</button>
 
-            <!-- PENDIENTE: texto provisorio mientras no esté resuelto el envío -->
-            <p class="formulario__estado" role="status" hidden data-formulario-estado>Tus datos están completos, pero el envío de postulaciones todavía no está habilitado.</p>
-
           </form>
+
+          <!-- Agradecimiento: reemplaza al formulario cuando está completo
+               (formulario-postulacion.js). El botón abre WhatsApp con un
+               mensaje armado con el nombre, el tipo y el área elegidos.
+               PENDIENTE: todavía no hay envío real; el mensaje se muestra igual. -->
+          <div class="postulacion-gracias" role="status" tabindex="-1" hidden data-postulacion-gracias>
+            <p class="postulacion-gracias__titulo">¡Gracias por postularte!</p>
+            <p class="postulacion-gracias__texto">Tu postulación se envió correctamente. Si querés, también podés avisarnos por WhatsApp.</p>
+            <a class="btn postulacion-gracias__whatsapp" href="https://wa.me/5493516095374" target="_blank" rel="noopener" aria-label="Avisar por WhatsApp (se abre en una pestaña nueva)" data-postulacion-whatsapp="5493516095374">
+              <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><path d="M72,104a32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16a32,32,0,0,1-32,32A80,80,0,0,1,72,104Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><path d="M79.93,211.11a96,96,0,1,0-35-35h0L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+              Avisar por WhatsApp
+            </a>
+          </div>
         </div>
       </div>
     </section>

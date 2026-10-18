@@ -11,6 +11,8 @@
    El envío NO se resuelve acá: si todo está completo, se dispara el evento
    "postulacion:lista" con los datos (FormData), para que lo tome el
    módulo de envío que se defina. PENDIENTE: ese módulo.
+   Después se reemplaza el formulario por el agradecimiento, con un botón
+   que abre WhatsApp con un mensaje armado con los datos.
    ========================================================================== */
 
 (function () {
@@ -29,7 +31,9 @@
     const cvLink = cv.querySelector('[data-cv-link]');
     const cvNombre = cv.querySelector('[data-cv-nombre]');
     const cvQuitar = cv.querySelector('[data-cv-quitar]');
-    const estado = formulario.querySelector('[data-formulario-estado]');
+    const tarjeta = formulario.parentElement;
+    const gracias = tarjeta.querySelector('[data-postulacion-gracias]');
+    const whatsapp = gracias && gracias.querySelector('[data-postulacion-whatsapp]');
 
     const tipoElegido = () => formulario.elements.tipo.value;
 
@@ -143,7 +147,6 @@
     /* ---------- Envío ---------- */
     formulario.addEventListener('submit', evento => {
       evento.preventDefault();
-      estado.hidden = true;
 
       let primerError = null;
       obligatorios().forEach(control => {
@@ -161,11 +164,26 @@
         return;
       }
 
-      formulario.dispatchEvent(new CustomEvent('postulacion:lista', {
-        detail: { datos: new FormData(formulario) }
-      }));
-      estado.hidden = false;   // PENDIENTE: se reemplaza cuando esté resuelto el envío
+      const datos = new FormData(formulario);
+      formulario.dispatchEvent(new CustomEvent('postulacion:lista', { detail: { datos } }));
+      mostrarGracias(datos);   // PENDIENTE: cuando haya envío real, mostrarlo solo si salió bien
     });
+
+    /* ---------- Agradecimiento con botón de WhatsApp ---------- */
+    function mostrarGracias(datos) {
+      if (!gracias) return;
+      if (whatsapp) {
+        const nombre = datos.get('nombre').trim();
+        const tipo = datos.get('tipo') === 'profesional' ? 'profesional' : 'voluntario/a';
+        const areaElegida = datos.get('area') === 'Otra' ? datos.get('area_otra').trim() : datos.get('area');
+        const mensaje = `Hola, soy ${nombre}. Acabo de enviar mi postulación desde la web para sumarme como ${tipo} en ${areaElegida}.`;
+        whatsapp.href = `https://wa.me/${whatsapp.dataset.postulacionWhatsapp}?text=${encodeURIComponent(mensaje)}`;
+      }
+      formulario.hidden = true;
+      gracias.hidden = false;
+      gracias.focus({ preventScroll: true });
+      gracias.scrollIntoView({ block: 'center' });
+    }
 
     // Por si el navegador recordó lo elegido al volver a la página
     actualizarTipo();
