@@ -119,6 +119,20 @@
   transition: color var(--duracion-corta) var(--ease);
 }
 
+/* Ancho fijo: una copia invisible del texto (data-texto) reserva su ancho
+   sin apretar, así al hover ni el link ni la columna se achican */
+.footer--trazo .footer__enlace [data-texto] {
+  display: inline-grid;
+}
+
+.footer--trazo .footer__enlace [data-texto]::after {
+  content: attr(data-texto);
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  letter-spacing: normal;
+}
+
 .footer--trazo .footer__enlace:hover,
 .footer--trazo .footer__enlace:focus-visible {
   color: var(--rosa);
