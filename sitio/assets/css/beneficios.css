@@ -129,6 +129,11 @@
   scale: 1.35;
 }
 
+/* Ilustraciones anchas (ej. la ambulancia): sin agrandar, para que no se corten los costados */
+.card-beneficio__ilustracion--chica img {
+  scale: 1;
+}
+
 .card-beneficio__titulo {
   font-family: var(--fuente-subtitulo);
   font-weight: 500;
