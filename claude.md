@@ -62,7 +62,7 @@ Una vez terminado el sitio se está evaluando **pasarlo a WordPress**. Todavía 
 - Si alguna decisión de código complica la migración, avisame antes de aplicarla.
 
 ## Repositorio y deploy
-- **Repositorio de GitHub:** https://github.com/agostinacuervo32/sietesentidos
+- **Repositorio de GitHub:** https://github.com/agostinacuervo32/prototipo-siete-sentidos-2
 - **Vista previa actual (Vercel):** https://sietesentidos.vercel.app/. Vercel toma el repositorio de GitHub y despliega solo cada push a `main`, sirviendo `sitio/` como raíz.
 - **Dominio:** `fundacionsietesentidos.com.ar`, todavía **no está activo**. Está en trámite el pago y la vinculación con **Hostinger**. Cuando el dominio esté habilitado, probablemente el sitio pase de Vercel a Hostinger; todavía no está decidido cómo. Al hacer ese cambio, el contenido de `sitio/` tiene que quedar en la raíz del dominio para que las rutas con `/` sigan funcionando.
 - El código se sube al repositorio y desde ahí se hace el deploy (por ahora, a Vercel).
