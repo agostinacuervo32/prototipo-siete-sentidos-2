@@ -19,6 +19,7 @@
   --amarillo-pastel: #FFF0B8;
   --negro: #2B2522;            /* nunca #000000 */
   --blanco: #FFFFFF;
+  --gris: color-mix(in srgb, var(--negro) 14%, var(--blanco));   /* fondo de la card "Próximamente" de Noticias */
   --linea-suave: color-mix(in srgb, var(--negro) 12%, transparent);   /* líneas de la grilla de la agenda */
 
   /* ---------- Roles ---------- */

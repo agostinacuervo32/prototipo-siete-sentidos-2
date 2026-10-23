@@ -20,7 +20,8 @@
     const numeros = paginacion.querySelector('.paginacion__numeros');
     const anterior = paginacion.querySelector('.paginacion__anterior');
     const siguiente = paginacion.querySelector('.paginacion__siguiente');
-    const noticias = [...lista.querySelectorAll('.card-noticia')];
+    const noticias = [...lista.querySelectorAll('.card-noticia:not(.card-noticia--proximamente)')];
+    const proximamente = lista.querySelector('.card-noticia--proximamente');   // sin fecha: siempre al final
     const movimientoReducido = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     const fecha = noticia => noticia.querySelector('time').getAttribute('datetime');
@@ -63,7 +64,7 @@
 
     function mostrar() {
       const cantidad = porPagina();
-      totalPaginas = Math.ceil(noticias.length / cantidad);
+      totalPaginas = Math.ceil(lista.children.length / cantidad);
       pagina = Math.min(pagina, totalPaginas);
       paginacion.hidden = totalPaginas < 2;
       const desde = (pagina - 1) * cantidad;
@@ -86,6 +87,7 @@
       noticias
         .sort((a, b) => (recientesPrimero ? fecha(b).localeCompare(fecha(a)) : fecha(a).localeCompare(fecha(b))))
         .forEach(noticia => lista.append(noticia));
+      if (proximamente) lista.append(proximamente);
       pagina = 1;
       mostrar();
     }

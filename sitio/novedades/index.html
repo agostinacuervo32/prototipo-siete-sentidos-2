@@ -460,7 +460,8 @@
     <!-- NOTICIAS
          Cada .card-noticia es una entrada (en WordPress, un post): misma estructura y mismas clases.
          noticias.js las ordena por fecha y las muestra de a 6 con paginación.
-         PROVISORIO: títulos y textos en lorem ipsum, fechas de ejemplo y la misma foto en todas.
+         Por ahora hay 2 noticias y la card "Próximamente" (fondo gris con la franja en loop), que queda siempre última.
+         PROVISORIO: textos en lorem ipsum y fechas de ejemplo.
          PENDIENTE: el link de "Seguir leyendo" (todavía no existe la página de cada nota). -->
     <section class="noticias" id="noticias" data-fondo="claro" aria-labelledby="noticias-titulo" data-noticias>
       <div class="contenedor">
@@ -479,6 +480,7 @@
 
         <div class="noticias__lista">
 
+          <!-- PENDIENTE: título, texto, fecha y foto de la nota del premio (los pasa Ana). Por ahora, lorem ipsum y foto provisoria. -->
           <article class="card-noticia" aria-labelledby="noticia-1-titulo">
             <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
             <div class="card-noticia__contenido">
@@ -489,114 +491,21 @@
             </div>
           </article>
 
+          <!-- PROVISORIO: nota de ejemplo (no es real), con la foto de Rocío Godoy, psicóloga. -->
           <article class="card-noticia" aria-labelledby="noticia-2-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
+            <img class="card-noticia__imagen" src="/assets/imagenes/equipo/foto-equipo-07.jpg" alt="" width="901" height="901" loading="lazy">
             <div class="card-noticia__contenido">
               <time class="card-noticia__fecha visualmente-oculto" datetime="2026-10-07">7 de octubre de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-2-titulo">Lorem ipsum dolor sit amet</h3>
+              <h3 class="card-noticia__titulo" id="noticia-2-titulo">El uso de pantallas en las infancias</h3>
               <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
+              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: El uso de pantallas en las infancias</span></a>
             </div>
           </article>
 
-          <article class="card-noticia" aria-labelledby="noticia-3-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-09-30">30 de septiembre de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-3-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-4-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-09-23">23 de septiembre de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-4-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-5-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-09-16">16 de septiembre de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-5-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-6-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-09-09">9 de septiembre de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-6-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-7-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-09-02">2 de septiembre de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-7-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-8-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-08-26">26 de agosto de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-8-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-9-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-08-19">19 de agosto de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-9-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-10-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-08-12">12 de agosto de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-10-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-11-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-08-05">5 de agosto de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-11-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
-          </article>
-
-          <article class="card-noticia" aria-labelledby="noticia-12-titulo">
-            <img class="card-noticia__imagen" src="/assets/imagenes/novedades/noticia-provisoria.jpg" alt="" width="1600" height="1200" loading="lazy">
-            <div class="card-noticia__contenido">
-              <time class="card-noticia__fecha visualmente-oculto" datetime="2026-07-29">29 de julio de 2026</time>
-              <h3 class="card-noticia__titulo" id="noticia-12-titulo">Lorem ipsum dolor sit amet</h3>
-              <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: Lorem ipsum dolor sit amet</span></a>
-            </div>
+          <!-- Aviso de que vienen más noticias: noticias.js la deja siempre al final. Se borra cuando haya más notas. -->
+          <article class="card-noticia card-noticia--proximamente">
+            <p class="visualmente-oculto">Próximamente, más noticias.</p>
+            <p class="card-noticia__franja" aria-hidden="true"><span class="card-noticia__franja-pista"><span>Próximamente · Próximamente · Próximamente ·</span><span>Próximamente · Próximamente · Próximamente ·</span></span></p>
           </article>
 
         </div>

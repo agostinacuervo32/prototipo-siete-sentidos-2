@@ -176,6 +176,50 @@
   margin-top: 12px;
 }
 
+/* ---------- Card "Próximamente": fondo gris con una franja en loop ----------
+   Misma franja que la de "Nuevo" en las cards de talleres (talleres.css) */
+.card-noticia--proximamente {
+  background: var(--gris);
+}
+
+.card-noticia--proximamente::before {
+  content: none;   /* sin foto, no lleva degradado */
+}
+
+.card-noticia__franja {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120%;
+  overflow: hidden;
+  padding: 6px 0;
+  background: var(--verde-pastel);
+  color: var(--verde-oscuro);
+  font-family: var(--fuente-subtitulo);
+  font-weight: 500;
+  font-size: var(--fs-bajada);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-14deg);
+  pointer-events: none;
+}
+
+/* El texto se repite dos veces para que la franja corra en loop sin cortes */
+.card-noticia__franja-pista {
+  display: inline-flex;
+  animation: card-noticia-franja 12s linear infinite;
+}
+
+.card-noticia__franja-pista span {
+  padding-right: 0.6em;
+}
+
+@keyframes card-noticia-franja {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 /* ---------- Paginación ---------- */
 .paginacion {
   display: flex;
@@ -250,5 +294,9 @@
 @media (prefers-reduced-motion: reduce) {
   .card-noticia__imagen {
     transition: none;
+  }
+
+  .card-noticia__franja-pista {
+    animation: none;
   }
 }
