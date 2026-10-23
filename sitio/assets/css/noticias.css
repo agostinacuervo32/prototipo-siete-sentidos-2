@@ -176,14 +176,18 @@
   margin-top: 12px;
 }
 
-/* ---------- Card "Próximamente": fondo gris con una franja en loop ----------
+/* ---------- Card "Próximamente": foto en blanco y negro con una franja en loop ----------
    Misma franja que la de "Nuevo" en las cards de talleres (talleres.css) */
 .card-noticia--proximamente {
   background: var(--gris);
 }
 
 .card-noticia--proximamente::before {
-  content: none;   /* sin foto, no lleva degradado */
+  content: none;   /* sin texto encima, no lleva degradado */
+}
+
+.card-noticia--proximamente .card-noticia__imagen {
+  filter: grayscale(1);
 }
 
 .card-noticia__franja {
