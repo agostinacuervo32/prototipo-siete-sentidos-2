@@ -96,6 +96,16 @@
   border: 0;
   border-radius: var(--radio);
   background: var(--blanco);
+  /* Al tocar seguido las flechas no se selecciona la foto como si fuera texto */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mientras el visor está abierto, tampoco se selecciona nada de la página de fondo */
+body:has(.galeria-visor[open]) {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .galeria-visor::backdrop {
@@ -110,6 +120,7 @@
   /* Nunca más alta que el recuadro: su tope, menos el padding y las flechas (12 + 44px) */
   max-height: min(70vh, calc(100vh - 2 * var(--margen) - 24px - 56px));
   border-radius: var(--radio-sm);
+  -webkit-user-drag: none;
 }
 
 /* Flechas para pasar de foto: centradas debajo, con la misma separación que
