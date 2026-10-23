@@ -107,7 +107,7 @@
   width: auto;
   height: auto;
   max-width: calc(100vw - 2 * var(--margen) - 24px);
-  max-height: 70vh;
+  max-height: min(70vh, calc(100vh - 2 * var(--margen) - 24px));   /* nunca más alta que el recuadro (su tope, menos el padding) */
   border-radius: var(--radio-sm);
 }
 
