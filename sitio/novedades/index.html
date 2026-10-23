@@ -364,7 +364,7 @@
          noticias.js las ordena por fecha y las muestra de a 6 con paginación.
          Por ahora hay 2 noticias y la card "Próximamente" (fondo gris con la franja en loop), que queda siempre última.
          PROVISORIO: la nota de pantallas (lorem ipsum y fecha de ejemplo).
-         PENDIENTE: el link de "Seguir leyendo" (todavía no existe la página de cada nota). -->
+         "Seguir leyendo" lleva a la página de cada nota (/novedades/<slug>/). -->
     <section class="noticias" id="noticias" data-fondo="claro" aria-labelledby="noticias-titulo" data-noticias>
       <div class="contenedor">
 
@@ -384,7 +384,7 @@
 
           <!-- Nota del premio de ProSalud. En la card va solo el resumen; el texto completo irá en la página de la nota.
                La fecha es la de publicación de la nota (la premiación fue en noviembre de 2025).
-               PENDIENTE: el link de "Seguir leyendo" a la página de la nota. -->
+               "Seguir leyendo" lleva a la página de la nota. -->
           <article class="card-noticia" aria-labelledby="noticia-1-titulo">
             <img class="card-noticia__imagen" src="/assets/imagenes/noticias/concurso-2025/premio-prosalud.jpg" alt="" width="1200" height="1600" loading="lazy">
             <div class="card-noticia__contenido">
@@ -402,7 +402,7 @@
               <time class="card-noticia__fecha visualmente-oculto" datetime="2026-10-07">7 de octubre de 2026</time>
               <h3 class="card-noticia__titulo" id="noticia-2-titulo">El uso de pantallas en las infancias</h3>
               <p class="card-noticia__extracto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <a class="btn btn--oscuro card-noticia__boton" href="#noticias">Seguir leyendo<span class="visualmente-oculto">: El uso de pantallas en las infancias</span></a>
+              <a class="btn btn--oscuro card-noticia__boton" href="/novedades/uso-de-pantallas-en-las-infancias/">Seguir leyendo<span class="visualmente-oculto">: El uso de pantallas en las infancias</span></a>
             </div>
           </article>
 
