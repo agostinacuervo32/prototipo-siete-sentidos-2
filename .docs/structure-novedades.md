@@ -54,7 +54,7 @@
      - Título "Galería de fotos" con las flechas al lado.
      - Mosaico de fotos de distintos tamaños con las medidas exactas del wireframe (separación 22; filas de 88 y 136; anchos 130, 172, 194 y 236), que encajan sin dejar huecos y se repiten en loop (`galeria.css`).
      - **REUTILIZA** el carrusel de las reseñas del Inicio (`carrusel.js`, `carrusel.css`): pasa solo como un marquee, se puede arrastrar y, al tocar una flecha, se frena y avanza de a una columna.
-     - Al tocar una foto se abre en un visor (`<dialog>`, `galeria.js`) con un recuadro blanco y 70vh de alto como máximo. Se cierra con la X, con Escape o tocando afuera.
+     - Al tocar una foto se abre en un visor (`<dialog>`, `galeria.js`) con un recuadro blanco y 70vh de alto como máximo. Debajo de la foto, centradas, dos flechas (con la misma separación que las del título) pasan a la foto anterior o siguiente, en loop; también con las flechas del teclado. Se cierra con la X, con Escape o tocando afuera.
      - **PROVISORIO:** las 9 fotos se eligieron entre las de la fundación (cocina, arte niños, arte adultos, actividades grupales y merienda). A confirmar cuáles son de talleres.
    - **REQUERIMIENTO OBLIGATORIO:** no usar "accesible" para hablar de precios.
 

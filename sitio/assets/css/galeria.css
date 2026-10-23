@@ -107,8 +107,18 @@
   width: auto;
   height: auto;
   max-width: calc(100vw - 2 * var(--margen) - 24px);
-  max-height: min(70vh, calc(100vh - 2 * var(--margen) - 24px));   /* nunca más alta que el recuadro (su tope, menos el padding) */
+  /* Nunca más alta que el recuadro: su tope, menos el padding y las flechas (12 + 44px) */
+  max-height: min(70vh, calc(100vh - 2 * var(--margen) - 24px - 56px));
   border-radius: var(--radio-sm);
+}
+
+/* Flechas para pasar de foto: centradas debajo, con la misma separación que
+   las del título (carrusel-encabezado__flechas). Usan el botón circular de botones.css */
+.galeria-visor__flechas {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
 }
 
 /* La X usa el botón circular de botones.css */
