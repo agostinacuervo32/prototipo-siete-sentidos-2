@@ -61,6 +61,11 @@
   color: var(--negro);
 }
 
+/* Bajada de varios párrafos (Nosotros): menos aire entre párrafos que entre título y bajada */
+.hero__bajada + .hero__bajada {
+  margin-top: 0.75em;
+}
+
 .hero__botones {
   justify-content: center;
   margin-top: 28px;
