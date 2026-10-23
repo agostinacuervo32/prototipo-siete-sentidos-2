@@ -176,6 +176,19 @@
   margin-top: 12px;
 }
 
+/* Firma de las notas de opinión: profesional y área, al pie de la card */
+.card-noticia__firma {
+  align-self: stretch;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid color-mix(in srgb, var(--blanco) 30%, transparent);
+  font-family: var(--fuente-subtitulo);
+  font-weight: 400;
+  font-size: var(--fs-aclaracion);
+  line-height: 1.3;
+  color: var(--rosa-pastel);
+}
+
 /* ---------- Card "Próximamente": foto en blanco y negro con una franja en loop ----------
    Misma franja que la de "Nuevo" en las cards de talleres (talleres.css) */
 .card-noticia--proximamente {
