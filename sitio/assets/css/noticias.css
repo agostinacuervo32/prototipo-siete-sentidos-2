@@ -176,8 +176,8 @@
   margin-top: 12px;
 }
 
-/* Firma de las notas de opinión: profesional y área, al pie de la card */
-.card-noticia__firma {
+/* Pie de la card: "Noticia" en las noticias; profesional y área en las notas de opinión */
+.card-noticia__pie {
   align-self: stretch;
   margin-top: 12px;
   padding-top: 12px;
