@@ -28,7 +28,8 @@
    - **Móvil:** cada servicio se apila en este orden: título, texto, CTA principal, CTA secundario e imagen.
    - **Contenido por servicio:**
      - **Apoyo escolar:** "Reforzamos lo que se trabaja en la escuela para que cada estudiante gane confianza y autonomía. Acompañamos todas las materias, desde nivel inicial hasta secundario, en turnos de mañana y tarde. Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual." · CTA: "Ver precios y horarios" (principal) · "Conocé las materias" (secundario) · Etiqueta "10% OFF" junto al título.
-     - **Especialidades:** "Cuando una dificultad va más allá de lo escolar, contamos con profesionales que la abordan desde su área. Psicopedagogía, fonoaudiología, psicología y pediatría trabajan en conjunto con el apoyo escolar para acompañar a cada niño de manera integral. Atendemos de forma particular y por obra social." · CTA: "Ver precios y horarios" (principal) · "Conocé las especialidades" (secundario).
+     - **Especialidades:** "Cuando una dificultad va más allá de lo escolar, contamos con profesionales que la abordan desde su área. Psicopedagogía, fonoaudiología, psicología, pediatría y nutrición trabajan en conjunto con el apoyo escolar para acompañar a cada niño de manera integral, y también se pueden hacer por separado." · "Algunas, como psicología y nutrición, están disponibles para toda la familia, también para adultos. Atendemos de forma particular y por obra social." · CTA: "Ver precios y horarios" (principal) · "Conocé las especialidades" (secundario).
+     - **Videos de las cards:** Apoyo escolar, `sitio/assets/videos/WhatsApp Video 2026-10-15 at 20.14.20.mp4` · Especialidades, `sitio/assets/videos/WhatsApp Video 2026-10-14 at 19.38.23.mp4`.
    - **REQUERIMIENTO OBLIGATORIO:** cada CTA lleva a la página del servicio correspondiente (Apoyo Escolar o Especialidades). "Ver precios y horarios" ancla a la sección de precios y agenda de esa página.
    - **A DEFINIR:** en escritorio el wireframe muestra solo imagen y título. Falta resolver cómo aparecen el texto, la etiqueta "10% OFF" y los CTA (por ejemplo, al pasar el cursor o debajo de cada card).
 
@@ -74,7 +75,7 @@
      - ¿La revisión con la pediatra tiene costo? → No. Cuando el equipo detecta alguna dificultad durante la atención, la pediatra realiza una revisión preventiva sin costo. No reemplaza una consulta pediátrica a pedido.
      - ¿La atención es gratuita? → No. Siete Sentidos es una fundación, pero sus servicios son arancelados. Incluyen sin costo adicional los servicios detallados arriba.
      - ¿Trabajan con obra social? → Sí. Las especialidades se atienden de forma particular y por obra social. Consultanos por la tuya.
-     - Se pueden sumar: ¿Qué incluye el servicio?, ¿Cómo se paga?, ¿Se pueden combinar servicios?, ¿Hasta qué nivel dan apoyo escolar? (textos en `contexto.md`).
+     - Se pueden sumar: ¿Qué incluye el servicio?, ¿Cada cuánto se paga?, ¿Se pueden combinar servicios?, ¿Hasta qué nivel dan apoyo escolar? (textos en `contexto.md`).
    - **REQUERIMIENTO OBLIGATORIO:** la agenda tiene que poder actualizarse con facilidad, porque los horarios de los profesionales cambian con frecuencia.
    - **REQUERIMIENTO OBLIGATORIO:** la FAQ "¿La atención es gratuita?" va siempre, porque muchas familias asocian "fundación" con un servicio gratuito y abandonan la consulta al conocer el costo.
 

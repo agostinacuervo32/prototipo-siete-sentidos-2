@@ -21,7 +21,7 @@
    - **Contenido (PROVISORIO):** el wireframe tiene los textos de Novedades como relleno.
      - Antetítulo en mayúsculas: "DONÁ".
      - H1: "Tu donación sostiene el acompañamiento de cada niño".
-     - Bajada: "Además de lo que aportan las familias, la fundación se sostiene con donaciones. Podés donar dinero, con beneficio en Ganancias, o los materiales que usamos todos los días."
+     - Bajada: "Además de lo que aportan las familias, la fundación crece con las donaciones. Podés donar dinero o los materiales que usamos todos los días."
      - Doble CTA: "Quiero donar" (principal, a WhatsApp con mensaje prearmado) y "Ver qué necesitamos" (secundario, ancla a `#que-necesitamos`).
 
 2. **Por qué donar (beneficio en Ganancias)**

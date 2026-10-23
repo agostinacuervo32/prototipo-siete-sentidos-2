@@ -23,7 +23,7 @@
    - **Contenido (PROVISORIO):** el wireframe tiene los textos del Inicio como relleno. Textos armados con `brief.md`:
      - Antetítulo en mayúsculas: "NOSOTROS".
      - H1: "Educación y salud de la mano".
-     - Bajada: "Siete Sentidos nació en 2023 como un espacio de apoyo escolar en la casa de Ana Rinaldi y fue sumando especialidades a pedido de las familias. Hoy docentes y profesionales trabajan juntos para acompañar a cada niño."
+     - Bajada: "Siete Sentidos nació en 2023 como un espacio de apoyo escolar y fue sumando especialidades a pedido de las familias. Hoy docentes y profesionales trabajan juntos para acompañar a cada niño."
 
 2. **¡Conocé al equipo!**
    - **Distribución (captura `imagenes de referencia/Captura de pantalla 2026-10-16 134626.png`):** H2 y debajo la grilla con todas las integrantes, sin paginar. Son 11. Escritorio: 3 por fila (cards de ~498 × 520px, 56px entre columnas y 60px entre filas). Tablet: 3 por fila. Móvil: 2 por fila con 6px de separación. Estilos en `equipo.css` (`integrantes`, `card-integrante`).

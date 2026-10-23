@@ -25,7 +25,7 @@
      - H1: *PROPUESTA — a validar.* Opciones:
        - "Apoyo escolar en Yofre Norte, desde nivel inicial hasta secundario" (suma la keyword local "apoyo escolar" + barrio).
        - "Cada estudiante gana confianza y autonomía".
-     - Bajada (**APROBADO**, texto de la card del Inicio): "Reforzamos lo que se trabaja en la escuela para que cada estudiante gane confianza y autonomía. Acompañamos todas las materias, desde nivel inicial hasta secundario, en turnos de mañana y tarde."
+     - Bajada: "Acompañamos todas las materias, desde nivel inicial hasta secundario, en turnos de mañana y tarde."
      - Doble CTA: "Inscribite al apoyo escolar" (principal, al formulario de la sección 6) y "Ver precios y horarios" (secundario, ancla). *PROPUESTA — a validar* ("Inscribite al apoyo escolar" sale de la lista de CTAs del `brief.md`).
    - **Interacción:**
      - El video se reproduce sin sonido y en loop solo mientras está en pantalla (**REUTILIZA** `video-fondo.js`).
@@ -43,8 +43,8 @@
      - **Móvil:** acordeón vertical, con el primer panel abierto.
      - Cada panel lleva un color pastel distinto de la paleta y, si hay, una foto o ilustración.
      - **Paneles (PROPUESTA — a validar, armados con datos del `brief.md`):**
-       1. **Todas las materias:** Desde nivel inicial (motricidad, letras, números y nombre propio) hasta secundario. Lengua y Matemática son las materias que más se refuerzan.
-       2. **En la fundación:** Las clases son en la fundación, no a domicilio, con docentes que conocen a cada estudiante.
+       1. **Todas las materias:** Desde nivel inicial (motricidad, letras, números y nombre propio) hasta secundario. Lengua y Matemática son las materias que más reforzamos.
+       2. **En la fundación:** Las clases son en la fundación, de manera presencial, con docentes que conocen a cada estudiante.
        3. **Aprender jugando:** Usamos juegos como el UNO, el Jenga, el dominó, la lotería, las damas, el ajedrez y los encastres para trabajar los contenidos.
        4. **El oficio de estudiante:** Acompañamos a cada estudiante para que gane autonomía, valores y pensamiento crítico.
    - **Agenda (REUTILIZA el componente de agenda del Inicio y `agenda.js`):**
@@ -79,8 +79,8 @@
      1. **Por hora:** PENDIENTE valor actual. *(El brief da $9.500 como referencia, pero dice que faltan los valores actualizados.)*
      2. **Por semana:** PENDIENTE valor y cantidad de horas que incluye.
      3. **Plan mensual:** PENDIENTE valor. Etiqueta "10% de descuento" y aclaración "abonando del 1 al 10 de cada mes". Es la card destacada (otro relleno de la paleta + etiqueta), porque es el plan con beneficio.
-   - Debajo de las cards, una nota: "La merienda y el área protegida están incluidas en todas las formas de pago." (dato del `brief.md`; *PROPUESTA — a validar*).
-   - **Aclaración de arancel (APROBADO, texto de la FAQ del Inicio):** "Siete Sentidos es una fundación, pero sus servicios son arancelados." Va visible en la sección, no escondida.
+   - Sin notas debajo de las cards: no se aclara que la merienda y el área protegida están incluidas ni que los servicios son arancelados (eso se entiende por los precios).
+   - Card "Apoyo escolar y especialidad": "Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología, pediatría o nutrición."
    - **Escritorio:** 3 cards en fila, con la del plan mensual destacada. Hover según `style.md` (el relleno sube un tono).
    - **Móvil (PROPUESTA — a validar):** selector tipo píldora con tres opciones ("Por hora", "Por semana", "Por mes") que cambia la card visible; también se puede deslizar entre cards. Por defecto queda elegido el plan mensual.
    - Cada card lleva su CTA: "Consultá por este plan" (principal). *PROPUESTA — a validar.* A DEFINIR si lleva al formulario o a WhatsApp con el plan en el mensaje.

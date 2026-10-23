@@ -14,7 +14,7 @@ Se definen a partir de la idea de **"educación y salud de la mano"**: un trabaj
 
 El desafío de fondo, detectado en el problema de diseño: la fundación **no cuenta con un medio de comunicación institucional propio**. Depende de Instagram y WhatsApp (pensados para difusión puntual y contacto directo) y de la recomendación de las escuelas de la zona. Una persona que no la conoce no logra comprender rápidamente qué es Siete Sentidos, a quién atiende, qué servicios ofrece, dónde está ni cómo acceder. A esto se suma que la fundación no logra incrementar su cantidad de alumnos y pacientes, al punto de haber tenido que prescindir de una profesional.
 
-**⚠️ Restricción crítica de posicionamiento:** Siete Sentidos es una fundación **arancelada**. Muchas familias abandonan la consulta al conocer el costo porque asocian "fundación" con servicio gratuito. El sitio debe comunicar con claridad que los servicios tienen costo (por debajo del valor de mercado), sin que eso se lea como una barrera.
+**⚠️ Restricción crítica de posicionamiento:** Siete Sentidos es una fundación **arancelada**. Muchas familias abandonan la consulta al conocer el costo porque asocian "fundación" con servicio gratuito. El sitio debe dejar claro que los servicios tienen costo (por debajo del valor de mercado), sin que eso se lea como una barrera. Se comunica a lo largo del sitio (precios visibles, formas de pago), sin una aclaración explícita del tipo "es una fundación, pero sus servicios son arancelados".
 
 **Palabras clave de la marca:** Integralidad, Acompañamiento, Cercanía, Confianza, Comunidad, Amor por el trabajo, Educación y salud de la mano. (Buscar más keywords que representen al sector para posicionamiento orgánico y en búsquedas locales.)
 

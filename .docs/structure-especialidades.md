@@ -24,8 +24,8 @@
    - **Móvil:** el texto arriba y la composición debajo, recortada en los bordes laterales de la pantalla.
    - **Contenido (PROVISORIO):**
      - Antetítulo en mayúsculas: "ESPECIALIDADES".
-     - H1: "Psicopedagogía, fonoaudiología y psicología infantil en Córdoba" (suma las keywords del área 2 de `keywords.md` con la variante local).
-     - Bajada (basada en el texto **APROBADO** de la card de Especialidades del Inicio): "Cuando una dificultad va más allá de lo escolar, contamos con profesionales que la abordan desde su área y trabajan en conjunto con el apoyo escolar. Atendemos de forma particular y por obra social."
+     - H1: "La especialidad que tu familia necesita" (las keywords del área 2 de `keywords.md` quedan en el `<title>`).
+     - Bajada (basada en el texto **APROBADO** de la card de Especialidades del Inicio): "Cuando una dificultad va más allá de lo escolar, contamos con profesionales que la abordan desde su área y trabajan en conjunto con el apoyo escolar. Atendemos a los niños y también al resto de la familia, de forma particular y por obra social."
      - Doble CTA: "Pedí un turno" (principal, al formulario `#contacto`) y "Ver precios" (secundario, ancla a `#precios`).
    - **Recursos:**
      - Video: `sitio/assets/videos/WhatsApp Video 2026-10-14 at 19.38.23.mp4` (indicado por vos).
@@ -37,23 +37,24 @@
    - **REQUERIMIENTO OBLIGATORIO:** en el primer vistazo tiene que quedar claro qué especialidades hay, que trabajan junto con el apoyo escolar y cómo pedir un turno.
 
 2. **Acompañamiento integral (descuentos) + Servicios incluidos**
-   - Dos bloques seguidos (en el HTML, dos `<section>` dentro del mismo tramo): primero el descuento por combinar servicios, después lo que se incluye sin costo adicional.
+   - Dos bloques seguidos (en el HTML, dos `<section>` dentro del mismo tramo): primero la presentación de las especialidades, después lo que se incluye sin costo adicional.
    - **ID de ancla:** `#acompanamiento-integral` (2a) y `#servicios-incluidos` (2b).
 
    **2a. Acompañamiento integral**
-   - Antetítulo: "ACOMPAÑAMIENTO INTEGRAL" · Título: "Combiná especialidades con apoyo escolar" (PROVISORIO).
-   - Bajada (PROVISORIO): "Cuando un niño hace apoyo escolar y una o más especialidades en la fundación, docentes y profesionales comparten lo que observan y trabajan sobre los mismos objetivos. Además, combinar servicios tiene un descuento especial."
-   - **Bloques por especialidad (PROVISORIO):** Psicopedagogía, Fonoaudiología, Psicología, Pediatría y Nutrición, cada panel con nombre y una línea de qué aborda, sin imagen:
+   - No habla de combinar servicios: presenta las especialidades que hay.
+   - Antetítulo: "ACOMPAÑAMIENTO INTEGRAL" · Título: "Profesionales para cada etapa".
+   - Bajada: "Contamos con profesionales capacitadas para trabajar con niños, adolescentes y adultos, cada una desde su especialidad. Conocé en qué acompaña cada área y sus horarios de atención."
+   - **Bloques por especialidad (PROVISORIO):** Psicopedagogía, Fonoaudiología, Psicología, Pediatría, Nutrición y Cosmiatría, cada panel con nombre y una línea de qué aborda, sin imagen:
      - **Psicopedagogía:** Acompaña las dificultades de aprendizaje: lectura, escritura, cálculo, atención y organización del estudio.
      - **Fonoaudiología:** Trabaja el desarrollo del habla y del lenguaje oral, la pronunciación y la comprensión.
      - **Psicología:** Acompaña lo emocional y lo conductual del niño, en diálogo con su familia y su escuela.
      - **Pediatría:** Revisiones preventivas, controles y fichas médicas, en coordinación con el resto del equipo.
      - **Nutrición:** Acompaña la alimentación de cada niño y de su familia, con hábitos saludables adaptados a sus necesidades.
+     - **Cosmiatría (próximamente):** especialidad nueva para temas de la piel (por ejemplo, el acné en adolescentes). En lugar de texto, el panel muestra la franja "Próximamente" en loop, la misma de la card "Próximamente" de Noticias (`acordeon-paneles__franja`).
    - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): la agenda de las especialidades; el acordeón se estira hasta el alto de la agenda.
    - **Agenda (REUTILIZA el componente de agenda del Inicio y `agenda.js`):** muestra solo las especialidades, con el desplegable reducido a Psicología, Pediatría, Fonoaudiología, Psicopedagogía y Nutrición (sin Apoyo escolar ni Inglés). Por defecto, Psicología. Los horarios salen de `informacion/horarios.md`.
    - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la agenda debajo (lista por día, como en el Inicio).
-   - CTA principal: "Consultá por el acompañamiento integral" (WhatsApp con mensaje prearmado).
-   - **REQUERIMIENTO OBLIGATORIO:** no se promete un porcentaje de descuento: depende de la combinación y se invita a consultar por WhatsApp (`contexto.md`, sección 7).
+   - CTA principal: "Consultá por una especialidad" (WhatsApp con mensaje prearmado).
    - **REQUERIMIENTO OBLIGATORIO:** pediatría se comunica como revisión y controles, no como atención pediátrica general (nota de `keywords.md`).
 
    **2b. Servicios incluidos (sin costo adicional)**
@@ -74,7 +75,8 @@
      4. **Nutrición:** $40.000 por hora.
      5. **Servicios adicionales:** $25.000. Descripción: "Pediatría, fichas médicas, planillas ANSES y fichas para viajes de estudio."
    - Cada card lleva el CTA "Consultar" a WhatsApp con el servicio en el mensaje (mismo criterio que Apoyo Escolar).
-   - Notas debajo de las cards: "Si combinás una especialidad con apoyo escolar, tenés un descuento especial." (PROVISORIO) · "Siete Sentidos es una fundación, pero sus servicios son arancelados." (**APROBADO**, FAQ del Inicio).
+   - Card "Apoyo escolar y especialidad": "Combiná el apoyo escolar con psicopedagogía, fonoaudiología, psicología, pediatría o nutrición."
+   - Sin notas debajo de las cards (ni el descuento por combinar ni la aclaración de arancel).
    - **ID de ancla:** `#precios`.
    - **REQUERIMIENTO OBLIGATORIO:** los precios se escriben en el HTML, en un único lugar por card, para poder actualizarlos.
    - **REQUERIMIENTO OBLIGATORIO:** no usar "accesible" para hablar de precios.
@@ -96,7 +98,7 @@
 |---|---|---|---|
 | Header | — | Contactate | WhatsApp |
 | 1. Hero | Pedí un turno | Ver precios | `#contacto` · `#precios` |
-| 2. Acompañamiento integral + incluidos | Consultá por el acompañamiento integral · Hacé tu consulta | — | WhatsApp · `#contacto` |
+| 2. Acompañamiento integral + incluidos | Consultá por una especialidad · Hacé tu consulta | — | WhatsApp · `#contacto` |
 | 3. Precios | Consultar (en cada card) | — | WhatsApp |
 | 4. Contacto | Enviar | — | WhatsApp |
 

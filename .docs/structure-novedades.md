@@ -28,9 +28,9 @@
    - **REQUERIMIENTO OBLIGATORIO:** en el primer vistazo tiene que quedar claro que acá están los talleres vigentes y las novedades de la fundación.
 
 2. **Talleres vigentes (jóvenes y adultos)**
-   - **Separación por público (captura):** dos cards, "Talleres para jóvenes" y "Talleres para adultos". **REUTILIZA** las cards con video del Inicio (`servicios`, `card-servicio`), más altas en escritorio (`servicios--talleres`) para que entre la información: en escritorio con cursor, la card elegida crece y se despega la ventana con la info; en móvil, la info visible y el video abajo.
+   - **Separación por público (captura):** dos cards, "Talleres para jóvenes" y "Talleres para adultos". **REUTILIZA** las cards con video del Inicio (`servicios`, `card-servicio`), un poco más altas en escritorio (`servicios--talleres`) para que entre la lista de talleres: en escritorio con cursor, la card elegida crece y se despega la ventana con la info; en móvil, la info visible y el video abajo.
    - **Medios:** jóvenes, video `sitio/assets/videos/WhatsApp Video 2026-10-14 at 19.35.57.mp4`; adultos, foto PROVISORIA `sitio/assets/imagenes/novedades/taller-arte-adultos.jpg` hasta tener su video.
-   - **Contenido de cada card:** una línea de presentación (PROVISORIO), la aclaración "Todos los talleres incluyen lo necesario para hacerlos: no hace falta llevar nada." y un **acordeón con los talleres** (**REUTILIZA** `acordeon.css` y `acordeon.js`, el de preguntas frecuentes del Inicio). Cada taller se despliega y muestra el día y lo que incluye.
+   - **Contenido de cada card:** una línea de presentación (PROVISORIO), la aclaración "Todos los talleres incluyen lo necesario para hacerlos: no hace falta llevar nada." y la **lista de los talleres** (`card-servicio__talleres`): solo los nombres, sin desplegables, para que la navegación no se haga larga. El día y lo que incluye cada taller están en las cards de "Talleres disponibles".
    - **REQUERIMIENTO OBLIGATORIO:** todos los talleres (los actuales y los que se sumen) incluyen todo lo necesario; en ninguno hay que llevar nada.
    - **Talleres para jóvenes:**
      1. **Taller de arte (pintura):** sábados a la mañana, una vez por mes. Incluye los materiales de pintura y el cuadro. Precio: **PENDIENTE** (en `brief.md`, $30.000).
@@ -40,7 +40,7 @@
      1. **Taller de arte (pintura):** sábados a la tarde, una vez por mes. $50.000. Incluye los materiales de pintura y el cuadro.
      2. **Taller de nutrición y alimentación saludable:** domingos y miércoles. Incluye todos los materiales. Horario y precio: **PENDIENTE**.
      3. **Habitar el cuidado (solo en octubre):** por el mes de la lucha contra el cáncer de mama; trabaja alimentación protectora y antiinflamatoria, emociones y autocuidado. Incluye todos los materiales. Días, horario y precio: **PENDIENTE**.
-   - **CTA de cada card:** "Reservar mi lugar", a WhatsApp (3516095374) con el público en el mensaje prearmado. Sin botón "Ver talleres": los talleres se despliegan en la misma card.
+   - **CTA de cada card:** "Reservar mi lugar", a WhatsApp (3516095374) con el público en el mensaje prearmado. Sin botón "Ver talleres": los talleres se listan en la misma card.
    - **ID de ancla:** `#talleres`.
    - **REQUERIMIENTO OBLIGATORIO:** los días, lo que incluye y los precios se escriben en el HTML, en un único lugar por taller, para poder actualizarlos.
    - **Talleres disponibles (captura `imagenes de referencia/Captura de pantalla 2026-10-16 115414.png`):** debajo de las dos cards y antes de la galería, con ancla `#talleres-disponibles`.

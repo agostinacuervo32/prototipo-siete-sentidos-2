@@ -22,7 +22,7 @@
 Datos que condicionan el copy:
 - El 96% busca desde el celular → textos cortos y escaneables.
 - El 73,2% no conoce lugares que combinen apoyo escolar y especialidades → el diferencial tiene que estar arriba.
-- Muchas familias asocian "fundación" con servicio gratuito → aclarar que los servicios son arancelados, sin esconderlo.
+- Muchas familias asocian "fundación" con servicio gratuito → que se entienda que los servicios son arancelados, sin esconderlo, pero a través de los precios y las formas de pago, sin la aclaración explícita "es una fundación, pero sus servicios son arancelados".
 - 2 de cada 3 contactan apenas encuentran la institución → CTA a WhatsApp siempre visible.
 
 ## 3. Tono comunicacional
@@ -65,7 +65,7 @@ Datos que condicionan el copy:
 - **Apoyo escolar:** Reforzamos lo que se trabaja en la escuela para que cada estudiante gane confianza y autonomía. Acompañamos todas las materias, desde nivel inicial hasta secundario, en turnos de mañana y tarde. Podés pagar por hora, por semana o por mes, con un 10% de descuento en el plan mensual.
   - CTA (Figma): Ver precios y horarios · Conocé las materias
   - Etiqueta: 10% OFF
-- **Especialidades:** Cuando una dificultad va más allá de lo escolar, contamos con profesionales que la abordan desde su área. Psicopedagogía, fonoaudiología, psicología y pediatría trabajan en conjunto con el apoyo escolar para acompañar a cada niño de manera integral. Atendemos de forma particular y por obra social.
+- **Especialidades:** Cuando una dificultad va más allá de lo escolar, contamos con profesionales que la abordan desde su área. Psicopedagogía, fonoaudiología, psicología, pediatría y nutrición trabajan en conjunto con el apoyo escolar para acompañar a cada niño de manera integral, y también se pueden hacer por separado. Algunas, como psicología y nutrición, están disponibles para toda la familia, también para adultos. Atendemos de forma particular y por obra social.
   - CTA (Figma): Ver precios y horarios · Conocé las especialidades
 
 ### Por qué elegir Siete Sentidos
@@ -139,7 +139,9 @@ Datos que condicionan el copy:
 - **Apoyo escolar:** plan mensual con **10% de descuento abonando del 1 al 10 de cada mes**, o pago directo por hora o por semana.
 - **Especialidades:** se pagan el día del turno, **sin descuentos**.
 - **Acompañamiento integral** (por ejemplo, psicología + fonoaudiología + apoyo escolar): tiene un descuento especial, pero no hay un monto fijo porque depende de qué servicios se combinen. En el copy no se promete un porcentaje: se invita a **consultar por WhatsApp**.
-- La merienda y el área protegida aplican a todas las formas de pago (mensual y por hora).
+- La merienda y el área protegida aplican a todas las formas de pago (mensual y por hora). Es un dato interno: no se publica como aclaración en el sitio.
+- Las especialidades también se pueden hacer por separado, sin apoyo escolar. Algunas (por ejemplo, psicología y nutrición) atienden también a adultos de la familia (madres, padres, hermanos).
+- **Cosmiatría:** especialidad que se va a sumar próximamente, para temas de la piel (por ejemplo, el acné en adolescentes). Por ahora solo se anuncia como "Próximamente".
 
 ### Sumate: a quién convoca
 - **Principalmente a profesionales con trabajo remunerado.** Es el público principal de la página y va primero en el copy.
