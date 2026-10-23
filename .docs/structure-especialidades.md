@@ -50,7 +50,7 @@
      - **Psicología:** Acompaña lo emocional y lo conductual del niño, en diálogo con su familia y su escuela.
      - **Pediatría:** Revisiones preventivas, controles y fichas médicas, en coordinación con el resto del equipo.
      - **Nutrición:** Acompaña la alimentación de cada niño y de su familia, con hábitos saludables adaptados a sus necesidades.
-     - **Cosmiatría (próximamente):** especialidad nueva para temas de la piel (por ejemplo, el acné en adolescentes). En lugar de texto, el panel muestra la franja "Próximamente" en loop, la misma de la card "Próximamente" de Noticias (`acordeon-paneles__franja`).
+     - **Cosmiatría (próximamente):** especialidad nueva para temas de la piel (por ejemplo, el acné en adolescentes). Texto: "Va a trabajar el cuidado de la piel de la cara, como el acné y los granitos en la adolescencia." Debajo, el panel muestra la franja "Próximamente" en loop, la misma de la card "Próximamente" de Noticias (`acordeon-paneles__franja`).
    - **Escritorio:** dos columnas de la misma altura. Izquierda (media página): acordeón de paneles horizontal (**REUTILIZA** `acordeon-paneles.js`, el de Cómo trabajamos), con el primer panel abierto. Derecha (la otra mitad): la agenda de las especialidades; el acordeón se estira hasta el alto de la agenda.
    - **Agenda (REUTILIZA el componente de agenda del Inicio y `agenda.js`):** muestra solo las especialidades, con el desplegable reducido a Psicología, Pediatría, Fonoaudiología, Psicopedagogía y Nutrición (sin Apoyo escolar ni Inglés). Por defecto, Psicología. Los horarios salen de `informacion/horarios.md`.
    - **Móvil:** acordeón de paneles vertical, con un panel siempre abierto, y la agenda debajo (lista por día, como en el Inicio).

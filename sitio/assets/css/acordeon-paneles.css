@@ -93,7 +93,7 @@
   object-fit: cover;
 }
 
-/* "Próximamente": en lugar de texto, una franja en loop (la misma de la
+/* "Próximamente": debajo del texto, una franja en loop (la misma de la
    card "Próximamente" de Noticias, noticias.css). Se usa en Cosmiatría. */
 .acordeon-paneles__proximamente {
   position: relative;
