@@ -86,7 +86,7 @@
          ("Nota de opinión profesional"). Las notas de opinión suman la firma (.nota__firma).
          Traducción: cada texto con data-traducir="clave" tiene su versión en inglés en el
          <template class="nota__traduccion"> con la misma clave (nota-idioma.js los intercambia).
-         No se traducen las migas de pan ni la banda. -->
+         No se traducen la banda ni las migas de Inicio y Novedades; la miga final (la volanta) sí. -->
     <article class="nota nota--noticia" data-fondo="claro" aria-labelledby="nota-titulo" data-nota>
 
       <!-- Banda de categoría -->
@@ -96,12 +96,12 @@
 
         <!-- Migas de pan a la izquierda y "Volver a Novedades" a la derecha -->
         <div class="nota__navegacion">
-          <nav class="migas" aria-label="Migas de pan" lang="es">
+          <nav class="migas" aria-label="Migas de pan">
             <ol class="migas__lista">
-              <li class="migas__item"><a class="migas__link" href="/">Inicio</a></li>
-              <li class="migas__item"><a class="migas__link" href="/novedades/#noticias">Novedades</a></li>
-              <!-- La miga final repite la volanta (el título es muy largo) -->
-              <li class="migas__item"><span class="migas__actual" aria-current="page">Concurso 2025</span></li>
+              <li class="migas__item" lang="es"><a class="migas__link" href="/">Inicio</a></li>
+              <li class="migas__item" lang="es"><a class="migas__link" href="/novedades/#noticias">Novedades</a></li>
+              <!-- La miga final repite la volanta (el título es muy largo) y es la única que se traduce: Inicio y Novedades quedan en español como el resto del sitio -->
+              <li class="migas__item"><span class="migas__actual" aria-current="page" data-traducir="miga">Concurso 2025</span></li>
             </ol>
           </nav>
 
@@ -183,6 +183,7 @@
       <!-- Versión en inglés (PROVISORIO: traducción a revisar). No se muestra ni se lee hasta tocar el botón. -->
       <template class="nota__traduccion" lang="en">
         <p data-traducir="volver">Back to News</p>
+        <p data-traducir="miga">2025 contest</p>
         <p data-traducir="volanta">2025 contest</p>
         <p data-traducir="titulo">“Los Antipantallas”, from Fundación Siete Sentidos, won first place in ProSalud’s addiction prevention contest</p>
         <p data-traducir="fecha">October 22, 2026</p>

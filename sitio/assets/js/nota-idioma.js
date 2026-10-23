@@ -2,7 +2,8 @@
    NOTA — IDIOMA: pasa la nota de español a inglés y vuelve
    Cada texto con data-traducir="clave" tiene su versión en inglés en el
    <template class="nota__traduccion"> con la misma clave; los alt de las
-   fotos usan data-traducir-alt. Las migas de pan y la banda no se traducen.
+   fotos usan data-traducir-alt. No se traducen la banda ni las migas de
+   Inicio y Novedades; la miga final (la volanta de la nota) sí.
    Efecto: con GSAP SplitText, las palabras suben y salen línea por línea y
    entran las del otro idioma. Sin GSAP o con prefers-reduced-motion, el
    cambio es directo. Sin JS el botón no se muestra.
@@ -24,8 +25,8 @@
   const alts = [...nota.querySelectorAll('[data-traducir-alt]')];
   const claves = [...nota.querySelectorAll('[data-claves]')];
 
-  // Los textos de los botones .btn se cambian sin animación (la copia del blob los repite)
-  const animables = textos.filter(el => !el.closest('.btn'));
+  // Sin animación: los botones .btn (la copia del blob repite su texto) y la miga final (va en una línea con "…")
+  const animables = textos.filter(el => !el.closest('.btn, .migas'));
 
   const versiones = { es: {}, en: {} };
   textos.forEach(el => { versiones.es[el.dataset.traducir] = el.innerHTML.trim(); });

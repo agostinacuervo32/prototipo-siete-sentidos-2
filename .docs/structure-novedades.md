@@ -64,7 +64,7 @@
    - **Entrada de noticia:** todas usan el mismo marcado y las mismas clases (`card-noticia`, `card-noticia__imagen`, `card-noticia__titulo`, `card-noticia__extracto`, `card-noticia__boton`), con la fecha en `<time datetime="…">` (oculta a la vista, como en el wireframe; se usa para ordenar). En WordPress serían entradas (posts).
    - **Legibilidad:** degradado oscuro de abajo hacia arriba detrás del texto blanco; botón "Seguir leyendo" en la variante para fondos oscuros (`btn--oscuro`).
    - **PROVISORIO:** 12 noticias con título y descripción en lorem ipsum, fechas de ejemplo y la misma foto en todas (`sitio/assets/imagenes/novedades/noticia-provisoria.jpg`).
-   - **PENDIENTE:** las noticias reales (las pasás vos) y a dónde lleva "Seguir leyendo" (una página por nota).
+   - **PENDIENTE:** las noticias reales (las pasás vos). "Seguir leyendo" lleva a la página de cada nota, en la misma pestaña (ver "Página de cada nota").
    - **ID de ancla:** `#noticias`.
 
 4. **Redes sociales (solo los links)**
@@ -76,6 +76,25 @@
 
 ---
 
+## Página de cada nota (plantilla)
+
+Cada entrada de Novedades tiene su propia página en `sitio/novedades/<slug>/index.html` (URL `/novedades/<slug>/`, como un post de WordPress). Todas usan el mismo marcado y las mismas clases (`nota`, `nota.css`, `nota-idioma.js`). Primera nota hecha: `/novedades/primer-puesto-concurso-prevencion-adicciones/`.
+
+- **Categorías (por ahora dos):** Noticia (`nota--noticia`, banda verde) y Nota de opinión profesional (`nota--opinion`, banda rosa). Mismo orden y misma estética en ambas.
+- **Orden, de arriba hacia abajo:**
+  1. Header común.
+  2. **Banda de categoría** de ancho completo, con el nombre de la categoría (no se traduce).
+  3. En una misma línea: **migas de pan** a la izquierda (Inicio › Novedades › volanta de la nota; la última miga es la volanta, no el título, porque es muy largo) y **"Volver a Novedades"** a la derecha, como link subrayado con flecha a la izquierda, sin forma de botón.
+  4. **Encabezado entre filetes:** volanta, título (H1, ocupa todo el ancho), fecha y botón de idioma. Sin tiempo de lectura y sin copete.
+  5. **Cuerpo:** foto de portada en recuadro a la izquierda (fija al hacer scroll en escritorio) y texto a la derecha, separados por una línea. Las fotos extra van dentro del texto. Todas las fotos llevan **epígrafe**.
+  6. **Palabras clave** sin fondo, en lista corrida separada por "·". Solo se ve la lista del idioma en que se lee la nota (español o inglés).
+  7. Footer común.
+- **Firma:** las noticias no llevan firma. Las notas de opinión llevan foto, nombre y especialidad de la profesional (sin matrícula).
+- **Traducción:** botón "Leer en inglés" / "Read in Spanish" antes de que empiece la nota, con efecto de split text de GSAP. Se traduce todo lo de la nota (volanta, título, fecha, texto, epígrafes, `alt`, "Volver a Novedades" y palabras clave). De las migas de pan **solo se traduce la última** (la volanta), para que se entienda a dónde llevan; Inicio, Novedades, la banda, el header y el footer quedan en español como el resto del sitio.
+- **Textos de cada nota:** los pasás vos. La traducción al inglés y las palabras clave las propongo yo a partir del texto, marcadas como PROVISORIO.
+
+---
+
 ## CTAs
 
 | Sección | CTA principal | CTA secundario | Destino |
@@ -83,7 +102,7 @@
 | Header | — | Contactate | WhatsApp |
 | 1. Hero | Ver talleres | — | `#talleres` |
 | 2. Talleres | Reservar mi lugar (en cada card) | — | WhatsApp |
-| 3. Noticias | Seguir leyendo (en cada card) | — | PENDIENTE (página de cada nota) |
+| 3. Noticias | Seguir leyendo (en cada card) | — | Página de la nota (`/novedades/<slug>/`) |
 | 4. Redes | Ver en Instagram | — | Instagram |
 
 *Regla de `contexto.md`: voseo imperativo, nunca primera persona.*
