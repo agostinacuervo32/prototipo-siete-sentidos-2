@@ -22,6 +22,7 @@
   // El contenido del <template> no forma parte de la página: estos son solo los textos visibles
   const textos = [...nota.querySelectorAll('[data-traducir]')];
   const alts = [...nota.querySelectorAll('[data-traducir-alt]')];
+  const claves = [...nota.querySelectorAll('[data-claves]')];
 
   // Los textos de los botones .btn se cambian sin animación (la copia del blob los repite)
   const animables = textos.filter(el => !el.closest('.btn'));
@@ -52,6 +53,8 @@
       const valor = version[img.dataset.traducirAlt];
       if (valor !== undefined) img.alt = valor;
     });
+    // Palabras clave: solo la lista del idioma actual
+    claves.forEach(lista => { lista.hidden = lista.dataset.claves !== idioma; });
     if (idioma === 'es') nota.removeAttribute('lang');
     else nota.lang = idioma;
   }

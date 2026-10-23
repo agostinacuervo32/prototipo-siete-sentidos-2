@@ -99,14 +99,16 @@
           <ol class="migas__lista">
             <li class="migas__item"><a class="migas__link" href="/">Inicio</a></li>
             <li class="migas__item"><a class="migas__link" href="/novedades/#noticias">Novedades</a></li>
-            <li class="migas__item"><span class="migas__actual" aria-current="page">“Los Antipantallas”, de Fundación Siete Sentidos, ganó el primer puesto en el concurso de prevención de adicciones de ProSalud</span></li>
+            <!-- La miga final repite la volanta (el título es muy largo) -->
+            <li class="migas__item"><span class="migas__actual" aria-current="page">Concurso 2025</span></li>
           </ol>
         </nav>
 
+        <a class="nota__volver" href="/novedades/#noticias" data-traducir="volver">Volver a Novedades</a>
+
         <!-- Encabezado: volanta, título, fecha y botón de traducción -->
         <header class="nota__encabezado">
-          <!-- PROVISORIO: volanta -->
-          <p class="nota__volanta" data-traducir="volanta">Concurso Gente Bicho de Luz 2025</p>
+          <p class="nota__volanta" data-traducir="volanta">Concurso 2025</p>
           <h1 class="nota__titulo" id="nota-titulo" data-traducir="titulo">“Los Antipantallas”, de Fundación Siete Sentidos, ganó el primer puesto en el concurso de prevención de adicciones de ProSalud</h1>
 
           <div class="nota__datos">
@@ -132,10 +134,10 @@
             <p data-traducir="p1">El grupo “Los Antipantallas”, de la Fundación Siete Sentidos, obtuvo el primer puesto de la Categoría Blanca en el concurso de afiches y videos Gente Bicho de Luz 2025, organizado por la Fundación ProSalud bajo el lema “Comienzo saludable, futuro esperanzador”.</p>
             <p data-traducir="p2">Con la consigna “Anímate a disfrutar sin pantallas”, el equipo propuso reflexionar sobre el uso excesivo del celular y cómo afecta la salud física, emocional y social de chicos y adultos. Para contarlo, crearon superhéroes que se enfrentan a los celulares, una forma de mostrar la importancia de recuperar el control sobre el tiempo y las actividades del día a día. Como alternativas, el trabajo propone el juego compartido, la actividad física, la lectura y el encuentro con otros sin pantallas de por medio.</p>
 
-            <!-- Foto secundaria dentro del texto. PROVISORIO: epígrafe y alt -->
+            <!-- Foto secundaria dentro del texto -->
             <figure class="nota__figura nota__figura--texto">
-              <img class="nota__imagen" src="/assets/imagenes/noticias/concurso-2025/afiche-los-antipantallas.jpg" alt="Dos personas posan en el escenario con sus obsequios; detrás se proyecta el afiche de Los Antipantallas con la frase “Animate a disfrutar sin pantallas”." width="1200" height="1600" loading="lazy" data-traducir-alt="afiche-alt">
-              <figcaption class="nota__epigrafe" data-traducir="afiche-epigrafe">El afiche de Los Antipantallas, proyectado durante la premiación.</figcaption>
+              <img class="nota__imagen" src="/assets/imagenes/noticias/concurso-2025/equipo-antipantallas.jpg" alt="Integrantes del equipo Antipantallas en el escenario, con el diploma y los obsequios del premio." width="1200" height="1600" loading="lazy" data-traducir-alt="equipo-alt">
+              <figcaption class="nota__epigrafe" data-traducir="equipo-epigrafe">Foto del equipo Antipantallas recibiendo el premio.</figcaption>
             </figure>
 
             <p data-traducir="p3">El mensaje no plantea eliminar la tecnología, sino construir hogares y comunidades más saludables, donde las pantallas sean una herramienta y no un obstáculo para el bienestar.</p>
@@ -144,11 +146,12 @@
 
         </div>
 
-        <!-- Pie: palabras clave en español e inglés (no se traducen) y vuelta a Novedades -->
+        <!-- Pie: palabras clave. Se ve solo la lista del idioma en que se lee la nota
+             (nota-idioma.js cambia cuál; sin JS queda la de español). -->
         <footer class="nota__pie">
-          <div class="nota__claves">
-            <p class="nota__claves-titulo" lang="es">Palabras clave</p>
-            <ul class="nota__claves-lista" lang="es">
+          <div class="nota__claves" lang="es" data-claves="es">
+            <p class="nota__claves-titulo">Palabras clave</p>
+            <ul class="nota__claves-lista">
               <li class="nota__clave">Prevención de adicciones</li>
               <li class="nota__clave">Uso de pantallas</li>
               <li class="nota__clave">Infancias y tecnología</li>
@@ -157,9 +160,9 @@
               <li class="nota__clave">Córdoba</li>
             </ul>
           </div>
-          <div class="nota__claves">
-            <p class="nota__claves-titulo" lang="en">Keywords</p>
-            <ul class="nota__claves-lista" lang="en">
+          <div class="nota__claves" lang="en" data-claves="en" hidden>
+            <p class="nota__claves-titulo">Keywords</p>
+            <ul class="nota__claves-lista">
               <li class="nota__clave">Addiction prevention</li>
               <li class="nota__clave">Screen time</li>
               <li class="nota__clave">Children and technology</li>
@@ -168,26 +171,24 @@
               <li class="nota__clave">Córdoba, Argentina</li>
             </ul>
           </div>
-
-          <a class="btn btn--secundario nota__volver" href="/novedades/#noticias" data-traducir="volver">Volver a Novedades</a>
         </footer>
 
       </div>
 
       <!-- Versión en inglés (PROVISORIO: traducción a revisar). No se muestra ni se lee hasta tocar el botón. -->
       <template class="nota__traduccion" lang="en">
-        <p data-traducir="volanta">Gente Bicho de Luz 2025 contest</p>
+        <p data-traducir="volver">Back to News</p>
+        <p data-traducir="volanta">2025 contest</p>
         <p data-traducir="titulo">“Los Antipantallas”, from Fundación Siete Sentidos, won first place in ProSalud’s addiction prevention contest</p>
         <p data-traducir="fecha">October 22, 2026</p>
         <p data-traducir="portada-alt">Three people smile on the award ceremony stage, in front of the ProSalud banner and the Faculty of Education and Health banner.</p>
         <p data-traducir="portada-epigrafe">Award ceremony of the Gente Bicho de Luz 2025 contest, at the Faculty of Education and Health.</p>
         <p data-traducir="p1">The group “Los Antipantallas” (The Anti-Screens), from Fundación Siete Sentidos, won first place in the White Category of the Gente Bicho de Luz 2025 poster and video contest, organized by Fundación ProSalud under the motto “Healthy beginning, hopeful future”.</p>
         <p data-traducir="p2">With the slogan “Dare to enjoy without screens”, the team invited people to reflect on the excessive use of cell phones and how it affects the physical, emotional and social health of children and adults. To tell the story, they created superheroes who take on cell phones, as a way to show how important it is to regain control over our time and everyday activities. As alternatives, the project proposes shared play, physical activity, reading and spending time with others without screens in between.</p>
-        <p data-traducir="afiche-alt">Two people pose on stage with their gifts; behind them, the Los Antipantallas poster is projected with the phrase “Dare to enjoy without screens”.</p>
-        <p data-traducir="afiche-epigrafe">The Los Antipantallas poster, projected during the award ceremony.</p>
+        <p data-traducir="equipo-alt">Members of the Antipantallas team on stage, with the diploma and the award gifts.</p>
+        <p data-traducir="equipo-epigrafe">The Antipantallas team receiving the award.</p>
         <p data-traducir="p3">The message is not about getting rid of technology, but about building healthier homes and communities, where screens are a tool and not an obstacle to well-being.</p>
         <p data-traducir="p4">The award ceremony took place in November 2025, during the event “Healthy, supportive and enjoyable: ideas and actions 2025 for addiction prevention”, at the Faculty of Education and Health, with the support of the Universidad Provincial de Córdoba. There, the group received their diploma and gifts from the contest sponsors.</p>
-        <p data-traducir="volver">Back to News</p>
       </template>
 
     </article>
