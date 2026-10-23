@@ -33,9 +33,18 @@
   text-transform: uppercase;
 }
 
-/* ---------- Migas de pan ---------- */
-.migas {
+/* ---------- Migas de pan (izquierda) y volver (derecha), en una línea ---------- */
+.nota__navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin-top: 20px;
+}
+
+.migas {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .migas__lista {
@@ -96,7 +105,9 @@
 /* ---------- Volver a Novedades: link de texto subrayado ---------- */
 .nota__volver {
   display: inline-flex;
+  flex: none;
   align-items: center;
+  gap: 6px;
   min-height: 44px;
   font-family: var(--fuente-subtitulo);
   font-size: var(--fs-aclaracion);
@@ -106,9 +117,19 @@
   transition: color var(--duracion-corta) var(--ease);
 }
 
+.nota__volver .icono {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--duracion-corta) var(--ease);
+}
+
 @media (hover: hover) {
   .nota__volver:hover {
     color: var(--rosa);
+  }
+
+  .nota__volver:hover .icono {
+    transform: translateX(-3px);
   }
 }
 

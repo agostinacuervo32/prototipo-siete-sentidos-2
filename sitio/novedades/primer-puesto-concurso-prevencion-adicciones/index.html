@@ -94,17 +94,22 @@
 
       <div class="contenedor">
 
-        <!-- Migas de pan -->
-        <nav class="migas" aria-label="Migas de pan" lang="es">
-          <ol class="migas__lista">
-            <li class="migas__item"><a class="migas__link" href="/">Inicio</a></li>
-            <li class="migas__item"><a class="migas__link" href="/novedades/#noticias">Novedades</a></li>
-            <!-- La miga final repite la volanta (el título es muy largo) -->
-            <li class="migas__item"><span class="migas__actual" aria-current="page">Concurso 2025</span></li>
-          </ol>
-        </nav>
+        <!-- Migas de pan a la izquierda y "Volver a Novedades" a la derecha -->
+        <div class="nota__navegacion">
+          <nav class="migas" aria-label="Migas de pan" lang="es">
+            <ol class="migas__lista">
+              <li class="migas__item"><a class="migas__link" href="/">Inicio</a></li>
+              <li class="migas__item"><a class="migas__link" href="/novedades/#noticias">Novedades</a></li>
+              <!-- La miga final repite la volanta (el título es muy largo) -->
+              <li class="migas__item"><span class="migas__actual" aria-current="page">Concurso 2025</span></li>
+            </ol>
+          </nav>
 
-        <a class="nota__volver" href="/novedades/#noticias" data-traducir="volver">Volver a Novedades</a>
+          <a class="nota__volver" href="/novedades/#noticias">
+            <svg class="icono" viewBox="0 0 256 256" aria-hidden="true"><line x1="216" y1="128" x2="40" y2="128" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/><polyline points="112 56 40 128 112 200" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
+            <span class="nota__volver-texto" data-traducir="volver">Volver a Novedades</span>
+          </a>
+        </div>
 
         <!-- Encabezado: volanta, título, fecha y botón de traducción -->
         <header class="nota__encabezado">
