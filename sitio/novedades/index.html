@@ -36,7 +36,6 @@
   <link rel="stylesheet" href="/assets/css/header.css">
   <link rel="stylesheet" href="/assets/css/hero.css">
   <link rel="stylesheet" href="/assets/css/servicios.css">
-  <link rel="stylesheet" href="/assets/css/acordeon.css">
   <link rel="stylesheet" href="/assets/css/carrusel.css">
   <link rel="stylesheet" href="/assets/css/talleres.css">
   <link rel="stylesheet" href="/assets/css/galeria.css">
@@ -107,8 +106,8 @@
 
     <!-- TALLERES
          REUTILIZA las cards con video de Apoyo escolar y Especialidades del Inicio
-         (servicios.css), más altas (servicios--talleres) para que entre el acordeón
-         de talleres (acordeon.css, acordeon.js). Textos PROVISORIOS (structure-novedades.md, sección 2).
+         (servicios.css), un poco más altas (servicios--talleres) para que entre la lista
+         de talleres de cada card (card-servicio__talleres). Textos PROVISORIOS (structure-novedades.md, sección 2).
          PROVISORIO: la card de adultos lleva una foto hasta tener su video. -->
     <section class="servicios servicios--talleres" id="talleres" data-fondo="claro" aria-label="Talleres para jóvenes y adultos">
       <div class="contenedor">
@@ -123,63 +122,11 @@
                 <p>Espacios para que chicos y adolescentes creen, compartan y aprendan haciendo.</p>
                 <p>Todos los talleres incluyen lo necesario para hacerlos: no hace falta llevar nada.</p>
               </div>
-              <div class="acordeon card-servicio__acordeon" data-acordeon>
-
-                <div class="acordeon__item acordeon__item--amarillo">
-                  <h3 class="acordeon__encabezado">
-                    <button class="acordeon__pregunta" type="button" id="taller-jovenes-arte-boton" aria-expanded="false" aria-controls="taller-jovenes-arte">
-                      <span>Taller de arte</span>
-                      <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                    </button>
-                  </h3>
-                  <div class="acordeon__respuesta" id="taller-jovenes-arte" role="region" aria-labelledby="taller-jovenes-arte-boton">
-                    <div class="acordeon__interior">
-                      <div class="acordeon__texto">
-                        <p><strong>Día:</strong> sábados a la mañana, una vez por mes.</p>
-                        <p><strong>Incluye:</strong> los materiales de pintura y el cuadro.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="acordeon__item acordeon__item--naranja">
-                  <h3 class="acordeon__encabezado">
-                    <button class="acordeon__pregunta" type="button" id="taller-jovenes-cocina-boton" aria-expanded="false" aria-controls="taller-jovenes-cocina">
-                      <span>Taller de cocina</span>
-                      <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                    </button>
-                  </h3>
-                  <div class="acordeon__respuesta" id="taller-jovenes-cocina" role="region" aria-labelledby="taller-jovenes-cocina-boton">
-                    <div class="acordeon__interior">
-                      <div class="acordeon__texto">
-                        <!-- PENDIENTE: días y horario del taller de cocina -->
-                        <p><strong>Día:</strong> a confirmar.</p>
-                        <p><strong>Incluye:</strong> todos los ingredientes.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="acordeon__item acordeon__item--rosa">
-                  <h3 class="acordeon__encabezado">
-                    <button class="acordeon__pregunta" type="button" id="taller-jovenes-vocacional-boton" aria-expanded="false" aria-controls="taller-jovenes-vocacional">
-                      <span>Orientación vocacional</span>
-                      <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                    </button>
-                  </h3>
-                  <div class="acordeon__respuesta" id="taller-jovenes-vocacional" role="region" aria-labelledby="taller-jovenes-vocacional-boton">
-                    <div class="acordeon__interior">
-                      <div class="acordeon__texto">
-                        <!-- PENDIENTE: días y horario de orientación vocacional -->
-                        <p>Para estudiantes de 4.° y 5.° año, a cargo de las psicólogas de la fundación. Desde octubre.</p>
-                        <p><strong>Día:</strong> a confirmar.</p>
-                        <p><strong>Incluye:</strong> todos los materiales.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
+              <ul class="card-servicio__talleres">
+                <li class="card-servicio__taller card-servicio__taller--amarillo">Taller de arte</li>
+                <li class="card-servicio__taller card-servicio__taller--naranja">Taller de cocina</li>
+                <li class="card-servicio__taller card-servicio__taller--rosa">Orientación vocacional</li>
+              </ul>
               <div class="grupo-botones card-servicio__botones">
                 <a class="btn" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20los%20talleres%20para%20j%C3%B3venes." target="_blank" rel="noopener" aria-label="Reservar mi lugar en los talleres para jóvenes por WhatsApp (se abre en una pestaña nueva)">Reservar mi lugar</a>
               </div>
@@ -199,63 +146,11 @@
                 <p>Propuestas para las familias y la comunidad.</p>
                 <p>Todos los talleres incluyen lo necesario para hacerlos: no hace falta llevar nada.</p>
               </div>
-              <div class="acordeon card-servicio__acordeon" data-acordeon>
-
-                <div class="acordeon__item acordeon__item--verde">
-                  <h3 class="acordeon__encabezado">
-                    <button class="acordeon__pregunta" type="button" id="taller-adultos-arte-boton" aria-expanded="false" aria-controls="taller-adultos-arte">
-                      <span>Taller de arte</span>
-                      <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                    </button>
-                  </h3>
-                  <div class="acordeon__respuesta" id="taller-adultos-arte" role="region" aria-labelledby="taller-adultos-arte-boton">
-                    <div class="acordeon__interior">
-                      <div class="acordeon__texto">
-                        <p><strong>Día:</strong> sábados a la tarde, una vez por mes.</p>
-                        <p><strong>Incluye:</strong> los materiales de pintura y el cuadro.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="acordeon__item acordeon__item--naranja">
-                  <h3 class="acordeon__encabezado">
-                    <button class="acordeon__pregunta" type="button" id="taller-adultos-nutricion-boton" aria-expanded="false" aria-controls="taller-adultos-nutricion">
-                      <span>Taller de nutrición y alimentación saludable</span>
-                      <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                    </button>
-                  </h3>
-                  <div class="acordeon__respuesta" id="taller-adultos-nutricion" role="region" aria-labelledby="taller-adultos-nutricion-boton">
-                    <div class="acordeon__interior">
-                      <div class="acordeon__texto">
-                        <!-- PENDIENTE: horario del taller de nutrición -->
-                        <p><strong>Día:</strong> domingos y miércoles.</p>
-                        <p><strong>Incluye:</strong> todos los materiales.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="acordeon__item acordeon__item--rosa">
-                  <h3 class="acordeon__encabezado">
-                    <button class="acordeon__pregunta" type="button" id="taller-adultos-cuidado-boton" aria-expanded="false" aria-controls="taller-adultos-cuidado">
-                      <span>Habitar el cuidado (solo en octubre)</span>
-                      <svg class="icono acordeon__chevron" viewBox="0 0 256 256" aria-hidden="true"><polyline points="208 96 128 176 48 96" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/></svg>
-                    </button>
-                  </h3>
-                  <div class="acordeon__respuesta" id="taller-adultos-cuidado" role="region" aria-labelledby="taller-adultos-cuidado-boton">
-                    <div class="acordeon__interior">
-                      <div class="acordeon__texto">
-                        <!-- PENDIENTE: días y horario de Habitar el cuidado -->
-                        <p>En octubre, el mes de la lucha contra el cáncer de mama, trabajamos alimentación protectora y antiinflamatoria, emociones y autocuidado.</p>
-                        <p><strong>Día:</strong> a confirmar.</p>
-                        <p><strong>Incluye:</strong> todos los materiales.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
+              <ul class="card-servicio__talleres">
+                <li class="card-servicio__taller card-servicio__taller--verde">Taller de arte</li>
+                <li class="card-servicio__taller card-servicio__taller--naranja">Taller de nutrición y alimentación saludable</li>
+                <li class="card-servicio__taller card-servicio__taller--rosa">Habitar el cuidado (solo en octubre)</li>
+              </ul>
               <div class="grupo-botones card-servicio__botones">
                 <a class="btn" href="https://wa.me/5493516095374?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20los%20talleres%20para%20adultos." target="_blank" rel="noopener" aria-label="Reservar mi lugar en los talleres para adultos por WhatsApp (se abre en una pestaña nueva)">Reservar mi lugar</a>
               </div>
@@ -607,7 +502,6 @@
   <script src="/assets/js/menu.js" defer></script>
   <script src="/assets/js/boton-blob.js" defer></script>
   <script src="/assets/js/video-fondo.js" defer></script>
-  <script src="/assets/js/acordeon.js" defer></script>
   <script src="/assets/js/carrusel.js" defer></script>
   <script src="/assets/js/galeria.js" defer></script>
   <script src="/assets/js/noticias.js" defer></script>

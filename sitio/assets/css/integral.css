@@ -1,6 +1,6 @@
 /* ==========================================================================
    ACOMPAÑAMIENTO INTEGRAL (Especialidades)
-   Encabezado centrado; debajo, el acordeón de paneles con las cinco
+   Encabezado centrado; debajo, el acordeón de paneles con las seis
    especialidades y la agenda de las especialidades, y el botón a WhatsApp.
    Móvil: se apilan el acordeón vertical y la agenda (lista por día).
    Desde 1200px: dos columnas de la misma altura, acordeón horizontal | agenda.
@@ -72,11 +72,11 @@
     gap: 32px;
   }
 
-  /* Con 5 paneles en media página, los cerrados van angostos (como en
+  /* Con 6 paneles en media página, los cerrados van angostos (como en
      Cómo trabajamos de Apoyo escolar). El alto lo marca la agenda y el
      acordeón se estira hasta ese alto. */
   .integral__contenido .acordeon-paneles {
-    --panel-cerrado: 12cqw;
+    --panel-cerrado: 10cqw;
     min-height: 320px;
   }
 

@@ -93,6 +93,54 @@
   object-fit: cover;
 }
 
+/* "Próximamente": en lugar de texto, una franja en loop (la misma de la
+   card "Próximamente" de Noticias, noticias.css). Se usa en Cosmiatría. */
+.acordeon-paneles__proximamente {
+  position: relative;
+  min-height: 140px;
+  overflow: hidden;
+}
+
+.acordeon-paneles__franja {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  width: 120%;
+  overflow: hidden;
+  padding: 6px 0;
+  background: var(--verde-pastel);
+  color: var(--verde-oscuro);
+  font-family: var(--fuente-subtitulo);
+  font-weight: 500;
+  font-size: var(--fs-bajada);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform: translateY(-50%) rotate(-14deg);
+  pointer-events: none;
+}
+
+/* El texto se repite dos veces para que la franja corra en loop sin cortes */
+.acordeon-paneles__franja-pista {
+  display: inline-flex;
+  animation: acordeon-paneles-franja 12s linear infinite;
+}
+
+.acordeon-paneles__franja-pista span {
+  padding-right: 0.6em;
+}
+
+@keyframes acordeon-paneles-franja {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .acordeon-paneles__franja-pista {
+    animation: none;
+  }
+}
+
 /* ==========================================================================
    Escritorio (desde 1200px): acordeón horizontal
    ========================================================================== */
@@ -187,5 +235,11 @@
     min-height: 0;
     margin: 24px 0 0;
     aspect-ratio: auto;
+  }
+
+  /* La franja ocupa el alto que queda en el panel */
+  .acordeon-paneles__proximamente {
+    flex: 1 1 0;
+    margin: 0 calc(-1 * clamp(32px, 2.5vw, 48px));
   }
 }

@@ -105,9 +105,29 @@
   display: none;
 }
 
-/* ---------- Talleres (Novedades): acordeón de talleres dentro de la info ---------- */
-.card-servicio__acordeon {
+/* ---------- Talleres (Novedades): lista de talleres dentro de la info ----------
+   Cada taller toma su familia de color con un modificador (--verde, --rosa, etc.) */
+.card-servicio__talleres {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
   margin-top: 4px;
+}
+
+.card-servicio__taller--verde    { --taller-fondo: var(--verde-pastel); }
+.card-servicio__taller--rosa     { --taller-fondo: var(--rosa-pastel); }
+.card-servicio__taller--naranja  { --taller-fondo: var(--naranja-pastel); }
+.card-servicio__taller--amarillo { --taller-fondo: var(--amarillo-pastel); }
+
+.card-servicio__taller {
+  padding: 12px 20px;
+  border-radius: var(--radio);
+  background: var(--taller-fondo);
+  color: var(--negro);
+  font-family: var(--fuente-subtitulo);
+  font-weight: 300;
+  font-size: calc(var(--fs-bajada) - var(--fs-ajuste-horarios));
+  line-height: 1.3;
 }
 
 /* ==========================================================================
@@ -239,9 +259,9 @@
   }
 }
 
-/* Talleres (Novedades): cards más altas para que entren el acordeón y un taller abierto */
+/* Talleres (Novedades): cards un poco más altas para que entre la lista de talleres */
 @media (min-width: 1200px) and (hover: hover) {
   .servicios--talleres .servicios__grilla {
-    height: clamp(680px, 39.6vw, 760px);
+    height: clamp(560px, 30.2vw, 580px);
   }
 }
