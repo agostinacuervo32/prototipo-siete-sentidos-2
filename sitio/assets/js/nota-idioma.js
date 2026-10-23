@@ -25,8 +25,8 @@
   const alts = [...nota.querySelectorAll('[data-traducir-alt]')];
   const claves = [...nota.querySelectorAll('[data-claves]')];
 
-  // Sin animación: los botones .btn (la copia del blob repite su texto) y la miga final (va en una línea con "…")
-  const animables = textos.filter(el => !el.closest('.btn, .migas'));
+  // Sin animación: los botones .btn (la copia del blob repite su texto)
+  const animables = textos.filter(el => !el.closest('.btn'));
 
   const versiones = { es: {}, en: {} };
   textos.forEach(el => { versiones.es[el.dataset.traducir] = el.innerHTML.trim(); });
@@ -70,7 +70,10 @@
   }
 
   function dividir() {
-    return animables.map(el => SplitText.create(el, { type: 'lines,words', mask: 'lines' }));
+    // La miga final va en una sola línea (cortada con "…"): se divide y enmascara por palabras
+    return animables.map(el => el.closest('.migas')
+      ? SplitText.create(el, { type: 'words', mask: 'words' })
+      : SplitText.create(el, { type: 'lines,words', mask: 'lines' }));
   }
 
   const palabras = partes => partes.flatMap(p => p.words);
