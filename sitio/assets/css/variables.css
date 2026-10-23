@@ -45,6 +45,7 @@
   --fs-h2-lateral: clamp(30px, 22.3px + 1.96vw, 60px);
   --fs-subtitulo: clamp(24px, 21.9px + 0.52vw, 32px);
   --fs-card-titulo: 20px;   /* títulos de las cards de "Por qué elegir Siete Sentidos" */
+  --fs-noticia-titulo: clamp(18px, 6.8cqi, 26px);   /* títulos de las cards de Noticias: sigue el ancho de la card (cqi) para no pasar de dos renglones */
   --fs-bajada: clamp(16px, 15.2px + 0.2vw, 19px);
   --fs-texto-grande: clamp(16px, 15px + 0.26vw, 20px);   /* hero y cards de Apoyo escolar / Especialidades */
   --fs-texto: clamp(16px, 15.2px + 0.2vw, 19px);
