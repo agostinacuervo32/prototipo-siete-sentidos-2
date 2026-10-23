@@ -51,7 +51,7 @@
      - Muestra solo **Apoyo escolar** e **Inglés**, con el desplegable reducido a esas dos opciones.
      - Datos, según `informacion/horarios.md`:
        - **Apoyo escolar** (Andrea Novero y Ana Rinaldi): lunes de 17:00 a 21:00; martes a viernes de 9:00 a 12:30 y de 16:00 a 21:00.
-       - **Inglés** (Jaquelina del Valle Gutiérrez): martes y viernes de 18:00 a 19:00.
+       - **Inglés** (Jaquelina Gutiérrez): martes y viernes de 18:00 a 19:00.
    - Cierre de la sección con doble CTA: "Consultá por un turno" (principal, a WhatsApp) y "Ver precios" (secundario, ancla a la sección 4). *PROPUESTA — a validar.*
    - **REQUERIMIENTO OBLIGATORIO:** la agenda tiene que poder actualizarse con facilidad (los horarios se escriben en el HTML, igual que en el Inicio).
    - **REQUERIMIENTO OBLIGATORIO:** los horarios salen de `informacion/horarios.md`, no de `brief.md` (los del brief están desactualizados).
