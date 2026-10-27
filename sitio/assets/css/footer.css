@@ -191,26 +191,33 @@
     margin-bottom: 0;
   }
 
+  /* Las tres columnas comparten las mismas dos filas (subgrid), así la
+     dirección, Instagram y "Quiero donar" quedan a la misma altura, y
+     el horario, WhatsApp y "Trabajá con nosotros" también */
   .footer__columnas {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto;
+    gap: 0;
     width: auto;
     max-width: none;
   }
 
   .footer__columna {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
+    display: grid;
+    grid-row: span 2;
+    grid-template-rows: subgrid;
+    align-items: center;
+    row-gap: 16px;
     min-height: 107px;
     padding: 0 clamp(20px, 2.6vw, 50px) 0 18px;
     border-left: var(--borde-boton) solid var(--verde);
   }
 
   .footer__columna--botones {
+    grid-column: auto;
     order: 0;
-    align-items: flex-end;
-    gap: 16px;
+    justify-items: end;
     margin-bottom: 0;
     padding-right: 0;
   }
@@ -228,12 +235,6 @@
   /* Vuelve el orden del HTML (Instagram arriba de WhatsApp) */
   .footer__dato {
     order: 0;
-  }
-
-  /* Separación extra entre Instagram y WhatsApp para que sus bordes
-     del hover no queden pegados */
-  .footer--trazo .footer__dato--whatsapp {
-    margin-top: 8px;
   }
 
   .footer__legal span {
