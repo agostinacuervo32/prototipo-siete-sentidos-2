@@ -118,8 +118,8 @@
 }
 
 .nota__volver .icono {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   transition: transform var(--duracion-corta) var(--ease);
 }
 
@@ -218,8 +218,8 @@
 }
 
 .nota__idioma .icono {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
 }
 
 /* ---------- Cuerpo: portada a la izquierda, texto a la derecha ---------- */

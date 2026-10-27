@@ -73,8 +73,8 @@
 }
 
 .card-resena__estrellas svg {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
 }
 
 .card-resena__texto {
@@ -140,8 +140,8 @@
   }
 
   .card-resena__estrellas svg {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
   }
 
   .card-resena__texto {

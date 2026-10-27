@@ -123,8 +123,8 @@ textarea {
 
 /* ---------- Íconos lineales (Phosphor, trazo de 2px a 24px) ---------- */
 .icono {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   flex: none;
 }
 
@@ -153,18 +153,21 @@ textarea {
   transform: rotate(-180deg);
 }
 
-.is-abierto .icono-chevron__abajo {
+.is-abierto .icono-chevron__abajo,
+.is-desplegado > .icono-chevron .icono-chevron__abajo {
   opacity: 0;
   transform: rotate(180deg);
 }
 
-.is-abierto .icono-chevron__arriba {
+.is-abierto .icono-chevron__arriba,
+.is-desplegado > .icono-chevron .icono-chevron__arriba {
   opacity: 1;
   transform: none;
 }
 
 /* Desplegables nativos (select): mismo cambio mientras la lista está abierta.
-   Va en reglas aparte porque un navegador sin :open descarta la regla entera. */
+   Va en reglas aparte porque un navegador sin :open descarta la regla entera;
+   en esos navegadores (Safari en iPhone) desplegable-chevron.js pone .is-desplegado. */
 :has(> select:open) > .icono-chevron .icono-chevron__abajo {
   opacity: 0;
   transform: rotate(180deg);
