@@ -75,14 +75,6 @@
   color: var(--familia-oscuro);
 }
 
-.acordeon__chevron {
-  transition: transform var(--duracion-larga) var(--ease);
-}
-
-.acordeon__item.is-abierto .acordeon__chevron {
-  transform: rotate(180deg);
-}
-
 /* La respuesta se abre con grid-template-rows 0fr → 1fr */
 .acordeon__respuesta {
   display: grid;

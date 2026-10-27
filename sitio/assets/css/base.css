@@ -137,6 +137,44 @@ textarea {
   stroke-width: 50;
 }
 
+/* Chevron de los desplegables: al abrirse, el chevron-down gira y se
+   funde en el chevron-up, que indica que se va a cerrar */
+.icono-chevron__abajo,
+.icono-chevron__arriba {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition:
+    transform var(--duracion-larga) var(--ease),
+    opacity var(--duracion-corta) var(--ease);
+}
+
+.icono-chevron__arriba {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+.is-abierto .icono-chevron__abajo {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.is-abierto .icono-chevron__arriba {
+  opacity: 1;
+  transform: none;
+}
+
+/* Desplegables nativos (select): mismo cambio mientras la lista está abierta.
+   Va en reglas aparte porque un navegador sin :open descarta la regla entera. */
+:has(> select:open) > .icono-chevron .icono-chevron__abajo {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+:has(> select:open) > .icono-chevron .icono-chevron__arriba {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
