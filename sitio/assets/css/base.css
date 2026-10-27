@@ -132,6 +132,15 @@ textarea {
   stroke-width: 21;
 }
 
+/* Íconos propios de Siete Sentidos (viewBox de 610): mismo trazo de 2px a 24px */
+.icono--propio [stroke] {
+  stroke-width: 50;
+}
+
+.icono--propio .icono__trazo-grueso {
+  stroke-width: 66;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
