@@ -137,10 +137,6 @@ textarea {
   stroke-width: 50;
 }
 
-.icono--propio .icono__trazo-grueso {
-  stroke-width: 66;
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
