@@ -81,17 +81,18 @@
   pointer-events: none;
 }
 
-/* Sin foto todavía: fondo blanco con un "+" chico abajo a la derecha
+/* Sin foto todavía: fondo del color de la card, más clarito, con un "+" chico abajo a la derecha
    (al centro lo taparía la franja "Nuevo") */
 .card-taller__media--sin-foto {
   display: grid;
   place-items: center;
+  background: color-mix(in srgb, var(--familia-pastel) 45%, var(--blanco));   /* el pastel de la card, más clarito */
   color: var(--familia-medio);
 }
 
 /* Ícono del taller, grande al centro (opcional) */
 .card-taller__icono {
-  width: 34%;
+  width: 50%;
   height: auto;
 }
 
