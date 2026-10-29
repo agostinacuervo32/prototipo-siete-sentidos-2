@@ -226,7 +226,7 @@
 /* El texto se repite dos veces para que la franja corra en loop sin cortes */
 .card-noticia__franja-pista {
   display: inline-flex;
-  animation: card-noticia-franja 12s linear infinite;
+  animation: card-noticia-franja 24s linear infinite;
 }
 
 .card-noticia__franja-pista span {
