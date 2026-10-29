@@ -21,6 +21,9 @@
       if (control.type === 'tel' && valor.replace(/\D/g, '').length < MINIMO_DIGITOS) {
         return control.dataset.errorFormato;
       }
+      if (control.type === 'email' && control.validity.typeMismatch) {
+        return control.dataset.errorFormato;
+      }
       return '';
     }
 
@@ -48,13 +51,14 @@
       const nombre = datos.get('nombre').trim();
       const servicio = datos.get('servicio');
       const telefono = `${datos.get('prefijo')} ${datos.get('telefono').trim()}`;
+      const mail = (datos.get('mail') || '').trim();   // solo el formulario del Inicio lo pide
       let mensaje = (datos.get('mensaje') || '').trim().replace(/\s+/g, ' ');
       if (mensaje && !/[.!?…]$/.test(mensaje)) mensaje += '.';
 
       return [
         `Hola, soy ${nombre} y quiero consultar por ${servicio}.`,
         mensaje,
-        `(Tel: ${telefono})`
+        mail ? `(Tel: ${telefono} · Mail: ${mail})` : `(Tel: ${telefono})`
       ].filter(Boolean).join(' ');
     }
 

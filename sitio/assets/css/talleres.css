@@ -81,16 +81,18 @@
   pointer-events: none;
 }
 
-/* Sin foto todavía: ícono del taller sobre blanco */
+/* Sin foto todavía: fondo blanco con un "+" chico abajo a la derecha
+   (al centro lo taparía la franja "Nuevo") */
 .card-taller__media--sin-foto {
-  display: grid;
-  place-items: center;
   color: var(--familia-medio);
 }
 
-.card-taller__media--sin-foto .icono {
-  width: 34%;
-  height: auto;
+.card-taller__mas {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 28px;
+  height: 28px;
 }
 
 /* ---------- Texto ---------- */

@@ -837,6 +837,14 @@
 
             </div>
 
+            <div class="campo">
+              <div class="campo__caja">
+                <input class="campo__control" type="email" id="contacto-mail" name="mail" placeholder=" " inputmode="email" autocomplete="email" required aria-describedby="contacto-mail-error" data-error-vacio="Falta tu mail para poder responderte." data-error-formato="Revisá el mail: tiene que tener la forma nombre@ejemplo.com.">
+                <label class="campo__label" for="contacto-mail">Mail</label>
+              </div>
+              <p class="campo__error" id="contacto-mail-error" hidden><svg class="icono icono--propio" viewBox="20 45 610 610" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" d="M130,446.6c-13.65-29.35-21.28-62.08-21.28-96.58,0-126.63,102.65-229.28,229.28-229.28s229.28,102.65,229.28,229.28-102.65,229.28-229.28,229.28c-54.08,0-103.79-18.73-143-50.05"/><line fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="50" x1="338" y1="227.35" x2="338" y2="415.81"/><circle cx="338" cy="487.02" r="24.52" fill="currentColor"/></svg><span class="campo__error-texto"></span></p>
+            </div>
+
             <div class="campo campo--desplegable">
               <div class="campo__caja">
                 <select class="campo__control" id="contacto-servicio" name="servicio" required aria-describedby="contacto-servicio-error" data-error-vacio="Elegí un servicio para que podamos orientarte.">
