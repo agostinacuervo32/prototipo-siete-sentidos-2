@@ -95,7 +95,9 @@
   }
 }
 
+/* Click y tap: fondo verde pastel y se achica (igual en escritorio y móvil) */
 .boton-circular:active {
+  background-color: var(--verde-pastel);
   transform: scale(.9);
 }
 
